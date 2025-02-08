@@ -59,7 +59,7 @@ export const AppHeader = () => {
   return (
     <header className='sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center'>
       <div className='container flex h-14 items-center'>
-        <div className='mr-4 hidden md:flex'>
+        <div className='mr-4 ml-6 md:ml-0 flex'>
           <h1 className='text-2xl font-bold'>sivantha.com</h1>
         </div>
         <div className='flex flex-1 items-center justify-between space-x-2 md:justify-end'>
@@ -92,7 +92,7 @@ export const AppHeader = () => {
               <Menu className='h-6 w-6 mr-6' />
             </Button>
 
-            <Sheet open={sheetOpened}>
+            <Sheet open={sheetOpened} onOpenChange={handleToggleSheet}>
               <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
                 <nav className='flex flex-col space-y-4'>
                   <NavItems />

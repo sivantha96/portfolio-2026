@@ -19,6 +19,7 @@ import { ContactDialog } from '@/components/ContactDialog';
 import { ProjectDialog } from '@/components/ProjectDialog';
 import { ProjectSkeleton } from '@/components/ProjectSkeleton';
 import { SkillSkeleton } from '@/components/SkillSkeleton';
+import { StructuredData } from '@/components/StructuredData';
 import { Avatar } from '@/components/ui/avatar';
 import { Images } from '@/theme';
 import { Article, Project, Skill } from '@/types';
@@ -75,11 +76,13 @@ export default function Portfolio() {
               />
             </Avatar>
 
-            <div>
+            <div className='flex flex-col items-center md:items-start'>
               <h2 className='text-3xl font-bold mb-2'>
                 Sivantha Paranavithana
               </h2>
-              <p className='text-muted-foreground mb-4'>{about.main}</p>
+              <p className='text-muted-foreground text-center md:text-left mb-4'>
+                {about.main}
+              </p>
               <div className='flex flex-wrap gap-4'>
                 <ContactDialog />
                 <Button variant='outline' asChild>
@@ -221,6 +224,8 @@ export default function Portfolio() {
           onClose={() => setSelectedProject(undefined)}
         />
       )}
+
+      <StructuredData />
     </div>
   );
 }
