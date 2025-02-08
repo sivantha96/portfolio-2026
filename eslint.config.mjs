@@ -1,5 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+import pluginQuery from '@tanstack/eslint-plugin-query';
 import eslintPluginPrettierRecommended from 'eslint-config-prettier';
 import etcPlugin from 'eslint-plugin-etc';
 import importPlugin from 'eslint-plugin-import';
@@ -26,6 +27,7 @@ const eslintConfig = [
       'tailwind.config.ts',
     ],
   },
+  ...pluginQuery.configs['flat/recommended'],
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   js.configs.recommended,
   eslintPluginPrettierRecommended,
@@ -55,7 +57,7 @@ const eslintConfig = [
       'sonarjs/no-duplicate-string': 'off',
       'react-hooks/exhaustive-deps': 'error',
       'no-console': 'warn',
-      '@next/next/no-img-element': 'error',
+      // '@next/next/no-img-element': 'error',
       '@typescript-eslint/no-restricted-imports': [
         'error',
         {

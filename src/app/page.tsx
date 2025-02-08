@@ -1,96 +1,226 @@
+'use client';
+
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+
+import { about, contact } from '@/assets/content';
+import { AppHeader } from '@/components/AppHeader';
+import { ArticleSkeleton } from '@/components/ArticleSkeleton';
+import { ContactDialog } from '@/components/ContactDialog';
+import { ProjectDialog } from '@/components/ProjectDialog';
+import { ProjectSkeleton } from '@/components/ProjectSkeleton';
+import { SkillSkeleton } from '@/components/SkillSkeleton';
+import { Avatar } from '@/components/ui/avatar';
+import { Images } from '@/theme';
+import { Article, Project, Skill } from '@/types';
+import { makePhoneCall, openWebUrl, sendEmail } from '@/utils';
+import {
+  ExternalLink,
+  FileDown,
+  Github,
+  Linkedin,
+  Mail,
+  PhoneCall,
+} from 'lucide-react';
 import Image from 'next/image';
 
-export default function Home() {
-  return (
-    <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-        <Image
-          className='dark:invert'
-          src='/next.svg'
-          alt='Next.js logo'
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className='list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
-          <li className='mb-2'>
-            Get started by editing{' '}
-            <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function Portfolio() {
+  const [selectedProject, setSelectedProject] = useState<Project>();
 
-        <div className='flex gap-4 items-center flex-col sm:flex-row'>
-          <a
-            className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <Image
-              className='dark:invert'
-              src='/vercel.svg'
-              alt='Vercel logomark'
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'>
-            Read our docs
-          </a>
-        </div>
+  const { isPending: isLoadingProjects, data: projects } = useQuery({
+    queryKey: ['projects'],
+    queryFn: () =>
+      fetch('/data/projects.json').then(
+        (res) => res.json() as Promise<Project[]>,
+      ),
+  });
+
+  const { isPending: isLoadingSkills, data: skills } = useQuery({
+    queryKey: ['skills'],
+    queryFn: () =>
+      fetch('/data/skills.json').then((res) => res.json() as Promise<Skill[]>),
+  });
+
+  const { isPending: isLoadingArticles, data: articles } = useQuery({
+    queryKey: ['articles'],
+    queryFn: () =>
+      fetch('https://dev.to/api/articles?username=sivantha96').then(
+        (res) => res.json() as Promise<Article[]>,
+      ),
+  });
+
+  return (
+    <div className='min-h-screen bg-background text-foreground'>
+      <AppHeader />
+
+      <main className='container mx-auto px-6 py-8'>
+        <section id='about' className='mb-12 scroll-mt-[100px]'>
+          <div className='flex flex-col md:flex-row items-center mb-6'>
+            <Avatar className='h-24 w-24 mb-4 md:mb-0 md:mr-6'>
+              <Image
+                src={Images.Profile}
+                alt='Sivantha Paranavithana'
+                width={100}
+                height={100}
+                className='rounded-full'
+              />
+            </Avatar>
+
+            <div>
+              <h2 className='text-3xl font-bold mb-2'>
+                Sivantha Paranavithana
+              </h2>
+              <p className='text-muted-foreground mb-4'>{about.main}</p>
+              <div className='flex flex-wrap gap-4'>
+                <ContactDialog />
+                <Button variant='outline' asChild>
+                  <a href='/data/sivantha-paranavithana-cv.pdf' download>
+                    <FileDown className='mr-2 h-4 w-4' /> Download CV
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className='flex gap-4 justify-center md:justify-start'>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() => {
+                openWebUrl(contact.social.github);
+              }}>
+              <Github className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() => {
+                openWebUrl(contact.social.linkedin);
+              }}>
+              <Linkedin className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() =>
+                sendEmail(
+                  contact.email.personal,
+                  'Professional Inquiry - [Your Name]',
+                )
+              }>
+              <Mail className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='outline'
+              size='icon'
+              onClick={() => {
+                makePhoneCall(contact.phone.mobile);
+              }}>
+              <PhoneCall className='h-4 w-4' />
+            </Button>
+          </div>
+        </section>
+
+        <section id='projects' className='mb-12 scroll-mt-[60px]'>
+          <h2 className='text-3xl font-bold mb-6'>My Projects</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {isLoadingProjects
+              ? Array(3)
+                  .fill(0)
+                  .map((_, index) => <ProjectSkeleton key={index} />)
+              : projects?.map((project) => (
+                  <Card key={project.id}>
+                    <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Image
+                        src={project.images[0] || '/placeholder.svg'}
+                        alt={project.title}
+                        width={400}
+                        height={200}
+                        className='w-full h-48 object-cover rounded-md'
+                      />
+                    </CardContent>
+                    <CardFooter>
+                      <Button onClick={() => setSelectedProject(project)}>
+                        View Project
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+          </div>
+        </section>
+
+        <section id='skills' className='mb-12 scroll-mt-[60px]'>
+          <h2 className='text-3xl font-bold mb-6'>Skills & Technologies</h2>
+          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
+            {isLoadingSkills
+              ? Array(10)
+                  .fill(0)
+                  .map((_, index) => <SkillSkeleton key={index} />)
+              : skills?.map((skill) => (
+                  <div
+                    key={skill.id}
+                    className='flex flex-col items-center p-4 bg-muted rounded-lg'>
+                    <Image
+                      src={skill.icon || '/placeholder.svg'}
+                      alt={skill.name}
+                      width={48}
+                      height={48}
+                      className='mb-2'
+                    />
+                    <span className='text-sm font-medium'>{skill.name}</span>
+                  </div>
+                ))}
+          </div>
+        </section>
+
+        <section id='articles' className='mb-12 scroll-mt-[60px]'>
+          <h2 className='text-3xl font-bold mb-6'>My Articles</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {isLoadingArticles
+              ? Array(3)
+                  .fill(0)
+                  .map((_, index) => <ArticleSkeleton key={index} />)
+              : articles?.map((article) => (
+                  <Card key={article.id}>
+                    <CardHeader>
+                      <CardTitle>{article.title}</CardTitle>
+                      <CardDescription>{article.description}</CardDescription>
+                    </CardHeader>
+                    <CardFooter>
+                      <Button asChild onClick={() => openWebUrl(article.url)}>
+                        <span className='cursor-pointer'>
+                          Read More <ExternalLink className='ml-2 h-4 w-4' />
+                        </span>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+          </div>
+        </section>
       </main>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Image
-            aria-hidden
-            src='/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Image
-            aria-hidden
-            src='/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Image
-            aria-hidden
-            src='/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className='border-t p-6 text-center text-muted-foreground'>
+        <p>&copy; 2025 Sivantha Paranavithana. All rights reserved.</p>
       </footer>
+
+      {selectedProject && (
+        <ProjectDialog
+          project={selectedProject}
+          onClose={() => setSelectedProject(undefined)}
+        />
+      )}
     </div>
   );
 }

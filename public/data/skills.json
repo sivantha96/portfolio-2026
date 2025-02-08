@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "JavaScript", "icon": "/icons/javascript.svg" },
+  { "id": 2, "name": "TypeScript", "icon": "/icons/typescript.svg" },
+  { "id": 3, "name": "React", "icon": "/icons/react.svg" },
+  { "id": 4, "name": "Next.js", "icon": "/icons/nextjs.svg" },
+  { "id": 5, "name": "Node.js", "icon": "/icons/nodejs.svg" },
+  { "id": 6, "name": "Angular", "icon": "/icons/angular.svg" },
+  { "id": 7, "name": "Docker", "icon": "/icons/docker.svg" },
+  { "id": 8, "name": "AWS", "icon": "/icons/aws.svg" },
+  { "id": 9, "name": "Nest.js", "icon": "/icons/nestjs.svg" }
+]
