@@ -1,11 +1,33 @@
 [
-  { "id": 1, "name": "JavaScript", "icon": "/icons/javascript.svg" },
-  { "id": 2, "name": "TypeScript", "icon": "/icons/typescript.svg" },
+  { "id": 1, "name": "TypeScript", "icon": "/icons/typescript.svg" },
+  { "id": 2, "name": "JavaScript", "icon": "/icons/javascript.svg" },
+
   { "id": 3, "name": "React", "icon": "/icons/react.svg" },
-  { "id": 4, "name": "Next.js", "icon": "/icons/nextjs.svg" },
-  { "id": 5, "name": "Node.js", "icon": "/icons/nodejs.svg" },
-  { "id": 6, "name": "Angular", "icon": "/icons/angular.svg" },
-  { "id": 7, "name": "Docker", "icon": "/icons/docker.svg" },
-  { "id": 8, "name": "AWS", "icon": "/icons/aws.svg" },
-  { "id": 9, "name": "Nest.js", "icon": "/icons/nestjs.svg" }
+  { "id": 4, "name": "React Native", "icon": "/icons/react-native.svg" },
+  { "id": 5, "name": "Angular", "icon": "/icons/angular.svg" },
+  { "id": 6, "name": "Next.js", "icon": "/icons/nextjs.svg" },
+
+  { "id": 7, "name": "Node.js", "icon": "/icons/nodejs.svg" },
+  { "id": 8, "name": "Express.js", "icon": "/icons/express.svg" },
+  { "id": 9, "name": "Nest.js", "icon": "/icons/nestjs.svg" },
+
+  { "id": 10, "name": "MongoDB", "icon": "/icons/mongodb.svg" },
+  { "id": 11, "name": "MySQL", "icon": "/icons/mysql.svg" },
+
+  { "id": 12, "name": "Mongoose", "icon": "/icons/mongoose.svg" },
+  { "id": 13, "name": "Sequelize", "icon": "/icons/sequelize.svg" },
+
+  { "id": 14, "name": "Jest", "icon": "/icons/jest.svg" },
+  { "id": 15, "name": "Cypress", "icon": "/icons/cypress.svg" },
+
+  { "id": 16, "name": "GitHub Actions", "icon": "/icons/github-actions.svg" },
+  {
+    "id": 17,
+    "name": "GitLab Pipelines",
+    "icon": "/icons/gitlab-pipelines.svg"
+  },
+
+  { "id": 18, "name": "Git", "icon": "/icons/git.svg" },
+  { "id": 18, "name": "Docker", "icon": "/icons/docker.svg" },
+  { "id": 19, "name": "AWS", "icon": "/icons/aws.svg" }
 ]
