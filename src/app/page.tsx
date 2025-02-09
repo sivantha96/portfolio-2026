@@ -10,7 +10,9 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
+import { useMemo, useState } from 'react';
 
 import { about, contact } from '@/assets/content';
 import { AppHeader } from '@/components/AppHeader';
@@ -19,20 +21,28 @@ import { ContactDialog } from '@/components/ContactDialog';
 import { ProjectDialog } from '@/components/ProjectDialog';
 import { ProjectSkeleton } from '@/components/ProjectSkeleton';
 import { SkillSkeleton } from '@/components/SkillSkeleton';
+import StatCard from '@/components/StatCard';
 import { StructuredData } from '@/components/StructuredData';
 import { Avatar } from '@/components/ui/avatar';
 import { Images } from '@/theme';
 import { Article, Project, Skill } from '@/types';
 import { makePhoneCall, openWebUrl, sendEmail } from '@/utils';
+import { groupBy } from 'lodash';
 import {
   ExternalLink,
   FileDown,
+  GitBranch,
   Github,
+  Lightbulb,
   Linkedin,
   Mail,
   PhoneCall,
+  Trophy,
+  Users2,
 } from 'lucide-react';
 import Image from 'next/image';
+
+dayjs.extend(duration);
 
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project>();
@@ -58,6 +68,11 @@ export default function Portfolio() {
         (res) => res.json() as Promise<Article[]>,
       ),
   });
+
+  const clients = useMemo(
+    () => Object.keys(groupBy(projects, 'client')),
+    [projects],
+  );
 
   return (
     <div className='min-h-screen bg-background text-foreground'>
@@ -129,6 +144,31 @@ export default function Portfolio() {
               }}>
               <PhoneCall className='h-4 w-4' />
             </Button>
+          </div>
+        </section>
+
+        <section className='mb-12'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
+            <StatCard
+              value={dayjs().diff(dayjs(about.experience.start), 'year')}
+              description='Years of Experience'
+              Icon={Lightbulb}
+            />
+            <StatCard
+              value={projects?.length ?? 0}
+              description='Completed Projects'
+              Icon={Trophy}
+            />
+            <StatCard
+              value={clients.length}
+              description='Client Partnerships'
+              Icon={Users2}
+            />
+            <StatCard
+              value={30}
+              description='Open Source Contributions'
+              Icon={GitBranch}
+            />
           </div>
         </section>
 

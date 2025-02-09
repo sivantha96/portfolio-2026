@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   fullDescription: string;
   images: string[];
-  codeSnippet: string;
+  codeSnippet?: string;
 }
 
 export interface Skill {

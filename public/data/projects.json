@@ -1,38 +1,252 @@
 [
   {
     "id": 1,
-    "title": "E-commerce Platform",
-    "description": "A full-stack e-commerce solution with React and Node.js",
-    "fullDescription": "This e-commerce platform was built to provide a seamless shopping experience for users. It features a responsive design, user authentication, product catalog, shopping cart, and secure checkout process.\n\nThe frontend was developed using React and Next.js, providing a fast and interactive user interface. The backend uses Node.js with Express, connected to a MongoDB database for efficient data storage and retrieval.\n\nOne of the key challenges was implementing a real-time inventory management system to prevent overselling. This was achieved using WebSockets to update product availability across all active user sessions.",
-    "images": [
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300"
-    ],
-    "codeSnippet": "// Real-time inventory update\nsocket.on('inventoryUpdate', (data) => {\n  const { productId, newQuantity } = data;\n  setProducts(prevProducts => \n    prevProducts.map(product => \n      product.id === productId \n        ? { ...product, quantity: newQuantity } \n        : product\n    )\n  );\n});"
+    "title": "EatMe Admin Panel",
+    "year": "2025",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A comprehensive full-stack administration dashboard that provides centralized control over restaurant management, user permissions, and system configurations. Features include real-time analytics, user management, and customizable reporting tools.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
   },
   {
     "id": 2,
-    "title": "Task Management App",
-    "description": "A collaborative task manager with real-time updates",
-    "fullDescription": "This task management application was designed to streamline team collaboration and project organization. It allows users to create, assign, and track tasks in real-time, enhancing team productivity.\n\nThe app was built using a modern tech stack including React for the frontend, GraphQL for efficient data querying, and PostgreSQL for robust data storage. Real-time updates were implemented using GraphQL subscriptions.\n\nA major focus was placed on the user experience, with intuitive drag-and-drop interfaces for task management and a clean, responsive design that works seamlessly across desktop and mobile devices.",
-    "images": [
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300"
-    ],
-    "codeSnippet": "// GraphQL subscription for real-time task updates\nconst TASK_UPDATED_SUBSCRIPTION = gql`\n  subscription OnTaskUpdated {\n    taskUpdated {\n      id\n      title\n      status\n      assignee {\n        id\n        name\n      }\n    }\n  }\n`;\n\nuseSubscription(TASK_UPDATED_SUBSCRIPTION, {\n  onSubscriptionData: ({ subscriptionData }) => {\n    const updatedTask = subscriptionData.data.taskUpdated;\n    updateTaskInState(updatedTask);\n  },\n});"
+    "title": "EatMe Payments for Adyen",
+    "year": "2025",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "An integrated payment processing solution utilizing Adyen's gateway to handle multiple payment methods including credit cards, debit cards, and digital wallets. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
   },
   {
     "id": 3,
-    "title": "AI-Powered Chatbot",
-    "description": "An intelligent chatbot for customer support",
-    "fullDescription": "This AI-powered chatbot was developed to provide 24/7 customer support for a large e-commerce platform. It uses natural language processing to understand customer queries and provide accurate, helpful responses.\n\nThe chatbot was built using Python for the backend, with TensorFlow for the natural language processing model. The frontend interface was created with React, providing a smooth and interactive chat experience.\n\nOne of the most challenging aspects was training the AI model to handle a wide variety of customer queries effectively. This was achieved through extensive training on historical customer support data and continuous learning from new interactions.",
-    "images": [
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300"
-    ],
-    "codeSnippet": "# AI model for intent classification\ndef classify_intent(text):\n    # Preprocess the text\n    tokens = preprocess_text(text)\n    \n    # Convert tokens to model input format\n    model_input = tokenizer.texts_to_sequences([tokens])\n    model_input = pad_sequences(model_input, maxlen=MAX_SEQUENCE_LENGTH)\n    \n    # Predict intent\n    intent_probabilities = model.predict(model_input)[0]\n    predicted_intent = intents[np.argmax(intent_probabilities)]\n    \n    return predicted_intent"
+    "title": "EatMe BackOffice",
+    "year": "2024",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A robust full-stack application designed for restaurant owners to manage their operations efficiently. Includes inventory tracking, staff management, financial reporting, and performance analytics with customizable dashboards.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 4,
+    "title": "EatMe Kiosk",
+    "year": "2024",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A user-friendly mobile application optimized for self-service kiosk deployment in restaurants. Features include an intuitive ordering interface, customization options, multiple language support, and seamless integration with payment systems.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 5,
+    "title": "EatMe POS",
+    "year": "2024",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A comprehensive cloud-based point of sale system for restaurants featuring order management, table service tracking, inventory control, and real-time sales reporting. Includes offline functionality and multi-device synchronization.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 6,
+    "title": "EatMe Payments for Stripe",
+    "year": "2024",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A secure payment processing platform integrated with Stripe gateway, supporting various payment methods including cards and digital wallets. Features include payment analytics, automated refunds, and detailed transaction history.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 7,
+    "title": "Janashakthi InsureConnect",
+    "year": "2024",
+    "client": "LOLC",
+    "company": "EchonLabs",
+    "description": "A comprehensive mobile application for insurance customers featuring policy management, claim submissions, payment processing, and document storage. Includes real-time notifications and direct communication with insurance agents.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 8,
+    "title": "e-Assessor",
+    "year": "2023",
+    "client": "Kelsey",
+    "company": "EchonLabs",
+    "description": "A cross-platform mobile solution for insurance assessors to manage vehicle inspections and claims. Features include photo documentation, damage assessment tools, automated report generation, and offline functionality.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 9,
+    "title": "EatMe Merchant App",
+    "year": "2023",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A comprehensive mobile application for restaurant management, enabling owners to process orders, track delivery status, and handle payments. Features include real-time order updates, inventory management, and sales analytics.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 10,
+    "title": "ArchivEL",
+    "year": "2022",
+    "client": "EchonLabs",
+    "company": "EchonLabs",
+    "description": "A sophisticated document management system featuring advanced search capabilities, version control, automated indexing, and secure storage. Includes OCR functionality, document workflow automation, and access control management.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 11,
+    "title": "Base Neo",
+    "year": "2022",
+    "client": "EchonLabs",
+    "company": "EchonLabs",
+    "description": "A scalable ERP system built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 12,
+    "title": "CredenEL",
+    "year": "2022",
+    "client": "EchonLabs",
+    "company": "EchonLabs",
+    "description": "A comprehensive identity and access management system providing secure authentication, role-based access control, and user lifecycle management. Includes SSO integration, multi-factor authentication, and detailed audit logging.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 13,
+    "title": "EatMe Consumer Web",
+    "year": "2022",
+    "client": "EatMe",
+    "company": "EatMe",
+    "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalized recommendations, payment processing, and order history management.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 14,
+    "title": "LOLC Customer Portal",
+    "year": "2022",
+    "client": "LOLC",
+    "company": "EchonLabs",
+    "description": "An integrated web portal and mobile app for insurance customers to manage their policies, submit claims, and track payments. Features include document upload, policy comparisons, and automated renewal notifications.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 15,
+    "title": "Personalized Greeting System",
+    "year": "2022",
+    "client": "Janashathi",
+    "company": "EchonLabs",
+    "description": "An innovative mobile application utilizing facial recognition technology to display personalized greetings on kiosk displays at events. Features include real-time face detection, customizable greeting templates, and analytics tracking.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 16,
+    "title": "Writer Watch (AKA ReaderScout) Chrome Extension",
+    "year": "2022",
+    "client": "Surge",
+    "company": "Surge",
+    "description": "A powerful Chrome extension for authors to monitor their Amazon book performance metrics in real-time. Features include sales tracking, ranking analysis, review monitoring, and competitive market insights.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 17,
+    "title": "XLife",
+    "year": "2022",
+    "client": "XL Axiata",
+    "company": "ADL",
+    "description": "A comprehensive employee super app providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 18,
+    "title": "Audiobook Portal",
+    "year": "2021",
+    "client": "EchonLabs",
+    "company": "EchonLabs",
+    "description": "An accessible audiobook platform designed for visually impaired users featuring text-to-speech conversion, customizable playback controls, and library management. Includes bookmark synchronization and progress tracking.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 19,
+    "title": "Cityzen Kelzey",
+    "year": "2021",
+    "client": "Kelsey",
+    "company": "EchonLabs",
+    "description": "A sophisticated web application for condominium management featuring unit pricing calculations, maintenance scheduling, and resident communications. Includes payment processing, facility booking, and automated billing.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 20,
+    "title": "Genie Admin Portal",
+    "year": "2021",
+    "client": "Dialog Axiata",
+    "company": "ADL",
+    "description": "A comprehensive administration platform for Dialog Axiata's digital wallet service featuring transaction management, user administration, and reporting tools. Includes fraud detection and compliance monitoring.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 21,
+    "title": "Janashakthi Life",
+    "year": "2021",
+    "client": "LOLC",
+    "company": "EchonLabs",
+    "description": "A self-service mobile application for life insurance customers featuring policy management, premium payments, and claim submissions. Includes document storage, beneficiary management, and policy illustrations.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 22,
+    "title": "Janashakthi Protech",
+    "year": "2021",
+    "client": "LOLC",
+    "company": "EchonLabs",
+    "description": "An interactive web platform for insurance policy exploration and purchase featuring product comparisons, premium calculators, and online applications. Includes document upload, payment processing, and status tracking.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 23,
+    "title": "NCell Payment Gateway",
+    "year": "2021",
+    "client": "NCell",
+    "company": "ADL",
+    "description": "A comprehensive payment platform for NCell's telco services featuring e-top ups, bill payments, and product purchases. Includes transaction monitoring, automated reconciliation, and integration with multiple payment providers.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 24,
+    "title": "NCell Gifting Platform",
+    "year": "2020",
+    "client": "NCell",
+    "company": "ADL",
+    "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalized messaging, scheduled gifting, and integration with NCell's billing system.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
+  },
+  {
+    "id": 25,
+    "title": "URL Shortener",
+    "year": "2020",
+    "client": "EchonLabs",
+    "company": "EchonLabs",
+    "description": "A feature-rich URL shortening service with link protection and monetization capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
+    "fullDescription": "",
+    "images": ["https://picsum.photos/200/300"]
   }
 ]

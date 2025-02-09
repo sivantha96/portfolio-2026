@@ -6,16 +6,8 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Project } from '@/types';
 import Image from 'next/image';
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  fullDescription: string;
-  images: string[];
-  codeSnippet: string;
-}
 
 interface ProjectDialogProps {
   project: Project;
@@ -46,9 +38,11 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
               ))}
             </div>
             <p>{project.fullDescription.split('\n\n')[1]}</p>
-            <pre className='bg-muted p-4 rounded-md overflow-x-auto'>
-              <code>{project.codeSnippet}</code>
-            </pre>
+            {project.codeSnippet && (
+              <pre className='bg-muted p-4 rounded-md overflow-x-auto'>
+                <code>{project.codeSnippet}</code>
+              </pre>
+            )}
             <p>{project.fullDescription.split('\n\n')[2]}</p>
             {project.images[2] && (
               <Image
