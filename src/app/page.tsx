@@ -1,14 +1,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
@@ -24,6 +16,16 @@ import { SkillSkeleton } from '@/components/SkillSkeleton';
 import StatCard from '@/components/StatCard';
 import { StructuredData } from '@/components/StructuredData';
 import { Avatar } from '@/components/ui/avatar';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Timeline, TimelineEvent } from '@/components/ui/timeline';
 import { Images } from '@/theme';
 import { Article, Project, Skill } from '@/types';
 import { makePhoneCall, openWebUrl, sendEmail } from '@/utils';
@@ -59,6 +61,14 @@ export default function Portfolio() {
     queryKey: ['skills'],
     queryFn: () =>
       fetch('/data/skills.json').then((res) => res.json() as Promise<Skill[]>),
+  });
+
+  const { isPending: isLoadingTimeline, data: timelineEvents } = useQuery({
+    queryKey: ['timeline'],
+    queryFn: () =>
+      fetch('/data/timeline.json').then(
+        (res) => res.json() as Promise<TimelineEvent[]>,
+      ),
   });
 
   const { isPending: isLoadingArticles, data: articles } = useQuery({
@@ -202,6 +212,24 @@ export default function Portfolio() {
                   </Card>
                 ))}
           </div>
+        </section>
+
+        <section id='timeline' className='mb-12 scroll-mt-[60px]'>
+          <h2 className='text-3xl font-bold mb-6'>My Journey</h2>
+          {isLoadingTimeline ? (
+            <div className='space-y-4'>
+              {Array(3)
+                .fill(0)
+                .map((_, index) => (
+                  <Skeleton key={index} className='h-32 w-full' />
+                ))}
+            </div>
+          ) : (
+            <div className='relative'>
+              <div className='absolute left-4 top-0 bottom-0 w-[2px] bg-primary -translate-x-1/2 md:left-1/2'></div>
+              <Timeline events={timelineEvents} />
+            </div>
+          )}
         </section>
 
         <section id='skills' className='mb-12 scroll-mt-[60px]'>

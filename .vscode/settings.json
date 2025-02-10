@@ -1,5 +1,14 @@
 {
-  "cSpell.words": ["paranavithana", "sivantha", "sonarjs", "sonner", "Svgs"],
+  "cSpell.words": [
+    "Axiata",
+    "Echon",
+    "Jayewardenepura",
+    "paranavithana",
+    "sivantha",
+    "sonarjs",
+    "sonner",
+    "Svgs"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit",

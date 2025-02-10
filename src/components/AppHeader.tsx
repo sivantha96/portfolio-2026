@@ -51,6 +51,13 @@ export const AppHeader = () => {
         className='w-full justify-start'
         asChild
         onClick={handleCloseSheet}>
+        <a href='#timeline'>Timeline</a>
+      </Button>
+      <Button
+        variant='ghost'
+        className='w-full justify-start'
+        asChild
+        onClick={handleCloseSheet}>
         <a href='#articles'>Articles</a>
       </Button>
     </>
