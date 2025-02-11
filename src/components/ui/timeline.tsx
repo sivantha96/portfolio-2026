@@ -6,7 +6,6 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -68,10 +67,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
         className={`mb-8 flex justify-between items-center w-full ${
           isLeft ? 'flex-row-reverse' : ''
         }`}>
-        <div
-          className={`w-full md:w-5/12 ${
-            isLeft ? 'text-right' : ''
-          } ml-5 md:ml-0`}>
+        <div className={`w-full md:w-5/12 ml-5 md:ml-0`}>
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -124,7 +120,7 @@ const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
     );
 
     const [expandedYears, setExpandedYears] = useState<string[]>([
-      sortedYears[0],
+      Object.keys(groupedEvents)[0],
     ]);
 
     const toggleYear = (year: string) => {
@@ -153,18 +149,17 @@ const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
             <div className='absolute h-full' style={{ left: '50%' }}></div>
             {sortedYears.map((year) => (
               <div key={year} className='mb-10 relative'>
-                <Button
-                  size='sm'
-                  variant='outline'
-                  className='-left-4 md:-translate-x-1/2 z-30 mb-8 relative transform-none md:left-1/2 rounded-full border-current py-0'
-                  onClick={() => toggleYear(year)}>
+                <Badge
+                  onClick={() => toggleYear(year)}
+                  variant='default'
+                  className='-left-4 md:-translate-x-1/2 z-30 mb-8 relative transform-none md:left-1/2 text-xs rounded-full cursor-pointer'>
                   {year}{' '}
                   {expandedYears.includes(year) ? (
                     <ChevronUp size={16} className='ml-2' />
                   ) : (
                     <ChevronDown size={16} className='ml-2' />
                   )}
-                </Button>
+                </Badge>
                 <AnimatePresence>
                   {expandedYears.includes(year) && (
                     <motion.div

@@ -35,12 +35,12 @@ import {
   FileDown,
   GitBranch,
   Github,
+  Handshake,
   Lightbulb,
   Linkedin,
   Mail,
   PhoneCall,
   Trophy,
-  Users2,
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -172,7 +172,7 @@ export default function Portfolio() {
             <StatCard
               value={clients.length}
               description='Client Partnerships'
-              Icon={Users2}
+              Icon={Handshake}
             />
             <StatCard
               value={30}

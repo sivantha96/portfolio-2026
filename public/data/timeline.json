@@ -6,26 +6,13 @@
     "description": "Began Bachelor of Science in Computer Science at University of Sri Jayewardenepura",
     "type": "education"
   },
+
   {
-    "id": 2,
-    "title": "Started at EchonLabs",
-    "date": "2020",
-    "description": "Started as Part-time Software Engineer. Was responsible for full-stack web application development with MEAN stack.",
+    "id": 7,
+    "title": "Completed Internship at Axiata Digital Labs",
+    "date": "2021",
+    "description": "Successfully completed internship after contributing to multiple enterprise client projects.",
     "type": "work"
-  },
-  {
-    "id": 3,
-    "title": "Started Internship at Axiata Digital Labs",
-    "date": "2020",
-    "description": "Began internship focused on Angular development for enterprise clients. Worked with NgRx, NgXs, and various testing tools.",
-    "type": "work"
-  },
-  {
-    "id": 4,
-    "title": "URL Shortener",
-    "date": "2020",
-    "description": "First Angular project. Developed both frontend and backend, managing 2000+ shortened URLs. Led team of 5 junior developers during revamp.",
-    "type": "project"
   },
   {
     "id": 5,
@@ -42,25 +29,33 @@
     "type": "project"
   },
   {
-    "id": 7,
-    "title": "Completed Internship at Axiata Digital Labs",
-    "date": "2021",
-    "description": "Successfully completed internship after contributing to multiple enterprise client projects.",
+    "id": 3,
+    "title": "Started Internship at Axiata Digital Labs",
+    "date": "2020",
+    "description": "Began internship focused on Angular development for enterprise clients. Worked with NgRx, NgXs, and various testing tools.",
     "type": "work"
   },
   {
-    "id": 8,
-    "title": "Left EchonLabs",
-    "date": "2021",
-    "description": "Completed part-time role after successfully leading multiple development teams and implementing various full-stack solutions.",
+    "id": 2,
+    "title": "Started at EchonLabs",
+    "date": "2020",
+    "description": "Started as Part-time Software Engineer. Was responsible for full-stack web application development with MEAN stack.",
     "type": "work"
   },
   {
-    "id": 9,
-    "title": "Started Full-time at Axiata Digital Labs",
+    "id": 4,
+    "title": "URL Shortener",
+    "date": "2020",
+    "description": "First Angular project. Developed both frontend and backend, managing 2000+ shortened URLs. Led team of 5 junior developers during revamp.",
+    "type": "project"
+  },
+
+  {
+    "id": 12,
+    "title": "XLife Super App",
     "date": "2021",
-    "description": "Joined as full-time Software Engineer focusing on React Native and Angular development for enterprise solutions.",
-    "type": "work"
+    "description": "Frontend Mobile Engineer for XL Axiata Indonesia's employee super app. Built with React Native and Redux-Saga. Serving 2500+ daily users.",
+    "type": "project"
   },
   {
     "id": 10,
@@ -68,20 +63,6 @@
     "date": "2021",
     "description": "Completed Bachelor of Science in Computer Science at University of Sri Jayewardenepura",
     "type": "education"
-  },
-  {
-    "id": 11,
-    "title": "Genie Admin Portal",
-    "date": "2021",
-    "description": "Developed modules for Dialog Axiata's digital wallet admin portal using NgRx with Angular.",
-    "type": "project"
-  },
-  {
-    "id": 12,
-    "title": "XLife Super App",
-    "date": "2021",
-    "description": "Frontend Mobile Engineer for XL Axiata Indonesia's employee super app. Built with React Native and Redux-Saga. Serving 2500+ daily users.",
-    "type": "project"
   },
   {
     "id": 13,
@@ -105,11 +86,26 @@
     "type": "project"
   },
   {
-    "id": 16,
-    "title": "Left Axiata Digital Labs",
-    "date": "2022",
-    "description": "Completed tenure after successfully delivering multiple enterprise applications and leading development teams.",
+    "id": 11,
+    "title": "Genie Admin Portal",
+    "date": "2021",
+    "description": "Developed modules for Dialog Axiata's digital wallet admin portal using NgRx with Angular.",
+    "type": "project"
+  },
+  {
+    "id": 9,
+    "title": "Started Full-time at Axiata Digital Labs",
+    "date": "2021",
+    "description": "Joined as full-time Software Engineer focusing on React Native and Angular development for enterprise solutions.",
     "type": "work"
+  },
+
+  {
+    "id": 21,
+    "title": "EatMe Consumer Web",
+    "date": "2022",
+    "description": "Feature-rich web application for restaurant ordering with real-time delivery tracking.",
+    "type": "project"
   },
   {
     "id": 17,
@@ -119,33 +115,13 @@
     "type": "work"
   },
   {
-    "id": 18,
-    "title": "ArchivEL",
+    "id": 16,
+    "title": "Left Axiata Digital Labs",
     "date": "2022",
-    "description": "Document management system with advanced search, version control, OCR, and workflow automation.",
-    "type": "project"
+    "description": "Completed tenure after successfully delivering multiple enterprise applications and leading development teams.",
+    "type": "work"
   },
-  {
-    "id": 19,
-    "title": "Base Neo",
-    "date": "2022",
-    "description": "Scalable ERP system with modular architecture, customizable workflows, and business intelligence reporting.",
-    "type": "project"
-  },
-  {
-    "id": 20,
-    "title": "CredenEL",
-    "date": "2022",
-    "description": "Identity and access management system with SSO, MFA, and audit logging capabilities.",
-    "type": "project"
-  },
-  {
-    "id": 21,
-    "title": "EatMe Consumer Web",
-    "date": "2022",
-    "description": "Feature-rich web application for restaurant ordering with real-time delivery tracking.",
-    "type": "project"
-  },
+
   {
     "id": 22,
     "title": "LOLC Customer Portal",
@@ -168,12 +144,42 @@
     "type": "project"
   },
   {
+    "id": 18,
+    "title": "ArchivEL",
+    "date": "2022",
+    "description": "Document management system with advanced search, version control, OCR, and workflow automation.",
+    "type": "project"
+  },
+  {
+    "id": 20,
+    "title": "CredenEL",
+    "date": "2022",
+    "description": "Identity and access management system with SSO, MFA, and audit logging capabilities.",
+    "type": "project"
+  },
+  {
+    "id": 19,
+    "title": "Base Neo",
+    "date": "2022",
+    "description": "Scalable ERP system with modular architecture, customizable workflows, and business intelligence reporting.",
+    "type": "project"
+  },
+
+  {
     "id": 25,
     "title": "EatMe Merchant App",
     "date": "2023",
     "description": "Mobile application for restaurant management with order processing and analytics.",
     "type": "project"
   },
+  {
+    "id": 25,
+    "title": "EatMe Kiosk App",
+    "date": "2023",
+    "description": "Mobile application optimized for self-service kiosk deployment in restaurants",
+    "type": "project"
+  },
+
   {
     "id": 26,
     "title": "EatMe BackOffice",
@@ -195,18 +201,19 @@
     "description": "Payment processing platform with Stripe integration and payment analytics.",
     "type": "project"
   },
-  {
-    "id": 29,
-    "title": "EatMe Admin Panel",
-    "date": "2025",
-    "description": "Full-stack administration dashboard with real-time analytics and user management.",
-    "type": "project"
-  },
+
   {
     "id": 30,
     "title": "EatMe Payments for Adyen",
     "date": "2025",
     "description": "Payment processing solution with Adyen integration and transaction monitoring.",
+    "type": "project"
+  },
+  {
+    "id": 29,
+    "title": "EatMe Admin Panel",
+    "date": "2025",
+    "description": "Full-stack administration dashboard with real-time analytics and user management.",
     "type": "project"
   }
 ]
