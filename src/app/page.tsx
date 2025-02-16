@@ -263,7 +263,7 @@ export default function Portfolio() {
               : skills?.map((skill) => (
                   <div
                     key={skill.id}
-                    className='flex flex-col items-center p-4 bg-muted rounded-lg'>
+                    className='flex flex-col items-center p-4 bg-muted rounded-[calc(var(--radius)*1rem)]'>
                     <Image
                       src={skill.icon || '/placeholder.svg'}
                       alt={skill.name}

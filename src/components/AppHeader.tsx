@@ -1,12 +1,10 @@
-import { Menu, Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { Menu } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
+import { ThemeCustomizer } from './ThemeCustomizer';
 import { Button } from './ui/button';
 import { Sheet, SheetContent } from './ui/sheet';
 
 export const AppHeader = () => {
-  const { setTheme, theme } = useTheme();
-
   const [mounted, setMounted] = useState(false);
   const [sheetOpened, setSheetOpen] = useState(false);
 
@@ -76,21 +74,7 @@ export const AppHeader = () => {
             </div>
           </nav>
           <div className='flex items-center space-x-2'>
-            {mounted && (
-              <Button
-                variant='ghost'
-                size='icon'
-                aria-label='Toggle Theme'
-                className='mr-2'
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                <span className='sr-only'>Toggle theme</span>
-                {mounted && theme === 'dark' ? (
-                  <Sun className='h-6 w-6' />
-                ) : (
-                  <Moon className='h-6 w-6' />
-                )}
-              </Button>
-            )}
+            {mounted && <ThemeCustomizer />}
             <Button
               variant='ghost'
               size='icon'

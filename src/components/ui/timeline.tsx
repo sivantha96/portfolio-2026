@@ -71,7 +71,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className='bg-card rounded-lg border shadow-md p-3'>
+            className='bg-card rounded-[calc(var(--radius)*1rem)] border shadow-md p-3'>
             <Card className='border-0 shadow-none'>
               <CardHeader className='p-2 pb-1'>
                 <div className='flex justify-between items-start'>
@@ -92,7 +92,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
             </Card>
           </motion.div>
         </div>
-        <div className='z-20 flex items-center justify-center bg-primary shadow-sm w-6 h-6 rounded-full -ml-3 md:ml-0'>
+        <div className='z-20 flex items-center justify-center bg-primary shadow-sm w-6 h-6 rounded-[calc(var(--radius)*2rem)] -ml-3 md:ml-0'>
           <div className='text-primary-foreground'>{icon}</div>
         </div>
         <div className='hidden md:flex md:w-5/12'></div>
@@ -152,7 +152,7 @@ const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
                 <Badge
                   onClick={() => toggleYear(year)}
                   variant='default'
-                  className='-left-4 md:-translate-x-1/2 z-30 mb-8 relative transform-none md:left-1/2 text-xs rounded-full cursor-pointer'>
+                  className='-left-4 md:-translate-x-1/2 z-30 mb-8 relative transform-none md:left-1/2 text-xs cursor-pointer'>
                   {year}{' '}
                   {expandedYears.includes(year) ? (
                     <ChevronUp size={16} className='ml-2' />
