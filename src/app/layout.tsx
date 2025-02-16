@@ -90,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
+        <link rel='canonical' href='https://sivantha.com' />
         <link
           rel='icon'
           type='image/png'
