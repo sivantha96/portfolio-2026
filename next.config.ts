@@ -2,7 +2,69 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  webpack(config) {
+  reactStrictMode: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-dialog'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config) => {
+    // Optimize bundle size
+    config.optimization = {
+      ...config.optimization,
+      moduleIds: 'deterministic',
+      chunkIds: 'named',
+      splitChunks: {
+        chunks: 'all',
+        maxInitialRequests: 25,
+        minSize: 20000,
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          commons: {
+            name: 'commons',
+            chunks: 'all',
+            minChunks: 2,
+            reuseExistingChunk: true,
+          },
+          shared: {
+            name: (module: any) => {
+              const name = module
+                .identifier()
+                .split('/')
+                .reduceRight((item: string) => item)
+                .replace(/\.[^/.]+$/, '')
+                .toLowerCase();
+              return `shared-${name}`;
+            },
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'async',
+            enforce: true,
+            priority: 10,
+          },
+        },
+      },
+      runtimeChunk: 'single',
+    };
+
+    // Add case-sensitive module resolution
+    config.resolve = {
+      ...config.resolve,
+      symlinks: false,
+      cacheWithContext: false,
+    };
+
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule: any) =>
       rule.test?.test?.('.svg'),
@@ -29,24 +91,6 @@ const nextConfig: NextConfig = {
 
     return config;
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-        search: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'dev.to',
-        port: '',
-        pathname: '/**',
-        search: '',
-      },
-    ],
-  },
   async redirects() {
     return [
       {
@@ -67,12 +111,12 @@ const nextConfig: NextConfig = {
             type: 'host',
             value: 'sivantha.com',
           },
-        ],
-        condition: {
-          headers: {
-            'x-forwarded-proto': 'http',
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
           },
-        },
+        ],
         destination: 'https://sivantha.com/:path*',
         permanent: true,
       },

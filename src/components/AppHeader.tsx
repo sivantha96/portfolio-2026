@@ -94,6 +94,7 @@ export const AppHeader = () => {
             <Button
               variant='ghost'
               size='icon'
+              aria-label='Open Menu'
               className='md:hidden'
               onClick={handleToggleSheet}>
               <Menu className='h-6 w-6 mr-6' />

@@ -4,13 +4,12 @@ import { Button } from '@/components/ui/button';
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
+import dynamic from 'next/dynamic';
 import { useMemo, useState } from 'react';
 
 import { about, contact } from '@/assets/content';
 import { AppHeader } from '@/components/AppHeader';
 import { ArticleSkeleton } from '@/components/ArticleSkeleton';
-import { ContactDialog } from '@/components/ContactDialog';
-import { ProjectDialog } from '@/components/ProjectDialog';
 import { ProjectSkeleton } from '@/components/ProjectSkeleton';
 import { SkillSkeleton } from '@/components/SkillSkeleton';
 import StatCard from '@/components/StatCard';
@@ -43,6 +42,22 @@ import {
   Trophy,
 } from 'lucide-react';
 import Image from 'next/image';
+
+const ContactDialog = dynamic(
+  () => import('@/components/ContactDialog').then((mod) => mod.ContactDialog),
+  {
+    ssr: false,
+    loading: () => <Button>Loading...</Button>,
+  },
+);
+
+const ProjectDialog = dynamic(
+  () => import('@/components/ProjectDialog').then((mod) => mod.ProjectDialog),
+  {
+    ssr: false,
+    loading: () => null,
+  },
+);
 
 dayjs.extend(duration);
 
@@ -98,6 +113,8 @@ export default function Portfolio() {
                 width={100}
                 height={100}
                 className='rounded-full'
+                priority
+                loading='eager'
               />
             </Avatar>
 
@@ -122,6 +139,7 @@ export default function Portfolio() {
             <Button
               variant='outline'
               size='icon'
+              aria-label='Visit GitHub Profile'
               onClick={() => {
                 openWebUrl(contact.social.github);
               }}>
@@ -130,6 +148,7 @@ export default function Portfolio() {
             <Button
               variant='outline'
               size='icon'
+              aria-label='Visit LinkedIn Profile'
               onClick={() => {
                 openWebUrl(contact.social.linkedin);
               }}>
@@ -138,6 +157,7 @@ export default function Portfolio() {
             <Button
               variant='outline'
               size='icon'
+              aria-label='Send Email'
               onClick={() =>
                 sendEmail(
                   contact.email.personal,
@@ -149,6 +169,7 @@ export default function Portfolio() {
             <Button
               variant='outline'
               size='icon'
+              aria-label='Call Phone Number'
               onClick={() => {
                 makePhoneCall(contact.phone.mobile);
               }}>
