@@ -90,6 +90,22 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const radius = localStorage.getItem('radius') || '0.5';
+                const color = localStorage.getItem('color') || 'zinc';
+                document.documentElement.style.setProperty('--radius', radius);
+                document.documentElement.classList.add('theme-' + color);
+
+                const theme = localStorage.getItem('theme') || 'system';
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.classList.add(theme === 'system' ? systemTheme : theme);
+              })();
+            `,
+          }}
+        />
         <link rel='canonical' href='https://sivantha.com' />
         <link
           rel='icon'

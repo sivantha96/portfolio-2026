@@ -102,18 +102,21 @@ const radiusOptions: RadiusOption[] = [
 export function ThemeCustomizer() {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
-  const [radius, setRadius] = useState('0.5');
-  const [activeColor, setActiveColor] = useState('zinc');
+  const [radius, setRadius] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('radius') || '0.5';
+    }
+    return '0.5';
+  });
+  const [activeColor, setActiveColor] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('color') || 'zinc';
+    }
+    return 'zinc';
+  });
 
   useEffect(() => {
     setMounted(true);
-    // Get saved radius from localStorage
-    const savedRadius = localStorage.getItem('radius') || '0.5';
-    const savedColor = localStorage.getItem('color') || 'zinc';
-    setRadius(savedRadius);
-    setActiveColor(savedColor);
-    document.documentElement.style.setProperty('--radius', savedRadius);
-    document.documentElement.classList.add(`theme-${savedColor}`);
   }, []);
 
   const handleColorChange = (colorTheme: Theme) => {

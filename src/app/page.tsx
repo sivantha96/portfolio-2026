@@ -47,7 +47,7 @@ const ContactDialog = dynamic(
   () => import('@/components/ContactDialog').then((mod) => mod.ContactDialog),
   {
     ssr: false,
-    loading: () => <Button>Loading...</Button>,
+    loading: () => <Button>Contact Me</Button>,
   },
 );
 

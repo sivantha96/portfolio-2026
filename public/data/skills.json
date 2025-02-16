@@ -28,6 +28,6 @@
   },
 
   { "id": 18, "name": "Git", "icon": "/icons/git.svg" },
-  { "id": 18, "name": "Docker", "icon": "/icons/docker.svg" },
-  { "id": 19, "name": "AWS", "icon": "/icons/aws.svg" }
+  { "id": 19, "name": "Docker", "icon": "/icons/docker.svg" },
+  { "id": 20, "name": "AWS", "icon": "/icons/aws.svg" }
 ]
