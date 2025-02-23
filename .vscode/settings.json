@@ -1,14 +1,26 @@
 {
   "cSpell.words": [
+    "adyen",
+    "ArchivEL",
     "Axiata",
+    "CredenEL",
     "Customizer",
+    "eatme",
     "Echon",
+    "insureconnect",
+    "Janashakthi",
     "Jayewardenepura",
+    "LOLC",
+    "ncell",
     "paranavithana",
+    "Protech",
+    "readerscout",
     "sivantha",
     "sonarjs",
     "sonner",
-    "Svgs"
+    "Svgs",
+    "telco",
+    "xlife"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",

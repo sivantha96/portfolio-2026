@@ -120,7 +120,7 @@ const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
     );
 
     const [expandedYears, setExpandedYears] = useState<string[]>([
-      Object.keys(groupedEvents)[0],
+      Object.keys(groupedEvents)[Object.keys(groupedEvents).length - 1],
     ]);
 
     const toggleYear = (year: string) => {
