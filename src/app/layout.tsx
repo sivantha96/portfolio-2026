@@ -106,7 +106,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <link rel='canonical' href='https://sivantha.com' />
+        <link rel='canonical' href='https://sivantha.com/' />
         <link
           rel='icon'
           type='image/png'
