@@ -28,8 +28,8 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
             <div className='grid grid-cols-2 gap-4'>
               {project.images.slice(0, 2).map((img, index) => (
                 <Image
-                  width={400}
-                  height={200}
+                  width={1600}
+                  height={1200}
                   key={index}
                   src={img || '/placeholder.svg'}
                   alt={`Project image ${index + 1}`}
@@ -46,8 +46,8 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
             <p>{project.fullDescription.split('\n\n')[2]}</p>
             {project.images[2] && (
               <Image
-                width={400}
-                height={200}
+                width={1600}
+                height={1200}
                 src={project.images[2] || '/placeholder.svg'}
                 alt='Project image 3'
                 className='w-full h-auto rounded-md'
