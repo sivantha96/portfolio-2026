@@ -1,4 +1,11 @@
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -23,36 +30,52 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
           <DialogDescription>{project.description}</DialogDescription>
         </DialogHeader>
         <ScrollArea className='h-full pr-4'>
-          <div className='space-y-4'>
-            <p>{project.fullDescription.split('\n\n')[0]}</p>
-            <div className='grid grid-cols-2 gap-4'>
-              {project.images.slice(0, 2).map((img, index) => (
+          <div className='space-t-4'>
+            <p className='mb-4'>{project.fullDescription.split('\n\n')[0]}</p>
+
+            {project.images.length > 1 ? (
+              <Carousel
+                className='w-full mb-4 relative px-16'
+                orientation='horizontal'>
+                <CarouselContent>
+                  {project.images.slice(1).map((img, index) => (
+                    <CarouselItem
+                      key={index}
+                      className='sm:basis-1/1 md:basis-1/2 lg:basis-1/3'>
+                      <div className='flex aspect-[16/12] items-center justify-center'>
+                        <Image
+                          width={700}
+                          height={1200}
+                          src={img || '/placeholder.svg'}
+                          alt={`Project image ${index + 2}`}
+                          className='w-full h-auto rounded-md'
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            ) : (
+              project.images.length === 1 && (
                 <Image
                   width={1600}
                   height={1200}
-                  key={index}
-                  src={img || '/placeholder.svg'}
-                  alt={`Project image ${index + 1}`}
+                  src={project.images[0] || '/placeholder.svg'}
+                  alt='Project image 1'
                   className='w-full h-auto rounded-md'
                 />
-              ))}
+              )
+            )}
+            <div className='space-y-4'>
+              {project.fullDescription
+                .split('\n\n')
+                .slice(1)
+                .map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
             </div>
-            <p>{project.fullDescription.split('\n\n')[1]}</p>
-            {project.codeSnippet && (
-              <pre className='bg-muted p-4 rounded-md overflow-x-auto'>
-                <code>{project.codeSnippet}</code>
-              </pre>
-            )}
-            <p>{project.fullDescription.split('\n\n')[2]}</p>
-            {project.images[2] && (
-              <Image
-                width={1600}
-                height={1200}
-                src={project.images[2] || '/placeholder.svg'}
-                alt='Project image 3'
-                className='w-full h-auto rounded-md'
-              />
-            )}
           </div>
         </ScrollArea>
       </DialogContent>
