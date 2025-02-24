@@ -95,6 +95,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.sivantha.com',
+          },
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
         destination: 'https://sivantha.com/:path*',
         permanent: true,
       },
