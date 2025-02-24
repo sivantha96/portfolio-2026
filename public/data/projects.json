@@ -7,7 +7,7 @@
     "company": "EatMe",
     "description": "A comprehensive full-stack administration dashboard that provides centralized control over restaurant management, user permissions, and system configurations. Features include real-time analytics, user management, and customizable reporting tools.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-admin.svg"]
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "company": "EatMe",
     "description": "An integrated payment processing solution utilizing Adyen's gateway to handle multiple payment methods including credit cards, debit cards, and digital wallets. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-adyen-payments.svg"]
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "company": "EatMe",
     "description": "A robust full-stack application designed for restaurant owners to manage their operations efficiently. Includes inventory tracking, staff management, financial reporting, and performance analytics with customizable dashboards.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-backoffice.svg"]
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "company": "EatMe",
     "description": "A user-friendly mobile application optimized for self-service kiosk deployment in restaurants. Features include an intuitive ordering interface, customization options, multiple language support, and seamless integration with payment systems.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-kiosk-app.svg"]
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "company": "EatMe",
     "description": "A comprehensive cloud-based point of sale system for restaurants featuring order management, table service tracking, inventory control, and real-time sales reporting. Includes offline functionality and multi-device synchronization.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-pos-app.svg"]
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "company": "EatMe",
     "description": "A secure payment processing platform integrated with Stripe gateway, supporting various payment methods including cards and digital wallets. Features include payment analytics, automated refunds, and detailed transaction history.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-stripe-payments.svg"]
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "company": "EchonLabs",
     "description": "A comprehensive mobile application for insurance customers featuring policy management, claim submissions, payment processing, and document storage. Includes real-time notifications and direct communication with insurance agents.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/janashakthi-insureconnect.svg"]
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "company": "EchonLabs",
     "description": "A cross-platform mobile solution for insurance assessors to manage vehicle inspections and claims. Features include photo documentation, damage assessment tools, automated report generation, and offline functionality.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/janashakthi-e-assessor.svg"]
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "company": "EatMe",
     "description": "A comprehensive mobile application for restaurant management, enabling owners to process orders, track delivery status, and handle payments. Features include real-time order updates, inventory management, and sales analytics.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-merchant-app.svg"]
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "company": "EchonLabs",
     "description": "A sophisticated document management system featuring advanced search capabilities, version control, automated indexing, and secure storage. Includes OCR functionality, document workflow automation, and access control management.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/el-archivel.svg"]
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "company": "EchonLabs",
     "description": "A scalable ERP system built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/el-base-neo.svg"]
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "company": "EchonLabs",
     "description": "A comprehensive identity and access management system providing secure authentication, role-based access control, and user lifecycle management. Includes SSO integration, multi-factor authentication, and detailed audit logging.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/el-credenel.svg"]
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "company": "EatMe",
     "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalized recommendations, payment processing, and order history management.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/eatme-consumer-web.svg"]
   },
   {
     "id": 14,
@@ -137,17 +137,17 @@
     "company": "EchonLabs",
     "description": "An integrated web portal and mobile app for insurance customers to manage their policies, submit claims, and track payments. Features include document upload, policy comparisons, and automated renewal notifications.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/lolc-customer-portal.svg"]
   },
   {
     "id": 15,
     "title": "Personalized Greeting System",
     "year": "2022",
-    "client": "Janashathi",
+    "client": "Janashakthi",
     "company": "EchonLabs",
     "description": "An innovative mobile application utilizing facial recognition technology to display personalized greetings on kiosk displays at events. Features include real-time face detection, customizable greeting templates, and analytics tracking.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/janashakthi-pgs.svg"]
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "company": "Surge",
     "description": "A powerful Chrome extension for authors to monitor their Amazon book performance metrics in real-time. Features include sales tracking, ranking analysis, review monitoring, and competitive market insights.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/writer-watch.svg"]
   },
   {
     "id": 17,
@@ -167,27 +167,17 @@
     "company": "ADL",
     "description": "A comprehensive employee super app providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
-  },
-  {
-    "id": 18,
-    "title": "Audiobook Portal",
-    "year": "2021",
-    "client": "EchonLabs",
-    "company": "EchonLabs",
-    "description": "An accessible audiobook platform designed for visually impaired users featuring text-to-speech conversion, customizable playback controls, and library management. Includes bookmark synchronization and progress tracking.",
-    "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/xlife.svg"]
   },
   {
     "id": 19,
-    "title": "Cityzen Kelzey",
+    "title": "Kelzey CMS",
     "year": "2021",
     "client": "Kelsey",
     "company": "EchonLabs",
     "description": "A sophisticated web application for condominium management featuring unit pricing calculations, maintenance scheduling, and resident communications. Includes payment processing, facility booking, and automated billing.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/kelsey-cms.svg"]
   },
   {
     "id": 20,
@@ -197,7 +187,7 @@
     "company": "ADL",
     "description": "A comprehensive administration platform for Dialog Axiata's digital wallet service featuring transaction management, user administration, and reporting tools. Includes fraud detection and compliance monitoring.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/genie-admin.svg"]
   },
   {
     "id": 21,
@@ -207,7 +197,7 @@
     "company": "EchonLabs",
     "description": "A self-service mobile application for life insurance customers featuring policy management, premium payments, and claim submissions. Includes document storage, beneficiary management, and policy illustrations.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/janashakthi-life.svg"]
   },
   {
     "id": 22,
@@ -217,7 +207,7 @@
     "company": "EchonLabs",
     "description": "An interactive web platform for insurance policy exploration and purchase featuring product comparisons, premium calculators, and online applications. Includes document upload, payment processing, and status tracking.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/janashakthi-protech.svg"]
   },
   {
     "id": 23,
@@ -227,7 +217,7 @@
     "company": "ADL",
     "description": "A comprehensive payment platform for NCell's telco services featuring e-top ups, bill payments, and product purchases. Includes transaction monitoring, automated reconciliation, and integration with multiple payment providers.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/ncell-payment-gateway.svg"]
   },
   {
     "id": 24,
@@ -237,7 +227,7 @@
     "company": "ADL",
     "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalized messaging, scheduled gifting, and integration with NCell's billing system.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/ncell-gifting.svg"]
   },
   {
     "id": 25,
@@ -247,6 +237,6 @@
     "company": "EchonLabs",
     "description": "A feature-rich URL shortening service with link protection and monetization capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
     "fullDescription": "",
-    "images": ["https://picsum.photos/200/300"]
+    "images": ["/images/el-url-shortener.svg"]
   }
 ]

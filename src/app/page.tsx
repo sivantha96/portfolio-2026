@@ -10,6 +10,7 @@ import { useMemo, useState } from 'react';
 import { about, contact } from '@/assets/content';
 import { AppHeader } from '@/components/AppHeader';
 import { ArticleSkeleton } from '@/components/ArticleSkeleton';
+import ProjectCard from '@/components/ProjectCard';
 import { ProjectSkeleton } from '@/components/ProjectSkeleton';
 import { SkillSkeleton } from '@/components/SkillSkeleton';
 import StatCard from '@/components/StatCard';
@@ -17,7 +18,6 @@ import { StructuredData } from '@/components/StructuredData';
 import { Avatar } from '@/components/ui/avatar';
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -211,26 +211,11 @@ export default function Portfolio() {
                   .fill(0)
                   .map((_, index) => <ProjectSkeleton key={index} />)
               : projects?.map((project) => (
-                  <Card key={project.id}>
-                    <CardHeader>
-                      <CardTitle>{project.title}</CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Image
-                        src={project.images[0] || '/placeholder.svg'}
-                        alt={project.title}
-                        width={400}
-                        height={200}
-                        className='w-full h-48 object-cover rounded-md'
-                      />
-                    </CardContent>
-                    <CardFooter>
-                      <Button onClick={() => setSelectedProject(project)}>
-                        View Project
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                  <ProjectCard
+                    key={project.id}
+                    data={project}
+                    onPress={() => setSelectedProject(project)}
+                  />
                 ))}
           </div>
         </section>
