@@ -4,14 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "format:fix": "prettier --write .",
     "format": "prettier --check .",
     "lint:fix": "eslint . --fix",
     "lint": "next lint",
     "postinstall": "husky || true",
-    "postbuild": "next-sitemap",
     "prepare": "husky",
     "typecheck": "tsc --noEmit"
   },
