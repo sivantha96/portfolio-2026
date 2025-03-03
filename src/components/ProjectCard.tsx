@@ -63,7 +63,7 @@ function ProjectCard({ data, onPress }: ProjectCardProps) {
         <CardDescription>{data.description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className='relative w-full aspect-[4/3]'>
+        <div className='relative w-full aspect-4/3'>
           <Image
             src={currentImage || '/placeholder.svg'}
             alt={data.title}

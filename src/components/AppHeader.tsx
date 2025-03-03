@@ -62,7 +62,7 @@ export const AppHeader = () => {
   );
 
   return (
-    <header className='sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center'>
+    <header className='sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 flex justify-center'>
       <div className='container flex h-14 items-center mx-auto px-6'>
         <div className='mr-4 ml-6 md:ml-0 flex'>
           <h1 className='text-2xl font-bold'>sivantha.com</h1>

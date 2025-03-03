@@ -42,7 +42,7 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
                     <CarouselItem
                       key={index}
                       className='sm:basis-1/1 md:basis-1/2 lg:basis-1/3'>
-                      <div className='flex aspect-[16/12] items-center justify-center'>
+                      <div className='flex aspect-16/12 items-center justify-center'>
                         <Image
                           width={700}
                           height={1200}

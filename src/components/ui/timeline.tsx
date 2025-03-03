@@ -92,7 +92,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
             </Card>
           </motion.div>
         </div>
-        <div className='z-20 flex items-center justify-center bg-primary shadow-sm w-6 h-6 rounded-[calc(var(--radius)*2rem)] -ml-3 md:ml-0'>
+        <div className='z-20 flex items-center justify-center bg-primary shadow-xs w-6 h-6 rounded-[calc(var(--radius)*2rem)] -ml-3 md:ml-0'>
           <div className='text-primary-foreground'>{icon}</div>
         </div>
         <div className='hidden md:flex md:w-5/12'></div>
