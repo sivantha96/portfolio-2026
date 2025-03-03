@@ -1,8 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { NextConfig } from 'next';
 
+// Import bundle analyzer
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  productionBrowserSourceMaps: process.env.NODE_ENV !== 'production',
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -14,7 +22,12 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-dialog'],
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-dialog',
+      'framer-motion',
+      'lodash',
+    ],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -27,8 +40,9 @@ const nextConfig: NextConfig = {
       chunkIds: 'named',
       splitChunks: {
         chunks: 'all',
-        maxInitialRequests: 25,
-        minSize: 20000,
+        maxInitialRequests: 10, // Reduced from 25
+        minSize: 50000, // Increased from 20000
+        maxSize: 200000, // Added maximum size
         cacheGroups: {
           default: false,
           vendors: false,
@@ -138,8 +152,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value:
-              'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+            value: 'camera=(), microphone=(), geolocation=()',
           },
         ],
       },
@@ -147,4 +160,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Export with bundle analyzer wrapper
+export default withBundleAnalyzer(nextConfig);

@@ -1,4 +1,14 @@
+# *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_error
+Disallow: /404
+Disallow: /500
 
-Sitemap: https://www.sivantha.com/sitemap.xml
+# Host
+Host: https://sivantha.com
+
+# Sitemaps
+Sitemap: https://sivantha.com/sitemap.xml

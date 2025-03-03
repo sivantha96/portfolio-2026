@@ -19,8 +19,9 @@ export const useImageLoadingStore = create<ImageLoadingState>((set, get) => ({
   unregisterWebP: (path: string) => {
     const { pendingWebP } = get();
     pendingWebP.delete(path);
+
     set({ pendingWebP, allWebPLoaded: pendingWebP.size === 0 });
   },
 
-  allWebPLoaded: true,
+  allWebPLoaded: false,
 }));
