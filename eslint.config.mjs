@@ -57,7 +57,13 @@ const eslintConfig = [
       'sonarjs/no-duplicate-string': 'off',
       'react-hooks/exhaustive-deps': 'error',
       'no-console': 'warn',
-      // '@next/next/no-img-element': 'error',
+
+      'no-unused-vars': [
+        'error',
+        {
+          args: 'none',
+        },
+      ],
       '@typescript-eslint/no-restricted-imports': [
         'error',
         {

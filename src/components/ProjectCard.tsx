@@ -1,3 +1,4 @@
+import { useImageLoadingStore } from '@/stores/imageLoadingStore';
 import { Project } from '@/types';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -18,21 +19,40 @@ type ProjectCardProps = {
 
 function ProjectCard({ data, onPress }: ProjectCardProps) {
   const [currentImage, setCurrentImage] = useState<string>('');
+  const { registerWebP, unregisterWebP, allWebPLoaded } =
+    useImageLoadingStore();
   const webpImage = data.images[0].replace('.svg', '.webp');
   const svgImage = data.images[0];
 
   useEffect(() => {
+    // Register this WebP image
+    registerWebP(webpImage);
+
     // Start with WebP image
     setCurrentImage(webpImage);
 
-    // Preload SVG
-    const svgLoader = new window.Image();
-    svgLoader.src = svgImage;
-    svgLoader.onload = () => {
-      // Once SVG is loaded, switch to it
-      setCurrentImage(svgImage);
+    // Create an image element to track WebP loading
+    const webpLoader = new window.Image();
+    webpLoader.src = webpImage;
+    webpLoader.onload = () => {
+      // Unregister this WebP image once loaded
+      unregisterWebP(webpImage);
+
+      // Only load SVG if all other WebP images are loaded
+      if (allWebPLoaded) {
+        const svgLoader = new window.Image();
+        svgLoader.src = svgImage;
+        svgLoader.onload = () => {
+          setCurrentImage(svgImage);
+        };
+      }
     };
-  }, [webpImage, svgImage]);
+
+    return () => {
+      // Cleanup: unregister the WebP image if component unmounts before loading
+      unregisterWebP(webpImage);
+    };
+  }, [webpImage, svgImage, registerWebP, unregisterWebP, allWebPLoaded]);
 
   return (
     <Card>
