@@ -77,7 +77,9 @@ const styles = `
     margin-bottom: 7px;
     line-height: 1.45;
     word-break: break-all;
+    text-decoration: none;
   }
+  .ci:hover { opacity: .75; }
   .ci svg { width: 12px; height: 12px; flex-shrink: 0; margin-top: 1px; opacity: .5; }
 
   .lc-list { display: flex; flex-direction: column; gap: 5px; }
@@ -185,6 +187,17 @@ const styles = `
   .edu-det { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 2px; }
   .edu-yr { font-size: 11px; color: hsl(var(--muted-foreground)); white-space: nowrap; flex-shrink: 0; margin-left: 14px; margin-top: 2px; }
 
+  .notable-grid { display: flex; flex-direction: column; gap: 7px; }
+  .notable-card {
+    border-left: 3px solid hsl(var(--primary));
+    padding: 7px 12px;
+    background: hsl(var(--muted) / 0.5);
+    border-radius: 0 6px 6px 0;
+  }
+  .notable-name { font-size: 12px; font-weight: 600; color: hsl(var(--primary)); margin-bottom: 2px; }
+  .notable-desc { font-size: 11.5px; color: hsl(var(--muted-foreground)); line-height: 1.55; }
+  .notable-footer { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 8px; font-style: italic; }
+
   /* On viewports narrower than the natural page width, fix cv-page at its
      design width and let JS apply a CSS zoom so the full layout is visible. */
   @media screen and (max-width: 959px) {
@@ -267,19 +280,35 @@ const CVContent = forwardRef<HTMLDivElement>((_, ref) => {
             <div className='sb-label'>Contact</div>
             {(
               [
-                [ICONS.pin, contact.country],
-                [ICONS.email, contact.email.personal],
-                [ICONS.phone, phone],
-                [ICONS.globe, website],
-                [ICONS.link, linkedin],
-                [ICONS.link, github],
-              ] as [string, string][]
-            ).map(([path, val]) => (
-              <div className='ci' key={val}>
-                <SvgIcon path={path} />
-                {val}
-              </div>
-            ))}
+                [ICONS.pin, contact.country, null],
+                [
+                  ICONS.email,
+                  contact.email.personal,
+                  `mailto:${contact.email.personal}`,
+                ],
+                [ICONS.phone, phone, `tel:${contact.phone.mobile}`],
+                [ICONS.globe, website, contact.social.website],
+                [ICONS.link, linkedin, contact.social.linkedin],
+                [ICONS.link, github, contact.social.github],
+              ] as [string, string, string | null][]
+            ).map(([path, val, href]) =>
+              href ? (
+                <a
+                  className='ci'
+                  key={val}
+                  href={href}
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  <SvgIcon path={path} />
+                  {val}
+                </a>
+              ) : (
+                <div className='ci' key={val}>
+                  <SvgIcon path={path} />
+                  {val}
+                </div>
+              ),
+            )}
           </div>
 
           <div className='sb-divider' />
@@ -365,6 +394,21 @@ const CVContent = forwardRef<HTMLDivElement>((_, ref) => {
                 <span className='edu-yr'>{e.period}</span>
               </div>
             ))}
+          </section>
+
+          <section>
+            <div className='sh'>Notable Projects</div>
+            <div className='notable-grid'>
+              {about.notable.map((n) => (
+                <div className='notable-card' key={n.name}>
+                  <div className='notable-name'>{n.name}</div>
+                  <div className='notable-desc'>{n.desc}</div>
+                </div>
+              ))}
+            </div>
+            <p className='notable-footer'>
+              Visit sivantha.com to see more projects and full details.
+            </p>
           </section>
         </main>
       </div>
