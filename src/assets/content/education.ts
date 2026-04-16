@@ -11,6 +11,6 @@ export const education: EducationEntry[] = [
     institution: 'University of Sri Jayewardenepura, Sri Lanka',
     period: '2016 – 2021',
     detail:
-      'GPA: 3.6 · Specialisation: Computer Science, Mathematics & Statistics',
+      'GPA: 3.6 · Specialization: Computer Science, Mathematics & Statistics',
   },
 ];

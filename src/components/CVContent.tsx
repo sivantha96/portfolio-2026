@@ -185,11 +185,29 @@ const styles = `
   .edu-det { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 2px; }
   .edu-yr { font-size: 11px; color: hsl(var(--muted-foreground)); white-space: nowrap; flex-shrink: 0; margin-left: 14px; margin-top: 2px; }
 
+  /* On viewports narrower than the natural page width, fix cv-page at its
+     design width and let JS apply a CSS zoom so the full layout is visible. */
+  @media screen and (max-width: 959px) {
+    .cv-shell {
+      padding: 0 0 40px;
+      overflow: hidden;
+    }
+    .cv-page {
+      width: 920px;
+      max-width: none;
+      border-radius: 0;
+      zoom: var(--cv-zoom, 1);
+      transform-origin: top left;
+    }
+  }
+
   @media print {
     .cv-shell { background: white; padding: 0; min-height: unset; }
     .cv-page {
       max-width: 100%;
       width: 100%;
+      /* Force desktop two-column layout regardless of viewport width */
+      grid-template-columns: 236px 1fr !important;
       box-shadow: none;
       border-radius: 0;
       overflow: visible;
