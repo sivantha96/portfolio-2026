@@ -1,21 +1,19 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import pluginQuery from '@tanstack/eslint-plugin-query';
+import coreWebVitals from 'eslint-config-next/core-web-vitals';
+import nextTypescript from 'eslint-config-next/typescript';
 import eslintPluginPrettierRecommended from 'eslint-config-prettier';
 import etcPlugin from 'eslint-plugin-etc';
-import importPlugin from 'eslint-plugin-import';
 import prettierPlugin from 'eslint-plugin-prettier';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+// Reuse the import and react-hooks plugin instances already registered by eslint-config-next
+// to avoid "cannot redefine plugin" errors in ESLint flat config.
+const importPlugin = coreWebVitals.find((c) => c.plugins?.import)?.plugins
+  ?.import;
+const reactHooksPlugin = coreWebVitals.find((c) => c.plugins?.['react-hooks'])
+  ?.plugins?.['react-hooks'];
 
 const eslintConfig = [
   {
@@ -28,12 +26,14 @@ const eslintConfig = [
     ],
   },
   ...pluginQuery.configs['flat/recommended'],
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...coreWebVitals,
+  ...nextTypescript,
   js.configs.recommended,
   eslintPluginPrettierRecommended,
   {
     plugins: {
       'react-refresh': reactRefreshPlugin,
+      'react-hooks': reactHooksPlugin,
       prettier: prettierPlugin,
       import: importPlugin,
       sonarjs: sonarjsPlugin,

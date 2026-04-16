@@ -2,7 +2,6 @@ import { useImageLoadingStore } from '@/stores/imageLoadingStore';
 import { Project } from '@/types';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Button } from './ui/button';
 import {
   Card,
   CardContent,
@@ -17,22 +16,19 @@ type ProjectCardProps = {
   onPress: () => void;
 };
 
-function ProjectCard({ data, onPress }: ProjectCardProps) {
-  const [currentImage, setCurrentImage] = useState<string>('');
-  const { registerWebP, unregisterWebP, allWebPLoaded } =
-    useImageLoadingStore();
+function ProjectCard({ data }: ProjectCardProps) {
   const webpImage = useMemo(() => data.images[0], [data.images]);
   const svgImage = useMemo(
     () => data.images[0].replace('.webp', '.svg'),
     [data.images],
   );
+  const [currentImage, setCurrentImage] = useState<string>(webpImage);
+  const { registerWebP, unregisterWebP, allWebPLoaded } =
+    useImageLoadingStore();
 
   useEffect(() => {
     // Register this WebP image
     registerWebP(webpImage);
-
-    // Start with WebP image
-    setCurrentImage(webpImage);
 
     return () => {
       // Cleanup: unregister the WebP image if component unmounts before loading
@@ -78,9 +74,7 @@ function ProjectCard({ data, onPress }: ProjectCardProps) {
           />
         </div>
       </CardContent>
-      <CardFooter>
-        <Button onClick={onPress}>View Project</Button>
-      </CardFooter>
+      <CardFooter></CardFooter>
     </Card>
   );
 }

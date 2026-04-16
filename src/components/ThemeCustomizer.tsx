@@ -11,7 +11,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { TimerResetIcon as Reset } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface Theme {
   name: string;
@@ -100,7 +100,6 @@ const radiusOptions: RadiusOption[] = [
 ];
 
 export function ThemeCustomizer() {
-  const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [radius, setRadius] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -115,10 +114,6 @@ export function ThemeCustomizer() {
     return 'zinc';
   });
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const handleColorChange = (colorTheme: Theme) => {
     document.documentElement.classList.remove(
       ...themes.map((t) => t.className),
@@ -127,8 +122,6 @@ export function ThemeCustomizer() {
     setActiveColor(colorTheme.name);
     localStorage.setItem('color', colorTheme.name);
   };
-
-  if (!mounted) return null;
 
   return (
     <Dialog>

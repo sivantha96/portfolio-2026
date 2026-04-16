@@ -10,6 +10,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  turbopack: {},
   productionBrowserSourceMaps: process.env.NODE_ENV !== 'production',
   images: {
     formats: ['image/avif', 'image/webp'],
