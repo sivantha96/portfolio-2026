@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 import dynamic from 'next/dynamic';
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 import { about, contact } from '@/assets/content';
 import { AppHeader } from '@/components/AppHeader';
@@ -130,7 +130,7 @@ export default function Portfolio() {
                 <Button
                   variant='outline'
                   onClick={() => window.open('/cv', '_blank')}>
-                  <FileDown className='mr-2 h-4 w-4' /> Download CV
+                  <FileDown className='h-4 w-4' /> Download CV
                 </Button>
               </div>
             </div>

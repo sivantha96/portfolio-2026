@@ -191,6 +191,7 @@ const styles = `
     .cv-shell {
       padding: 0 0 40px;
       overflow: hidden;
+      min-height: unset;
     }
     .cv-page {
       width: 920px;

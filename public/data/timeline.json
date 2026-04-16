@@ -80,7 +80,7 @@
     "id": 12,
     "title": "Janashakthi Life",
     "date": "2021",
-    "description": "React Native engineer for Janashakthi's life insurance self-service app. Built policy management, premium payment, claim submission, and document storage features.",
+    "description": "React Native engineer for Janashakthi's life insurance self-service app. App achieved 25K+ downloads. Built policy management, premium payment, claim submission, and document storage features.",
     "type": "project"
   },
   {
@@ -94,34 +94,34 @@
     "id": 18,
     "title": "Base Neo",
     "date": "2022",
-    "description": "Architected and built the BaseNeo ERP framework from scratch as the sole engineer. A modular MEAN stack platform that now powers 20+ production applications across the EchonLabs portfolio.",
+    "description": "Architected and built the BaseNeo ERP framework from scratch, directing a small team of engineers. A modular MEAN stack platform that now powers 20+ production applications across the EchonLabs portfolio.",
     "type": "project"
   },
   {
     "id": 19,
     "title": "ArchivEL",
     "date": "2022",
-    "description": "Tech lead and architect for a Google Drive-like document management system. Built OCR, version control, workflow automation, and access control. Also integrated with the BaseNeo framework.",
+    "description": "Tech lead and architect for a Google Drive-like document management system. Built OCR, version control, workflow automation, and access control — integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
     "id": 20,
     "title": "CredenEL",
     "date": "2022",
-    "description": "Tech lead and architect for an identity and access management system featuring SSO, MFA, RBAC, and audit logging. Also integrated with the BaseNeo framework.",
+    "description": "Tech lead and architect for an identity and access management system featuring SSO, MFA, RBAC, and audit logging — integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
     "id": 14,
     "title": "Audiobook Portal",
-    "date": "2022",
+    "date": "2021",
     "description": "Developed an accessible audiobook platform with text-to-speech, playback controls, and library management.",
     "type": "project"
   },
   {
     "id": 15,
     "title": "Kelzey CMS",
-    "date": "2022",
+    "date": "2021",
     "description": "Tech lead and full-stack engineer for Kelsey's condominium management system. Built on the BaseNeo ERP framework. Delivered unit pricing calculations, maintenance scheduling, facility booking, and automated billing.",
     "type": "project"
   },
@@ -129,7 +129,7 @@
     "id": 23,
     "title": "Writer Watch Chrome Extension",
     "date": "2022",
-    "description": "Built a React Chrome extension solo for authors to monitor Amazon book performance metrics in real time such as sales rank, reviews, and competitive insights.",
+    "description": "Built a React Chrome extension solo for authors to monitor Amazon book performance metrics in real time — sales rank, reviews, and competitive insights. Reached 6,000+ users.",
     "type": "project"
   },
   {
@@ -150,7 +150,7 @@
     "id": 21,
     "title": "LOLC Customer Portal",
     "date": "2022",
-    "description": "Tech lead and full-stack engineer for LOLC's insurance customer portal and mobile app. Built policy management, claims, document upload, and automated renewal notifications on the BaseNeo framework.",
+    "description": "Tech lead and full-stack engineer for LOLC's insurance customer portal and mobile app. Mobile app achieved 20K+ downloads. Built policy management, claims, document upload, and automated renewal notifications on the BaseNeo framework.",
     "type": "project"
   },
   {
@@ -184,28 +184,28 @@
   {
     "id": 25,
     "title": "Left EchonLabs",
-    "date": "2024",
+    "date": "2022",
     "description": "Concluded part-time engagement at EchonLabs after two years, having architected the BaseNeo framework and led delivery of multiple enterprise products.",
     "type": "work"
   },
   {
     "id": 26,
     "title": "WooCommerce Payments Plugin",
-    "date": "2024",
+    "date": "2022",
     "description": "Built a WooCommerce PHP plugin to route payments through the Dinetap payments platform. Enables WooCommerce-based merchants to accept payments via the Dinetap ecosystem.",
     "type": "project"
   },
   {
     "id": 28,
     "title": "Dinetap Merchant App",
-    "date": "2024",
+    "date": "2023",
     "description": "Built the full-stack React Native merchant app for restaurant owners. Features real-time order updates via Pusher, inventory management, and sales analytics.",
     "type": "project"
   },
   {
     "id": 29,
     "title": "Dinetap Kiosk App",
-    "date": "2024",
+    "date": "2023",
     "description": "Built the full-stack React Native kiosk app for self-service restaurant ordering. Supports multiple languages, customisation options, and seamless payment terminal integration.",
     "type": "project"
   },
@@ -213,56 +213,57 @@
     "id": 30,
     "title": "Dinetap BackOffice",
     "date": "2024",
-    "description": "Tech lead, architect, and full-stack engineer for the restaurant owner operations portal built with React and Vite. Delivered inventory, staff, financial reporting, and analytics dashboards.",
+    "description": "Tech lead (team of 5), architect, and full-stack engineer for the restaurant owner operations portal built with React and Vite. Delivered inventory, staff, financial reporting, and analytics dashboards.",
     "type": "project"
   },
   {
     "id": 31,
     "title": "Dinetap POS",
     "date": "2024",
-    "description": "Tech lead, architect, and full-stack engineer for a cloud-based, offline-first React Native point-of-sale system. Designed sync conflict resolution across multiple simultaneous devices.",
+    "description": "Tech lead (team of 6), architect, and full-stack engineer for a cloud-based, offline-first React Native point-of-sale system. Designed sync conflict resolution across multiple simultaneous devices.",
     "type": "project"
   },
   {
     "id": 32,
     "title": "Dinetap Payments for Stripe",
     "date": "2024",
-    "description": "Built Stripe payment integration across web, mobile, and physical terminal surfaces. Implemented SQS-based webhook handling, automated refunds, and detailed transaction history.",
+    "description": "Built Stripe payment integration across web, mobile, and physical terminal surfaces. Part of a payments platform now processing over SGD 13.5M per month. Implemented SQS-based webhook handling, automated refunds, and detailed transaction history.",
     "type": "project"
   },
   {
     "id": 34,
     "title": "Promoted to Senior Software Engineer at Dinetap",
     "date": "2025",
-    "description": "Promoted to Senior Software Engineer, taking on full ownership of cloud infrastructure architecture and leading engineering across multiple product streams.",
+    "description": "Promoted to Senior Software Engineer, taking on full ownership of cloud infrastructure architecture and leading a team of 8 engineers across 5+ concurrent product streams.",
     "type": "work"
   },
   {
     "id": 35,
     "title": "AWS Infrastructure Migration",
     "date": "2025",
-    "description": "Designed and provisioned Dinetap's complete AWS cloud infrastructure using CDK. Led the migration from a monolithic EC2 system to a serverless ECS Fargate microservices architecture covering VPC, RDS/Aurora, API Gateway, SQS, Lambda, WAF, EventBridge, and CloudWatch.",
+    "description": "Designed and provisioned Dinetap's complete AWS cloud infrastructure using CDK. Led the migration from a monolithic EC2 system to a serverless ECS Fargate microservices architecture — achieving near-100% uptime, isolating failures to individual services, and reducing infrastructure costs by over 49%.",
     "type": "project"
   },
+
   {
     "id": 37,
     "title": "Dinetap Admin Panel",
     "date": "2025",
-    "description": "Tech lead, architect, and full-stack engineer for Dinetap's centralised administration dashboard built with Next.js. Covers restaurant management, user permissions, real-time analytics, and system configuration.",
+    "description": "Tech lead (team of 4), architect, and full-stack engineer for Dinetap's centralised administration dashboard built with Next.js. Covers restaurant management, user permissions, real-time analytics, and system configuration.",
     "type": "project"
   },
   {
     "id": 38,
     "title": "Dinetap Payments for Adyen",
     "date": "2025",
-    "description": "Tech lead and full-stack engineer for Adyen payment gateway integration with physical terminal support. Built SQS-based webhook event handling and automated reconciliation.",
+    "description": "Tech lead (team of 7) and full-stack engineer for Adyen payment gateway integration with physical terminal support. Part of a payments platform now processing over SGD 13.5M per month. Built SQS-based webhook event handling and automated reconciliation.",
     "type": "project"
   },
   {
     "id": 36,
     "title": "Dinetap App",
     "date": "2025",
-    "description": "Tech lead, architect, and full-stack engineer for the flagship Dinetap consumer app built with React Native Expo. Enables restaurant discovery, table booking, ordering, and payments with cashback rewards.",
+    "description": "Tech lead (team of 6), architect, and full-stack engineer for the flagship Dinetap consumer app built with React Native Expo. Enables restaurant discovery, table booking, ordering, and payments with cashback rewards.",
     "type": "project"
   }
 ]

@@ -1,11 +1,11 @@
 export const cvSkills: Record<string, string[]> = {
   'Leadership & Process': [
-    'Technical Architecture',
     'Team Leadership',
-    'Agile / Scrum',
-    'Code Review',
-    'Stakeholder Management',
+    'Hiring & Onboarding',
     'Engineering Mentoring',
+    'Agile / Scrum',
+    'Stakeholder Management',
+    'Code Review',
   ],
   'Cloud & Infrastructure': [
     'AWS CDK',
@@ -14,11 +14,9 @@ export const cvSkills: Record<string, string[]> = {
     'RDS / Aurora',
     'API Gateway',
     'SQS',
-    'EventBridge',
+    'CloudWatch',
     'WAF',
     'VPC',
-    'CloudWatch',
-    'CloudFormation',
   ],
   'DevOps & Quality': [
     'GitHub Actions',
@@ -27,7 +25,6 @@ export const cvSkills: Record<string, string[]> = {
     'Sentry',
     'SonarQube',
     'Expo EAS',
-    'Cloudflare',
   ],
   'Mobile & Frontend': [
     'React Native',
@@ -37,10 +34,8 @@ export const cvSkills: Record<string, string[]> = {
     'Angular',
     'Redux',
     'Zustand',
-    'Tailwind CSS',
   ],
   'Backend & Data': ['Node.js', 'Express', 'MySQL', 'MongoDB', 'Supabase'],
-  Testing: ['Jest', 'Playwright', 'Cypress', 'Maestro', 'Jasmine'],
   Payments: ['Stripe', 'Adyen', 'Airwallex', 'Terminal Integration'],
   Languages: ['JavaScript', 'TypeScript', 'Python', 'Java'],
 };

@@ -30,25 +30,45 @@ export default function CVPage() {
     if (contentRef.current) {
       const el = contentRef.current;
 
-      // Measure at print width (794px ≈ 210mm) for accurate page height.
+      // Reset CSS zoom before measuring — on mobile the element carries a
+      // viewport-fit zoom that scales scrollHeight, producing an undersized
+      // @page height that causes multi-page output.
+      el.style.zoom = '1';
       el.style.width = '794px';
       el.style.maxWidth = '794px';
       el.style.overflow = 'visible';
       void el.getBoundingClientRect();
-      const heightMm = Math.ceil(el.scrollHeight * 0.264583);
+      const heightPx = el.scrollHeight;
+      const heightMm = Math.ceil(heightPx * 0.264583);
+      el.style.zoom = '';
       el.style.width = '';
       el.style.maxWidth = '';
       el.style.overflow = '';
 
       pageStyleRef.current?.remove();
       const ps = document.createElement('style');
-      ps.textContent = `@page { size: 210mm ${heightMm}mm; margin: 0; }`;
+
+      if (isMobile) {
+        // iOS / Android browsers ignore @page { size }, defaulting to A4
+        // (297 mm). Scale the content so it fits within one A4 page instead.
+        const A4_HEIGHT_MM = 297;
+        const printZoom = Math.min(1, A4_HEIGHT_MM / heightMm);
+        ps.textContent = [
+          '@page { margin: 0; }',
+          '@media print {',
+          `  .cv-page { zoom: ${printZoom.toFixed(4)}; }`,
+          '}',
+        ].join('\n');
+      } else {
+        ps.textContent = `@page { size: 210mm ${heightMm}mm; margin: 0; }`;
+      }
+
       document.head.appendChild(ps);
       pageStyleRef.current = ps;
     }
 
     window.print();
-  }, []);
+  }, [isMobile]);
 
   // Restore theme and clean up @page style after the print dialog closes.
   useEffect(() => {

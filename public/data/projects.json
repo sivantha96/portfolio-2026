@@ -5,14 +5,14 @@
     "year": "2025",
     "client": "Dinetap",
     "company": "Dinetap",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
     "description": "A comprehensive full-stack administration dashboard that provides centralized control over restaurant management, user permissions, and system configurations. Features include real-time analytics, user management, and customizable reporting tools.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire system from scratch \u2014 data models, API design, and frontend architecture",
-      "Led the engineering team end-to-end from planning through to production deployment",
+      "Architected the entire system from scratch — data models, API design, and frontend architecture",
+      "Led a team of 4 engineers end-to-end from planning through to production deployment",
       "Designed role-based access control covering all Dinetap operations and client restaurants",
-      "Built real-time analytics dashboards and customizable reporting tools"
+      "Built real-time analytics dashboards and customisable reporting tools"
     ],
     "technologies": [
       "Next.js",
@@ -31,14 +31,14 @@
     "year": "2025",
     "client": "Dinetap",
     "company": "Dinetap",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
-    "description": "An integrated payment processing solution utilizing Adyen's gateway to handle multiple payment methods including credit cards, debit cards, and digital wallets. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
+    "description": "An integrated payment processing solution utilising Adyen's gateway handling multiple payment methods including credit cards, debit cards, and digital wallets. Part of a payment platform processing over SGD 13.5M per month. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
     "fullDescription": "",
     "highlights": [
-      "Architected the full payment flow \u2014 from checkout initiation through webhook reconciliation",
+      "Architected the full payment flow — from checkout initiation through webhook reconciliation — leading a team of 7 engineers",
       "Integrated Adyen physical terminal support for in-restaurant point-of-sale payments",
-      "Implemented SQS-based event queue to handle all Adyen webhook events reliably",
-      "Led the team through PCI-compliant integration patterns and end-to-end encryption"
+      "Implemented SQS-based event queue to handle all Adyen webhook events reliably at scale",
+      "Part of a payments platform now processing over SGD 13.5M per month across Stripe, Adyen, and WooCommerce"
     ],
     "technologies": [
       "React Native",
@@ -57,12 +57,12 @@
     "year": "2025",
     "client": "Dinetap",
     "company": "Dinetap",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
-    "description": "The flagship Dinetap consumer app making dining seamless \u2014 from discovering nearby restaurants, to booking a table, ordering, and paying all in one place. Diners earn cashback and credits when they prepay. For restaurants, Dinetap acts as both a marketplace and an operations platform.",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
+    "description": "The flagship Dinetap consumer app making dining seamless — from discovering nearby restaurants, to booking a table, ordering, and paying all in one place. Diners earn cashback and credits when they prepay. For restaurants, Dinetap acts as both a marketplace and an operations platform.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire application \u2014 data models, API design, real-time infrastructure, and mobile frontend",
-      "Led the engineering team end-to-end across all feature streams from planning through to production",
+      "Architected the entire application — data models, API design, real-time infrastructure, and mobile frontend",
+      "Led a cross-functional team of 6 engineers end-to-end across all feature streams from planning through to production",
       "Built restaurant discovery, table booking, real-time ordering, and integrated payment flows with cashback/credits system",
       "Designed for high availability on AWS ECS Fargate with Pusher-powered real-time order updates and OneSignal push notifications"
     ],
@@ -88,12 +88,12 @@
     "year": "2024",
     "client": "Dinetap",
     "company": "Dinetap",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
     "description": "A robust full-stack application designed for restaurant owners to manage their operations efficiently. Includes inventory tracking, staff management, financial reporting, and performance analytics with customizable dashboards.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire platform \u2014 system design, database schema, API layer, and frontend",
-      "Led the engineering team from scoping through production release",
+      "Architected the entire platform — system design, database schema, API layer, and frontend",
+      "Led a team of 5 engineers from scoping through production release",
       "Designed a flexible dashboard system allowing restaurant owners to customise their reporting views",
       "Built inventory, staff, and financial management modules with real-time data sync"
     ],
@@ -119,7 +119,7 @@
     "description": "A user-friendly mobile application optimized for self-service kiosk deployment in restaurants. Features include an intuitive ordering interface, customization options, multiple language support, and seamless integration with payment systems.",
     "fullDescription": "",
     "highlights": [
-      "Built the full stack end-to-end \u2014 from kiosk UI through to the backend order processing APIs",
+      "Built the full stack end-to-end — from kiosk UI through to the backend order processing APIs",
       "Engineered multi-language support and accessible UI optimised for large-format touchscreens",
       "Integrated seamlessly with Stripe and Adyen payment terminals",
       "Designed for unattended, always-on deployment with resilient error recovery"
@@ -140,12 +140,12 @@
     "year": "2024",
     "client": "Dinetap",
     "company": "Dinetap",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
     "description": "A comprehensive cloud-based point of sale system for restaurants featuring order management, table service tracking, inventory control, and real-time sales reporting. Includes offline functionality and multi-device synchronization.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire POS system \u2014 offline-first data model, sync conflict resolution strategy, and cloud infrastructure",
-      "Led the engineering team through a complex offline/online synchronisation challenge across multiple simultaneous devices",
+      "Architected the entire POS system — offline-first data model, sync conflict resolution strategy, and cloud infrastructure",
+      "Led a team of 6 engineers through a complex offline/online synchronisation challenge across multiple simultaneous devices",
       "Designed table service workflows, order management, and real-time kitchen display integration",
       "Built against production restaurant environments with zero-downtime deployment requirements"
     ],
@@ -167,13 +167,13 @@
     "client": "Dinetap",
     "company": "Dinetap",
     "role": "Full-Stack Engineer",
-    "description": "A secure payment processing platform integrated with Stripe gateway, supporting various payment methods including cards and digital wallets. Features include payment analytics, automated refunds, and detailed transaction history.",
+    "description": "A secure payment processing platform integrated with Stripe gateway, supporting cards, digital wallets, and physical terminals. Part of a payment platform processing over SGD 13.5M per month. Features payment analytics, automated refunds, and detailed transaction history.",
     "fullDescription": "",
     "highlights": [
       "Integrated Stripe across web, mobile, and physical terminal surfaces",
       "Built automated refund flows and detailed transaction history with reconciliation",
       "Implemented SQS-based webhook event handling to ensure reliable payment state management",
-      "Supported cards, digital wallets, and Stripe Terminal for in-person payments"
+      "Part of a payments platform now processing over SGD 13.5M per month across Stripe, Adyen, and WooCommerce"
     ],
     "technologies": [
       "React Native",
@@ -260,7 +260,7 @@
     "description": "A comprehensive mobile application for restaurant management, enabling owners to process orders, track delivery status, and handle payments. Features include real-time order updates, inventory management, and sales analytics.",
     "fullDescription": "",
     "highlights": [
-      "Built the full stack end-to-end \u2014 mobile app, APIs, and database schema",
+      "Built the full stack end-to-end — mobile app, APIs, and database schema",
       "Implemented real-time order streaming using Pusher for instant kitchen and delivery updates",
       "Built inventory management and sales analytics modules",
       "Integrated with the Stripe payment platform for in-app payment handling"
@@ -282,11 +282,11 @@
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
     "description": "A sophisticated document management system featuring advanced search capabilities, version control, automated indexing, and secure storage. Includes OCR functionality, document workflow automation, and access control management.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire system \u2014 storage architecture, versioning model, workflow engine, and access control design",
+      "Architected the entire system — storage architecture, versioning model, workflow engine, and access control design",
       "Led full-stack engineering from inception to production as the tech lead",
       "Integrated OCR for automated document indexing and full-text search",
       "Built document workflow automation and granular access control, integrated with the BaseNeo framework and CredenEL IAM system"
@@ -307,11 +307,11 @@
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Architect",
-    "description": "A scalable ERP framework built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting. Now powers 20+ production applications.",
+    "role": "Full-Stack Engineer · Architect",
+    "description": "A scalable ERP framework built with a modular architecture, supporting distributed deployment patterns. Features include customisable workflows, real-time data synchronisation, and integrated business intelligence reporting. Now powers 20+ production applications across the EchonLabs portfolio.",
     "fullDescription": "",
     "highlights": [
-      "Designed and built the entire ERP framework from scratch as the sole architect and engineer",
+      "Designed and built the entire ERP framework from scratch as architect and tech lead, directing a small team of engineers",
       "Architected a modular system that other applications (ArchivEL, CredenEL, Kelzey CMS, LOLC Portal) integrate with as a foundation",
       "The framework now underpins 20+ live production applications across EchonLabs' client portfolio",
       "Designed customisable workflow engine, real-time data sync, and BI reporting infrastructure"
@@ -334,11 +334,11 @@
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "role": "Full-Stack Engineer · Tech Lead · Architect",
     "description": "A comprehensive identity and access management system providing secure authentication, role-based access control, and user lifecycle management. Includes SSO integration, multi-factor authentication, and detailed audit logging.",
     "fullDescription": "",
     "highlights": [
-      "Architected the entire IAM system \u2014 authentication flows, RBAC model, SSO integration strategy, and audit logging",
+      "Architected the entire IAM system — authentication flows, RBAC model, SSO integration strategy, and audit logging",
       "Led full-stack engineering as the tech lead, integrated with the BaseNeo framework",
       "Implemented SSO, MFA, and full user lifecycle management",
       "Designed a detailed audit logging system for compliance and security monitoring"
@@ -363,7 +363,7 @@
     "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalised recommendations, payment processing, and order history management.",
     "fullDescription": "",
     "highlights": [
-      "Built the full stack end-to-end \u2014 from React frontend through to Express APIs and database",
+      "Built the full stack end-to-end — from React frontend through to Express APIs and database",
       "Implemented real-time order tracking using Pusher",
       "Integrated Stripe payment processing with full order history management",
       "Built personalised restaurant recommendation engine"
@@ -385,14 +385,14 @@
     "year": "2022",
     "client": "LOLC",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead",
-    "description": "An integrated web portal and mobile app for insurance customers to manage their policies, submit claims, and track payments. Features include document upload, policy comparisons, and automated renewal notifications.",
+    "role": "Full-Stack Engineer · Tech Lead",
+    "description": "An integrated web portal and mobile app for insurance customers to manage their policies, submit claims, and track payments. The mobile app has 20K+ downloads. Features include document upload, policy comparisons, and automated renewal notifications.",
     "fullDescription": "",
     "highlights": [
       "Led full-stack engineering as the tech lead across both web portal and mobile app",
+      "Mobile app achieved 20K+ downloads on the app stores",
       "Built on top of the BaseNeo framework, extending it with insurance-specific modules",
-      "Implemented policy comparison, document upload, and automated renewal notification flows",
-      "Engaged directly with the LOLC client team throughout delivery"
+      "Implemented policy comparison, document upload, and automated renewal notification flows"
     ],
     "technologies": [
       "React Native",
@@ -436,13 +436,13 @@
     "client": "Surge",
     "company": "Surge",
     "role": "Solo Developer",
-    "description": "A powerful Chrome extension for authors to monitor their Amazon book performance metrics in real-time. Features include sales tracking, ranking analysis, review monitoring, and competitive market insights.",
+    "description": "A powerful Chrome extension for authors to monitor their Amazon book performance metrics in real-time. Features include sales tracking, ranking analysis, review monitoring, and competitive market insights. Reached 6,000+ users.",
     "fullDescription": "",
     "highlights": [
-      "Built the entire extension as the sole developer \u2014 from Chrome extension architecture through to the backend API",
+      "Built the entire extension as the sole developer — from Chrome extension architecture through to the backend API",
       "Implemented real-time Amazon data scraping and parsing within extension constraints",
       "Built sales rank tracking, review monitoring, and competitive analysis tooling",
-      "Delivered independently from scoping to release"
+      "Reached 6,000+ users after delivering independently from scoping to release"
     ],
     "technologies": [
       "React",
@@ -481,7 +481,7 @@
     "description": "A WooCommerce plugin enabling merchants to process payments through the Dinetap payments platform. Allows WooCommerce-based restaurant and retail merchants to accept payments via the Dinetap ecosystem directly from their existing WooCommerce store.",
     "fullDescription": "",
     "highlights": [
-      "Built the full plugin solo \u2014 from WooCommerce PHP plugin architecture through to the Dinetap payments API integration",
+      "Built the full plugin solo — from WooCommerce PHP plugin architecture through to the Dinetap payments API integration",
       "Implemented checkout flow, payment status handling, and webhook reconciliation between WooCommerce and Dinetap",
       "Designed for easy merchant onboarding with minimal configuration required",
       "Tested across multiple WooCommerce versions and payment scenarios"
@@ -495,7 +495,7 @@
     "year": "2021",
     "client": "Kelsey",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead",
+    "role": "Full-Stack Engineer · Tech Lead",
     "description": "A sophisticated web application for condominium management featuring unit pricing calculations, maintenance scheduling, and resident communications. Includes payment processing, facility booking, and automated billing.",
     "fullDescription": "",
     "highlights": [
@@ -546,13 +546,13 @@
     "client": "LOLC",
     "company": "EchonLabs",
     "role": "React Native Engineer",
-    "description": "A self-service mobile application for life insurance customers featuring policy management, premium payments, and claim submissions. Includes document storage, beneficiary management, and policy illustrations.",
+    "description": "A self-service mobile application for life insurance customers featuring policy management, premium payments, and claim submissions. The app has 25K+ downloads. Includes document storage, beneficiary management, and policy illustrations.",
     "fullDescription": "",
     "highlights": [
       "Built the mobile application as the React Native engineer",
+      "App achieved 25K+ downloads on the app stores",
       "Implemented policy management, premium payment flows, and claim submissions",
-      "Built document storage, beneficiary management, and policy illustration features",
-      "Integrated with EchonLabs backend infrastructure and BaseNeo framework APIs"
+      "Built document storage, beneficiary management, and policy illustration features"
     ],
     "technologies": [
       "React Native",
@@ -570,7 +570,7 @@
     "year": "2021",
     "client": "LOLC",
     "company": "EchonLabs",
-    "role": "Full-Stack Engineer \u00b7 Tech Lead",
+    "role": "Full-Stack Engineer · Tech Lead",
     "description": "An interactive web platform for insurance policy exploration and purchase featuring product comparisons, premium calculators, and online applications. Includes document upload, payment processing, and status tracking.",
     "fullDescription": "",
     "highlights": [
