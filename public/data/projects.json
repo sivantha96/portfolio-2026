@@ -12,7 +12,7 @@
       "Architected the entire system from scratch — data models, API design, and frontend architecture",
       "Led a team of 4 engineers end-to-end from planning through to production deployment",
       "Designed role-based access control covering all Dinetap operations and client restaurants",
-      "Built real-time analytics dashboards and customisable reporting tools"
+      "Built real-time analytics dashboards and customizable reporting tools"
     ],
     "technologies": [
       "Next.js",
@@ -32,7 +32,7 @@
     "client": "Dinetap",
     "company": "Dinetap",
     "role": "Full-Stack Engineer · Tech Lead · Architect",
-    "description": "An integrated payment processing solution utilising Adyen's gateway handling multiple payment methods including credit cards, debit cards, and digital wallets. Part of a payment platform processing over SGD 13.5M per month. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
+    "description": "An integrated payment processing solution utilizing Adyen's gateway handling multiple payment methods including credit cards, debit cards, and digital wallets. Part of a payment platform processing over SGD 13.5M per month. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
     "fullDescription": "",
     "highlights": [
       "Architected the full payment flow — from checkout initiation through webhook reconciliation — leading a team of 7 engineers",
@@ -94,7 +94,7 @@
     "highlights": [
       "Architected the entire platform — system design, database schema, API layer, and frontend",
       "Led a team of 5 engineers from scoping through production release",
-      "Designed a flexible dashboard system allowing restaurant owners to customise their reporting views",
+      "Designed a flexible dashboard system allowing restaurant owners to customize their reporting views",
       "Built inventory, staff, and financial management modules with real-time data sync"
     ],
     "technologies": [
@@ -120,7 +120,7 @@
     "fullDescription": "",
     "highlights": [
       "Built the full stack end-to-end — from kiosk UI through to the backend order processing APIs",
-      "Engineered multi-language support and accessible UI optimised for large-format touchscreens",
+      "Engineered multi-language support and accessible UI optimized for large-format touchscreens",
       "Integrated seamlessly with Stripe and Adyen payment terminals",
       "Designed for unattended, always-on deployment with resilient error recovery"
     ],
@@ -145,7 +145,7 @@
     "fullDescription": "",
     "highlights": [
       "Architected the entire POS system — offline-first data model, sync conflict resolution strategy, and cloud infrastructure",
-      "Led a team of 6 engineers through a complex offline/online synchronisation challenge across multiple simultaneous devices",
+      "Led a team of 6 engineers through a complex offline/online synchronization challenge across multiple simultaneous devices",
       "Designed table service workflows, order management, and real-time kitchen display integration",
       "Built against production restaurant environments with zero-downtime deployment requirements"
     ],
@@ -308,13 +308,13 @@
     "client": "EchonLabs",
     "company": "EchonLabs",
     "role": "Full-Stack Engineer · Architect",
-    "description": "A scalable ERP framework built with a modular architecture, supporting distributed deployment patterns. Features include customisable workflows, real-time data synchronisation, and integrated business intelligence reporting. Now powers 20+ production applications across the EchonLabs portfolio.",
+    "description": "A scalable ERP framework built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting. Now powers 20+ production applications across the EchonLabs portfolio.",
     "fullDescription": "",
     "highlights": [
       "Designed and built the entire ERP framework from scratch as architect and tech lead, directing a small team of engineers",
       "Architected a modular system that other applications (ArchivEL, CredenEL, Kelzey CMS, LOLC Portal) integrate with as a foundation",
       "The framework now underpins 20+ live production applications across EchonLabs' client portfolio",
-      "Designed customisable workflow engine, real-time data sync, and BI reporting infrastructure"
+      "Designed customizable workflow engine, real-time data sync, and BI reporting infrastructure"
     ],
     "technologies": [
       "Angular",
@@ -360,13 +360,13 @@
     "client": "Dinetap",
     "company": "Dinetap",
     "role": "Full-Stack Engineer",
-    "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalised recommendations, payment processing, and order history management.",
+    "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalized recommendations, payment processing, and order history management.",
     "fullDescription": "",
     "highlights": [
       "Built the full stack end-to-end — from React frontend through to Express APIs and database",
       "Implemented real-time order tracking using Pusher",
       "Integrated Stripe payment processing with full order history management",
-      "Built personalised restaurant recommendation engine"
+      "Built personalized restaurant recommendation engine"
     ],
     "technologies": [
       "React",
@@ -412,12 +412,12 @@
     "client": "Janashakthi",
     "company": "EchonLabs",
     "role": "React Native Engineer",
-    "description": "An innovative mobile application utilising facial recognition technology to display personalised greetings on kiosk displays at events. Features include real-time face detection, customisable greeting templates, and analytics tracking.",
+    "description": "An innovative mobile application utilizing facial recognition technology to display personalized greetings on kiosk displays at events. Features include real-time face detection, customizable greeting templates, and analytics tracking.",
     "fullDescription": "",
     "highlights": [
       "Built the kiosk-facing React Native app as the sole engineer",
       "Integrated real-time facial recognition to identify and greet registered attendees",
-      "Built customisable greeting template system and event analytics dashboard",
+      "Built customizable greeting template system and event analytics dashboard",
       "Deployed on physical kiosk hardware at live Janashakthi events"
     ],
     "technologies": [
@@ -460,11 +460,12 @@
     "client": "XL Axiata",
     "company": "Axiata Digital Labs",
     "role": "React Native Engineer",
-    "description": "A comprehensive employee super app for XL Axiata Indonesia providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates.",
+    "description": "A comprehensive employee super app for XL Axiata Indonesia providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates. Reached 100K+ downloads.",
     "fullDescription": "",
     "highlights": [
       "Worked as a React Native engineer within a cross-functional international team across Indonesia and Sri Lanka",
-      "Integrated a customised Yammer platform into the app using React Native WebView",
+      "App reached 100K+ downloads on the app stores",
+      "Integrated a customized Yammer platform into the app using React Native WebView",
       "Contributed features across leave management, expense tracking, and HR modules",
       "Conducted knowledge transfer sessions on React concepts for team members"
     ],
@@ -614,11 +615,11 @@
     "client": "NCell",
     "company": "Axiata Digital Labs",
     "role": "Angular Frontend Engineer",
-    "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalised messaging, scheduled gifting, and integration with NCell's billing system.",
+    "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalized messaging, scheduled gifting, and integration with NCell's billing system.",
     "fullDescription": "",
     "highlights": [
       "Built the frontend as an Angular engineer during the internship period",
-      "Implemented product catalog, personalised messaging, and scheduled gifting flows",
+      "Implemented product catalog, personalized messaging, and scheduled gifting flows",
       "Integrated with NCell's billing system APIs",
       "Applied lazy-loading, scaffolding patterns, BEM and ITCSS methodology"
     ],
@@ -632,12 +633,12 @@
     "client": "EchonLabs",
     "company": "EchonLabs",
     "role": "Solo Full-Stack Developer",
-    "description": "A feature-rich URL shortening service with link protection and monetisation capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
+    "description": "A feature-rich URL shortening service with link protection and monetization capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
     "fullDescription": "",
     "highlights": [
       "Built the entire platform as the sole full-stack developer",
       "Implemented click tracking analytics, custom alias creation, and QR code generation",
-      "Built link protection, monetisation, and access control management features",
+      "Built link protection, monetization, and access control management features",
       "Designed and deployed the full MEAN stack infrastructure independently"
     ],
     "technologies": ["Angular", "Node.js", "Express", "MongoDB", "Bootstrap"],

@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Started Bachelor's Degree",
     "date": "2016",
-    "description": "Began Bachelor of Science (Hons) in Computer Science at University of Sri Jayewardenepura, specialising in Computer Science, Mathematics and Statistics.",
+    "description": "Began Bachelor of Science (Hons) in Computer Science at University of Sri Jayewardenepura, specializing in Computer Science, Mathematics and Statistics.",
     "type": "education"
   },
   {
@@ -24,7 +24,7 @@
     "id": 4,
     "title": "URL Shortener",
     "date": "2020",
-    "description": "Built a full-stack URL shortening service solo on the MEAN stack. Features include click analytics, QR code generation, custom aliases, and monetisation.",
+    "description": "Built a full-stack URL shortening service solo on the MEAN stack. Features include click analytics, QR code generation, custom aliases, and monetization.",
     "type": "project"
   },
   {
@@ -73,7 +73,7 @@
     "id": 11,
     "title": "XLife Super App",
     "date": "2021",
-    "description": "React Native engineer for XL Axiata Indonesia's employee super app. Contributed features across leave management, expense tracking, and HR modules. Worked with a cross-functional international team.",
+    "description": "React Native engineer for XL Axiata Indonesia's employee super app. App reached 100K+ downloads. Contributed features across leave management, expense tracking, and HR modules. Worked with a cross-functional international team.",
     "type": "project"
   },
   {
@@ -143,7 +143,7 @@
     "id": 17,
     "title": "Started at Dinetap Singapore",
     "date": "2022",
-    "description": "Joined as a Full-Stack Engineer specialising in React Native and React development for restaurant management solutions.",
+    "description": "Joined as a Full-Stack Engineer specializing in React Native and React development for restaurant management solutions.",
     "type": "work"
   },
   {
@@ -157,14 +157,14 @@
     "id": 22,
     "title": "Personalized Greeting System",
     "date": "2022",
-    "description": "Built a React Native kiosk app using facial recognition to display personalised greetings at Janashakthi events. Delivered as the sole engineer.",
+    "description": "Built a React Native kiosk app using facial recognition to display personalized greetings at Janashakthi events. Delivered as the sole engineer.",
     "type": "project"
   },
   {
     "id": 24,
     "title": "Dinetap Consumer Web",
     "date": "2022",
-    "description": "Built the full-stack consumer ordering web app using React and Vite. Includes real-time order tracking with Pusher, personalised recommendations, and Stripe payment processing.",
+    "description": "Built the full-stack consumer ordering web app using React and Vite. Includes real-time order tracking with Pusher, personalized recommendations, and Stripe payment processing.",
     "type": "project"
   },
   {
@@ -206,7 +206,7 @@
     "id": 29,
     "title": "Dinetap Kiosk App",
     "date": "2023",
-    "description": "Built the full-stack React Native kiosk app for self-service restaurant ordering. Supports multiple languages, customisation options, and seamless payment terminal integration.",
+    "description": "Built the full-stack React Native kiosk app for self-service restaurant ordering. Supports multiple languages, customization options, and seamless payment terminal integration.",
     "type": "project"
   },
   {
@@ -249,7 +249,7 @@
     "id": 37,
     "title": "Dinetap Admin Panel",
     "date": "2025",
-    "description": "Tech lead (team of 4), architect, and full-stack engineer for Dinetap's centralised administration dashboard built with Next.js. Covers restaurant management, user permissions, real-time analytics, and system configuration.",
+    "description": "Tech lead (team of 4), architect, and full-stack engineer for Dinetap's centralized administration dashboard built with Next.js. Covers restaurant management, user permissions, real-time analytics, and system configuration.",
     "type": "project"
   },
   {
