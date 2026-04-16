@@ -1,8 +1,8 @@
 export const about = {
-  main: 'Tech lead and senior engineer with 5+ years of experience leading engineering teams, defining technical architecture, and building engineering culture across fast-moving product organisations.',
+  main: 'Senior engineering lead with 5+ years of experience leading engineering teams, defining technical architecture, and building engineering culture across fast-moving product organizations.',
   meta: 'Sivantha Paranavithana is a tech lead and full-stack engineer specializing in team leadership, AWS cloud architecture, React Native, and Node.js.',
   summary:
-    "Tech lead and senior engineer with 5+ years of experience leading engineering teams, defining technical architecture, and building engineering culture across fast-moving product organisations. At Dinetap, led a team of 8 engineers across 5+ concurrent product streams, designed and owned the company's complete AWS cloud infrastructure, and drove a monolith-to-microservices migration that brought the platform to near-100% uptime. Known for combining hands-on technical depth with a strong focus on team growth, knowledge sharing, and engineering quality.",
+    'Senior engineering lead with 5+ years of experience building and directing engineering teams, defining technical architecture, and establishing engineering culture across fast-moving product organizations. At Dinetap, led a team of 8 engineers across 5+ concurrent product streams, drove a monolith-to-microservices migration that achieved near-100% uptime, reduced AWS infrastructure costs by 49%, and built a payments platform now processing over SGD 13.5M per month. Known for combining hands-on technical depth with a strong focus on team growth, knowledge sharing, and engineering quality.',
   experience: {
     start: '2020-05-01',
   },
@@ -16,6 +16,6 @@ export const about = {
     'CI/CD & DevOps Culture',
     'Payment Systems Architecture',
     'Stakeholder Management',
-    'Engineering Organisation Design',
+    'Engineering Organization Design',
   ],
 };

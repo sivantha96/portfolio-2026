@@ -1,6 +1,6 @@
 export const contact = {
   name: 'Sivantha Paranavithana',
-  designation: 'Full-Stack Engineer',
+  designation: 'Senior Engineering Lead',
   email: {
     personal: 'sivantha.paranavithana@gmail.com',
     work: 'sivantha.p@dinetap.com',
