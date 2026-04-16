@@ -605,7 +605,7 @@
       "Applied NgXs state management, lazy-loading, and BEM/ITCSS methodology"
     ],
     "technologies": ["Angular", "NgXs", "Bootstrap", "Sass", "Jasmine"],
-    "images": ["/images/ncell-payment-gateway.webp"]
+    "images": ["/images/ncell-pg.webp"]
   },
   {
     "id": 25,
