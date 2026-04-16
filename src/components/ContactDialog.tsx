@@ -35,6 +35,7 @@ export function ContactDialog() {
 
   const form = useForm({
     resolver: yupResolver(contactMeSchema),
+    defaultValues: { name: '', email: '', message: '' },
   });
 
   const handleOnSubmit = form.handleSubmit(async (values) => {

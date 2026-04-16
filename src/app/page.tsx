@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 import dynamic from 'next/dynamic';
-import { useMemo, useState } from 'react';
+import { useState, useMemo } from 'react';
 
 import { about, contact } from '@/assets/content';
 import { AppHeader } from '@/components/AppHeader';
@@ -119,7 +119,7 @@ export default function Portfolio() {
             </Avatar>
 
             <div className='flex flex-col items-center md:items-start'>
-              <h2 className='text-3xl font-bold mb-2'>
+              <h2 className='text-3xl font-bold mb-2 font-serif'>
                 Sivantha Paranavithana
               </h2>
               <p className='text-muted-foreground text-center md:text-left mb-4'>
@@ -127,10 +127,10 @@ export default function Portfolio() {
               </p>
               <div className='flex flex-wrap gap-4'>
                 <ContactDialog />
-                <Button variant='outline' asChild>
-                  <a href='/data/sivantha-paranavithana-cv.pdf' download>
-                    <FileDown className='mr-2 h-4 w-4' /> Download CV
-                  </a>
+                <Button
+                  variant='outline'
+                  onClick={() => window.open('/cv', '_blank')}>
+                  <FileDown className='mr-2 h-4 w-4' /> Download CV
                 </Button>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function Portfolio() {
 
         <section id='skills' className='mb-12 scroll-mt-[60px]'>
           <h2 className='text-3xl font-bold mb-6'>Skills & Technologies</h2>
-          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
+          <div className='grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-4'>
             {isLoadingSkills
               ? Array(10)
                   .fill(0)
@@ -248,7 +248,7 @@ export default function Portfolio() {
               : skills?.map((skill) => (
                   <div
                     key={skill.id}
-                    className='flex flex-col items-center p-4 bg-muted rounded-[calc(var(--radius)*1rem)]'>
+                    className='flex flex-col items-center justify-center p-4 bg-muted rounded-[calc(var(--radius)*1rem)]'>
                     <Image
                       src={skill.icon || '/placeholder.svg'}
                       alt={skill.name}
@@ -256,7 +256,9 @@ export default function Portfolio() {
                       height={48}
                       className='mb-2'
                     />
-                    <span className='text-sm font-medium'>{skill.name}</span>
+                    <span className='text-sm font-medium text-center'>
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
           </div>
@@ -289,7 +291,9 @@ export default function Portfolio() {
       </main>
 
       <footer className='border-t p-6 text-center text-muted-foreground'>
-        <p>&copy; 2025 Sivantha Paranavithana. All rights reserved.</p>
+        <p>
+          &copy; {dayjs().year()} Sivantha Paranavithana. All rights reserved.
+        </p>
       </footer>
 
       {selectedProject && (

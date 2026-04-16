@@ -3,217 +3,266 @@
     "id": 1,
     "title": "Started Bachelor's Degree",
     "date": "2016",
-    "description": "Began Bachelor of Science in Computer Science at University of Sri Jayewardenepura",
+    "description": "Began Bachelor of Science (Hons) in Computer Science at University of Sri Jayewardenepura, specialising in Computer Science, Mathematics and Statistics.",
     "type": "education"
-  },
-
-  {
-    "id": 7,
-    "title": "Completed Internship at Axiata Digital Labs",
-    "date": "2021",
-    "description": "Successfully completed internship after contributing to multiple enterprise client projects.",
-    "type": "work"
-  },
-  {
-    "id": 5,
-    "title": "NCell Payment Gateway",
-    "date": "2020",
-    "description": "Frontend developer for admin portal of NCell Nepal's telco payment platform. Developed two portals using Angular and NGXS state management library.",
-    "type": "project"
-  },
-  {
-    "id": 6,
-    "title": "NCell Gifting Platform",
-    "date": "2020",
-    "description": "Developed admin portal using Angular 10, Angular Material, and Bootstrap 4. Implemented gift management and monitoring features.",
-    "type": "project"
   },
   {
     "id": 3,
     "title": "Started Internship at Axiata Digital Labs",
     "date": "2020",
-    "description": "Began internship focused on Angular development for enterprise clients. Worked with NgRx, NgXs, and various testing tools.",
+    "description": "Began internship focused on Angular SPA development for enterprise clients including Dialog Axiata and NCell Axiata. Worked with NgRx, NgXs, and testing frameworks.",
     "type": "work"
   },
   {
     "id": 2,
     "title": "Started at EchonLabs",
     "date": "2020",
-    "description": "Started as Part-time Software Engineer. Was responsible for full-stack web application development with MEAN stack.",
+    "description": "Joined as a part-time Software Engineer. Responsible for full-stack web and mobile application development using the MEAN stack and React Native.",
     "type": "work"
   },
   {
     "id": 4,
     "title": "URL Shortener",
     "date": "2020",
-    "description": "First Angular project. Developed both frontend and backend, managing 2000+ shortened URLs. Led team of 5 junior developers during revamp.",
+    "description": "Built a full-stack URL shortening service solo on the MEAN stack. Features include click analytics, QR code generation, custom aliases, and monetisation.",
     "type": "project"
   },
-
   {
-    "id": 12,
-    "title": "XLife Super App",
-    "date": "2021",
-    "description": "Frontend Mobile Engineer for XL Axiata Indonesia's employee super app. Built with React Native and Redux-Saga. Serving 2500+ daily users.",
+    "id": 5,
+    "title": "NCell Gifting Platform",
+    "date": "2020",
+    "description": "Built the admin portal for NCell Nepal's telco product gifting platform as an Angular frontend engineer. Implemented gift management and monitoring features using Angular and Bootstrap.",
     "type": "project"
+  },
+  {
+    "id": 6,
+    "title": "NCell Payment Gateway",
+    "date": "2020",
+    "description": "Built both the admin portal and dealer app frontends for NCell Nepal's telco payment platform as an Angular frontend engineer. Used Angular and NgXs state management.",
+    "type": "project"
+  },
+  {
+    "id": 7,
+    "title": "Genie Admin Portal",
+    "date": "2021",
+    "description": "Built modules for Dialog Axiata's digital wallet admin portal as an Angular frontend engineer. Implemented transaction management, reporting, and fraud detection dashboards using NgRx.",
+    "type": "project"
+  },
+  {
+    "id": 8,
+    "title": "Completed Internship at Axiata Digital Labs",
+    "date": "2021",
+    "description": "Successfully completed internship after contributing to multiple enterprise client projects across NCell Axiata, Dialog Axiata, and XL Axiata.",
+    "type": "work"
   },
   {
     "id": 10,
     "title": "Graduated University",
     "date": "2021",
-    "description": "Completed Bachelor of Science in Computer Science at University of Sri Jayewardenepura",
+    "description": "Completed Bachelor of Science (Hons) in Computer Science at University of Sri Jayewardenepura with a GPA of 3.6.",
     "type": "education"
-  },
-  {
-    "id": 13,
-    "title": "Janashakthi Life",
-    "date": "2021",
-    "description": "Full Stack developer for insurance customer app. Built with React Native and Node.js/Express backend. Led backend team of 2 developers.",
-    "type": "project"
-  },
-  {
-    "id": 14,
-    "title": "Audiobook Portal",
-    "date": "2021",
-    "description": "Developed accessible audiobook platform with text-to-speech, playback controls, and library management.",
-    "type": "project"
-  },
-  {
-    "id": 15,
-    "title": "Cityzen Kelzey",
-    "date": "2021",
-    "description": "Web application for condominium management with unit pricing, maintenance scheduling, and automated billing.",
-    "type": "project"
-  },
-  {
-    "id": 11,
-    "title": "Genie Admin Portal",
-    "date": "2021",
-    "description": "Developed modules for Dialog Axiata's digital wallet admin portal using NgRx with Angular.",
-    "type": "project"
   },
   {
     "id": 9,
     "title": "Started Full-time at Axiata Digital Labs",
     "date": "2021",
-    "description": "Joined as full-time Software Engineer focusing on React Native and Angular development for enterprise solutions.",
-    "type": "work"
-  },
-
-  {
-    "id": 21,
-    "title": "EatMe Consumer Web",
-    "date": "2022",
-    "description": "Feature-rich web application for restaurant ordering with real-time delivery tracking.",
-    "type": "project"
-  },
-  {
-    "id": 17,
-    "title": "Started at EatMe Singapore",
-    "date": "2022",
-    "description": "Joined as Full Stack Engineer, specializing in React Native and React.js development for restaurant management solutions.",
+    "description": "Joined as a full-time Software Engineer focusing on React Native and Angular development for enterprise solutions across Indonesia, Sri Lanka, and Nepal.",
     "type": "work"
   },
   {
-    "id": 16,
-    "title": "Left Axiata Digital Labs",
-    "date": "2022",
-    "description": "Completed tenure after successfully delivering multiple enterprise applications and leading development teams.",
-    "type": "work"
-  },
-
-  {
-    "id": 22,
-    "title": "LOLC Customer Portal",
-    "date": "2022",
-    "description": "Integrated web portal and mobile app for insurance customers with policy management.",
+    "id": 11,
+    "title": "XLife Super App",
+    "date": "2021",
+    "description": "React Native engineer for XL Axiata Indonesia's employee super app. Contributed features across leave management, expense tracking, and HR modules. Worked with a cross-functional international team.",
     "type": "project"
   },
   {
-    "id": 23,
-    "title": "Personalized Greeting System",
-    "date": "2022",
-    "description": "Mobile application using facial recognition for personalized kiosk greetings.",
+    "id": 12,
+    "title": "Janashakthi Life",
+    "date": "2021",
+    "description": "React Native engineer for Janashakthi's life insurance self-service app. Built policy management, premium payment, claim submission, and document storage features.",
     "type": "project"
   },
   {
-    "id": 24,
-    "title": "Writer Watch Chrome Extension",
-    "date": "2022",
-    "description": "Chrome extension for monitoring Amazon book performance metrics and market insights.",
+    "id": 13,
+    "title": "Janashakthi Protech",
+    "date": "2021",
+    "description": "Tech lead and full-stack engineer for an interactive insurance policy exploration and purchase platform. Built premium calculators, product comparison tools, and online application flows with payment processing on the MEAN stack.",
     "type": "project"
   },
   {
     "id": 18,
+    "title": "Base Neo",
+    "date": "2022",
+    "description": "Architected and built the BaseNeo ERP framework from scratch as the sole engineer. A modular MEAN stack platform that now powers 20+ production applications across the EchonLabs portfolio.",
+    "type": "project"
+  },
+  {
+    "id": 19,
     "title": "ArchivEL",
     "date": "2022",
-    "description": "Document management system with advanced search, version control, OCR, and workflow automation.",
+    "description": "Tech lead and architect for a Google Drive-like document management system. Built OCR, version control, workflow automation, and access control. Also integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
     "id": 20,
     "title": "CredenEL",
     "date": "2022",
-    "description": "Identity and access management system with SSO, MFA, and audit logging capabilities.",
+    "description": "Tech lead and architect for an identity and access management system featuring SSO, MFA, RBAC, and audit logging. Also integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
-    "id": 19,
-    "title": "Base Neo",
+    "id": 14,
+    "title": "Audiobook Portal",
     "date": "2022",
-    "description": "Scalable ERP system with modular architecture, customizable workflows, and business intelligence reporting.",
-    "type": "project"
-  },
-
-  {
-    "id": 25,
-    "title": "EatMe Merchant App",
-    "date": "2023",
-    "description": "Mobile application for restaurant management with order processing and analytics.",
+    "description": "Developed an accessible audiobook platform with text-to-speech, playback controls, and library management.",
     "type": "project"
   },
   {
-    "id": 31,
-    "title": "EatMe Kiosk App",
-    "date": "2023",
-    "description": "Mobile application optimized for self-service kiosk deployment in restaurants",
+    "id": 15,
+    "title": "Kelzey CMS",
+    "date": "2022",
+    "description": "Tech lead and full-stack engineer for Kelsey's condominium management system. Built on the BaseNeo ERP framework. Delivered unit pricing calculations, maintenance scheduling, facility booking, and automated billing.",
     "type": "project"
   },
-
   {
-    "id": 26,
-    "title": "EatMe BackOffice",
-    "date": "2024",
-    "description": "Full-stack application for restaurant operations management with inventory tracking.",
+    "id": 23,
+    "title": "Writer Watch Chrome Extension",
+    "date": "2022",
+    "description": "Built a React Chrome extension solo for authors to monitor Amazon book performance metrics in real time such as sales rank, reviews, and competitive insights.",
+    "type": "project"
+  },
+  {
+    "id": 16,
+    "title": "Left Axiata Digital Labs",
+    "date": "2022",
+    "description": "Completed tenure after delivering multiple enterprise applications across React Native and Angular. Left to join Dinetap Singapore as a full-time Software Engineer.",
+    "type": "work"
+  },
+  {
+    "id": 17,
+    "title": "Started at Dinetap Singapore",
+    "date": "2022",
+    "description": "Joined as a Full-Stack Engineer specialising in React Native and React development for restaurant management solutions.",
+    "type": "work"
+  },
+  {
+    "id": 21,
+    "title": "LOLC Customer Portal",
+    "date": "2022",
+    "description": "Tech lead and full-stack engineer for LOLC's insurance customer portal and mobile app. Built policy management, claims, document upload, and automated renewal notifications on the BaseNeo framework.",
+    "type": "project"
+  },
+  {
+    "id": 22,
+    "title": "Personalized Greeting System",
+    "date": "2022",
+    "description": "Built a React Native kiosk app using facial recognition to display personalised greetings at Janashakthi events. Delivered as the sole engineer.",
+    "type": "project"
+  },
+  {
+    "id": 24,
+    "title": "Dinetap Consumer Web",
+    "date": "2022",
+    "description": "Built the full-stack consumer ordering web app using React and Vite. Includes real-time order tracking with Pusher, personalised recommendations, and Stripe payment processing.",
     "type": "project"
   },
   {
     "id": 27,
-    "title": "EatMe POS",
+    "title": "e-Assessor",
+    "date": "2023",
+    "description": "React Native engineer for an offline-first mobile app for insurance assessors. Built photo documentation, damage assessment tools, and automated PDF report generation.",
+    "type": "project"
+  },
+  {
+    "id": 33,
+    "title": "Janashakthi InsureConnect",
     "date": "2024",
-    "description": "Cloud-based point of sale system with offline functionality and multi-device synchronization.",
+    "description": "React Native engineer for Janashakthi's insurance customer app. Built policy management, claim submissions, payment processing, document storage, and real-time agent communication.",
+    "type": "project"
+  },
+  {
+    "id": 25,
+    "title": "Left EchonLabs",
+    "date": "2024",
+    "description": "Concluded part-time engagement at EchonLabs after two years, having architected the BaseNeo framework and led delivery of multiple enterprise products.",
+    "type": "work"
+  },
+  {
+    "id": 26,
+    "title": "WooCommerce Payments Plugin",
+    "date": "2024",
+    "description": "Built a WooCommerce PHP plugin to route payments through the Dinetap payments platform. Enables WooCommerce-based merchants to accept payments via the Dinetap ecosystem.",
     "type": "project"
   },
   {
     "id": 28,
-    "title": "EatMe Payments for Stripe",
+    "title": "Dinetap Merchant App",
     "date": "2024",
-    "description": "Payment processing platform with Stripe integration and payment analytics.",
-    "type": "project"
-  },
-
-  {
-    "id": 30,
-    "title": "EatMe Payments for Adyen",
-    "date": "2025",
-    "description": "Payment processing solution with Adyen integration and transaction monitoring.",
+    "description": "Built the full-stack React Native merchant app for restaurant owners. Features real-time order updates via Pusher, inventory management, and sales analytics.",
     "type": "project"
   },
   {
     "id": 29,
-    "title": "EatMe Admin Panel",
+    "title": "Dinetap Kiosk App",
+    "date": "2024",
+    "description": "Built the full-stack React Native kiosk app for self-service restaurant ordering. Supports multiple languages, customisation options, and seamless payment terminal integration.",
+    "type": "project"
+  },
+  {
+    "id": 30,
+    "title": "Dinetap BackOffice",
+    "date": "2024",
+    "description": "Tech lead, architect, and full-stack engineer for the restaurant owner operations portal built with React and Vite. Delivered inventory, staff, financial reporting, and analytics dashboards.",
+    "type": "project"
+  },
+  {
+    "id": 31,
+    "title": "Dinetap POS",
+    "date": "2024",
+    "description": "Tech lead, architect, and full-stack engineer for a cloud-based, offline-first React Native point-of-sale system. Designed sync conflict resolution across multiple simultaneous devices.",
+    "type": "project"
+  },
+  {
+    "id": 32,
+    "title": "Dinetap Payments for Stripe",
+    "date": "2024",
+    "description": "Built Stripe payment integration across web, mobile, and physical terminal surfaces. Implemented SQS-based webhook handling, automated refunds, and detailed transaction history.",
+    "type": "project"
+  },
+  {
+    "id": 34,
+    "title": "Promoted to Senior Software Engineer at Dinetap",
     "date": "2025",
-    "description": "Full-stack administration dashboard with real-time analytics and user management.",
+    "description": "Promoted to Senior Software Engineer, taking on full ownership of cloud infrastructure architecture and leading engineering across multiple product streams.",
+    "type": "work"
+  },
+  {
+    "id": 35,
+    "title": "AWS Infrastructure Migration",
+    "date": "2025",
+    "description": "Designed and provisioned Dinetap's complete AWS cloud infrastructure using CDK. Led the migration from a monolithic EC2 system to a serverless ECS Fargate microservices architecture covering VPC, RDS/Aurora, API Gateway, SQS, Lambda, WAF, EventBridge, and CloudWatch.",
+    "type": "project"
+  },
+  {
+    "id": 37,
+    "title": "Dinetap Admin Panel",
+    "date": "2025",
+    "description": "Tech lead, architect, and full-stack engineer for Dinetap's centralised administration dashboard built with Next.js. Covers restaurant management, user permissions, real-time analytics, and system configuration.",
+    "type": "project"
+  },
+  {
+    "id": 38,
+    "title": "Dinetap Payments for Adyen",
+    "date": "2025",
+    "description": "Tech lead and full-stack engineer for Adyen payment gateway integration with physical terminal support. Built SQS-based webhook event handling and automated reconciliation.",
+    "type": "project"
+  },
+  {
+    "id": 36,
+    "title": "Dinetap App",
+    "date": "2025",
+    "description": "Tech lead, architect, and full-stack engineer for the flagship Dinetap consumer app built with React Native Expo. Enables restaurant discovery, table booking, ordering, and payments with cashback rewards.",
     "type": "project"
   }
 ]

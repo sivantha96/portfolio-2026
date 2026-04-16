@@ -1,62 +1,190 @@
 [
   {
     "id": 1,
-    "title": "EatMe Admin Panel",
+    "title": "Dinetap Admin Panel",
     "year": "2025",
-    "client": "EatMe",
-    "company": "EatMe",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
     "description": "A comprehensive full-stack administration dashboard that provides centralized control over restaurant management, user permissions, and system configurations. Features include real-time analytics, user management, and customizable reporting tools.",
-    "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus volutpat, semper velit luctus, laoreet odio. Donec vitae turpis lacinia leo accumsan hendrerit. Aliquam ut tristique dui, eu varius arcu. In hac habitasse platea dictumst. Donec sed rhoncus massa. Maecenas sem nunc, dignissim in blandit at, maximus ac eros. Fusce et odio vel nunc sagittis dictum et vitae arcu. Sed ut mollis arcu, eu aliquet felis. Donec porttitor tempus ornare. Curabitur id magna rutrum, laoreet ex pellentesque, congue risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sem ex, rhoncus et condimentum placerat, aliquet vel nulla. Vestibulum imperdiet luctus arcu, ut porttitor eros sollicitudin at. Nulla nec libero commodo, ornare sapien in, laoreet ex. Maecenas id arcu ligula. Vivamus tristique ipsum vestibulum lobortis finibus.\n\nFusce lorem ipsum, aliquam et nisi vel, dictum dapibus arcu. Cras molestie dolor ligula, sit amet efficitur tortor sodales eget. Suspendisse id cursus dui. Pellentesque tempus vitae augue ac semper. Aenean eget tellus arcu. Praesent a justo ut mi varius blandit et ut dolor. Sed mattis tempor ultrices. Curabitur a molestie velit, vitae suscipit velit. Aenean vitae dignissim nisl.\n\nSuspendisse et faucibus odio. Donec mollis pharetra neque ullamcorper egestas. Donec suscipit auctor diam, eget fringilla lacus semper quis. Phasellus auctor efficitur turpis ac tempor. Pellentesque eget interdum purus, non vulputate nisl. Duis tellus mauris, fermentum ut dignissim eget, bibendum vel ex. Donec neque dui, semper ac ex non, mattis pellentesque libero. Phasellus pharetra at neque ac varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus facilisis iaculis arcu ac vestibulum.\n\nUt ac facilisis purus, sit amet consequat neque. Nullam sed sodales est. Curabitur auctor velit eu augue sollicitudin, eget imperdiet tortor luctus. Phasellus euismod lorem est, et aliquet ipsum dapibus ac. Proin ut est ac quam pellentesque tempus. Aliquam erat volutpat. Nulla porta mattis tellus, sit amet venenatis nisi tristique at.\n\nCurabitur eleifend sapien magna, in pretium tellus mollis eget. Sed vel leo ut odio tempus iaculis quis sit amet massa. Duis metus eros, suscipit egestas egestas quis, bibendum in elit. Aliquam finibus, nibh ac luctus accumsan, justo erat posuere nibh, vitae consectetur ligula libero non elit. Maecenas quis elit urna. Nulla et massa dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce fermentum interdum orci ut consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at tempor massa, at auctor felis. Maecenas vel consequat elit. Maecenas interdum posuere sem, bibendum feugiat ipsum sodales ac. Cras dictum neque non lectus feugiat commodo. Duis euismod euismod iaculis.\n\nNulla malesuada feugiat consequat. Nulla consequat pretium erat quis gravida. Suspendisse sagittis posuere lorem ut venenatis. Phasellus nec lorem pretium, iaculis tellus id, euismod ex. Proin in justo non est faucibus commodo ac et lorem. Ut dapibus ante eu lectus vehicula pellentesque. Pellentesque id ipsum odio. Curabitur eu dui ut justo placerat bibendum feugiat at tortor. Integer laoreet, nibh non vehicula faucibus, tortor augue bibendum elit, quis pellentesque enim quam vel odio. Aenean vitae tortor sapien. Cras eget enim at libero luctus maximus et a elit. Integer lobortis neque felis, ut imperdiet turpis ultricies vel. Aenean at tempus odio. Aenean hendrerit leo vel sem pretium cursus. Mauris convallis dui ut erat blandit, non mattis purus suscipit.\n\nSed eu turpis mattis, venenatis metus non, dignissim neque. Morbi et eros aliquam, bibendum nunc et, faucibus lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tincidunt elit tortor, vel feugiat ex mattis non. Aliquam blandit aliquet dui at mollis. Cras egestas neque ligula, vitae vulputate felis volutpat a. Nullam eleifend mollis tristique. Vestibulum ligula erat, pretium at quam vitae, vestibulum lobortis leo. Maecenas euismod nisi nisi, sit amet fringilla nisl aliquam vitae. Nullam quis erat eget sapien volutpat aliquet. Morbi vel nisl ultrices, eleifend sem vel, sodales turpis. Donec et sagittis elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\nQuisque orci nisl, feugiat porta dapibus vitae, feugiat ut sapien. Quisque iaculis sapien non diam mattis, in scelerisque mi egestas. Mauris eget lorem commodo, semper elit sagittis, facilisis nulla. In non tortor justo. Fusce sollicitudin turpis et magna feugiat, sit amet pretium purus sodales. Quisque ac purus varius, elementum risus eget, euismod libero. Nunc tempor tristique justo a ultrices. Quisque a erat rutrum, dictum nisi id, mollis dolor. Nunc scelerisque metus ut ante elementum, non lobortis odio congue. Integer semper orci et justo pellentesque, at varius turpis pharetra. Donec vel suscipit velit, eget malesuada quam. Integer suscipit feugiat convallis. Curabitur blandit felis nibh, et placerat ante feugiat maximus. Sed sollicitudin magna quis turpis tincidunt, vehicula posuere magna ullamcorper.\n\nCras arcu justo, elementum at quam semper, pulvinar efficitur felis. Suspendisse libero tellus, mattis sed imperdiet posuere, porttitor quis ex. Fusce at semper arcu. Nulla feugiat tincidunt nulla fermentum blandit. Etiam malesuada ante vestibulum feugiat finibus. Maecenas auctor vestibulum justo, sit amet hendrerit eros consequat elementum. Aliquam erat volutpat. Donec tempor dictum tellus non volutpat.\n\nDuis sed massa in tellus interdum vehicula ac in eros. Nunc vitae urna odio. Integer urna velit, tincidunt eget risus eget, facilisis consectetur justo. Integer aliquam eleifend orci nec convallis. Suspendisse sed metus ullamcorper, pharetra lorem nec, aliquam dolor. Nulla id nunc ut dolor lobortis tincidunt. Duis dapibus id sem a ornare. Nam at purus elementum, interdum erat vitae, pharetra nisi. Vivamus nec pretium dui. Aliquam tortor dolor, accumsan nec pulvinar id, efficitur in velit. Pellentesque varius, est quis eleifend commodo, nunc nisl dapibus dolor, vel finibus elit lorem eu risus. Sed consequat rutrum quam, in vulputate purus consequat eu. Sed vitae eleifend nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi efficitur, augue a sagittis dictum, nibh nisl malesuada urna, nec ultrices odio erat et neque. Sed ac pulvinar felis.",
+    "fullDescription": "",
+    "highlights": [
+      "Architected the entire system from scratch \u2014 data models, API design, and frontend architecture",
+      "Led the engineering team end-to-end from planning through to production deployment",
+      "Designed role-based access control covering all Dinetap operations and client restaurants",
+      "Built real-time analytics dashboards and customizable reporting tools"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "MongoDB",
+      "AWS ECS",
+      "AWS CDK"
+    ],
     "images": ["/images/eatme-admin.webp"]
   },
   {
     "id": 2,
-    "title": "EatMe Payments for Adyen",
+    "title": "Dinetap Payments for Adyen",
     "year": "2025",
-    "client": "EatMe",
-    "company": "EatMe",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
     "description": "An integrated payment processing solution utilizing Adyen's gateway to handle multiple payment methods including credit cards, debit cards, and digital wallets. Features end-to-end encryption, transaction monitoring, and automated reconciliation.",
     "fullDescription": "",
+    "highlights": [
+      "Architected the full payment flow \u2014 from checkout initiation through webhook reconciliation",
+      "Integrated Adyen physical terminal support for in-restaurant point-of-sale payments",
+      "Implemented SQS-based event queue to handle all Adyen webhook events reliably",
+      "Led the team through PCI-compliant integration patterns and end-to-end encryption"
+    ],
+    "technologies": [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "AWS SQS",
+      "AWS Lambda",
+      "Adyen SDK"
+    ],
     "images": ["/images/eatme-adyen-payments.webp"]
   },
   {
     "id": 3,
-    "title": "EatMe BackOffice",
-    "year": "2024",
-    "client": "EatMe",
-    "company": "EatMe",
-    "description": "A robust full-stack application designed for restaurant owners to manage their operations efficiently. Includes inventory tracking, staff management, financial reporting, and performance analytics with customizable dashboards.",
+    "title": "Dinetap App",
+    "year": "2025",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "description": "The flagship Dinetap consumer app making dining seamless \u2014 from discovering nearby restaurants, to booking a table, ordering, and paying all in one place. Diners earn cashback and credits when they prepay. For restaurants, Dinetap acts as both a marketplace and an operations platform.",
     "fullDescription": "",
-    "images": ["/images/eatme-backoffice.webp"]
+    "highlights": [
+      "Architected the entire application \u2014 data models, API design, real-time infrastructure, and mobile frontend",
+      "Led the engineering team end-to-end across all feature streams from planning through to production",
+      "Built restaurant discovery, table booking, real-time ordering, and integrated payment flows with cashback/credits system",
+      "Designed for high availability on AWS ECS Fargate with Pusher-powered real-time order updates and OneSignal push notifications"
+    ],
+    "technologies": [
+      "React Native",
+      "Expo",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "MongoDB",
+      "AWS ECS",
+      "AWS CDK",
+      "Pusher",
+      "OneSignal",
+      "Stripe",
+      "Adyen"
+    ],
+    "images": ["/images/dinetap-app.webp"]
   },
   {
     "id": 4,
-    "title": "EatMe Kiosk",
+    "title": "Dinetap BackOffice",
     "year": "2024",
-    "client": "EatMe",
-    "company": "EatMe",
-    "description": "A user-friendly mobile application optimized for self-service kiosk deployment in restaurants. Features include an intuitive ordering interface, customization options, multiple language support, and seamless integration with payment systems.",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "description": "A robust full-stack application designed for restaurant owners to manage their operations efficiently. Includes inventory tracking, staff management, financial reporting, and performance analytics with customizable dashboards.",
     "fullDescription": "",
-    "images": ["/images/eatme-kiosk-app.webp"]
+    "highlights": [
+      "Architected the entire platform \u2014 system design, database schema, API layer, and frontend",
+      "Led the engineering team from scoping through production release",
+      "Designed a flexible dashboard system allowing restaurant owners to customise their reporting views",
+      "Built inventory, staff, and financial management modules with real-time data sync"
+    ],
+    "technologies": [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "MongoDB",
+      "AWS ECS",
+      "AWS CDK"
+    ],
+    "images": ["/images/eatme-backoffice.webp"]
   },
   {
     "id": 5,
-    "title": "EatMe POS",
+    "title": "Dinetap Kiosk",
     "year": "2024",
-    "client": "EatMe",
-    "company": "EatMe",
-    "description": "A comprehensive cloud-based point of sale system for restaurants featuring order management, table service tracking, inventory control, and real-time sales reporting. Includes offline functionality and multi-device synchronization.",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer",
+    "description": "A user-friendly mobile application optimized for self-service kiosk deployment in restaurants. Features include an intuitive ordering interface, customization options, multiple language support, and seamless integration with payment systems.",
     "fullDescription": "",
-    "images": ["/images/eatme-pos-app.webp"]
+    "highlights": [
+      "Built the full stack end-to-end \u2014 from kiosk UI through to the backend order processing APIs",
+      "Engineered multi-language support and accessible UI optimised for large-format touchscreens",
+      "Integrated seamlessly with Stripe and Adyen payment terminals",
+      "Designed for unattended, always-on deployment with resilient error recovery"
+    ],
+    "technologies": [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Stripe",
+      "Adyen"
+    ],
+    "images": ["/images/eatme-kiosk-app.webp"]
   },
   {
     "id": 6,
-    "title": "EatMe Payments for Stripe",
+    "title": "Dinetap POS",
     "year": "2024",
-    "client": "EatMe",
-    "company": "EatMe",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
+    "description": "A comprehensive cloud-based point of sale system for restaurants featuring order management, table service tracking, inventory control, and real-time sales reporting. Includes offline functionality and multi-device synchronization.",
+    "fullDescription": "",
+    "highlights": [
+      "Architected the entire POS system \u2014 offline-first data model, sync conflict resolution strategy, and cloud infrastructure",
+      "Led the engineering team through a complex offline/online synchronisation challenge across multiple simultaneous devices",
+      "Designed table service workflows, order management, and real-time kitchen display integration",
+      "Built against production restaurant environments with zero-downtime deployment requirements"
+    ],
+    "technologies": [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "MongoDB",
+      "AWS ECS",
+      "AWS CDK"
+    ],
+    "images": ["/images/eatme-pos-app.webp"]
+  },
+  {
+    "id": 7,
+    "title": "Dinetap Payments for Stripe",
+    "year": "2024",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer",
     "description": "A secure payment processing platform integrated with Stripe gateway, supporting various payment methods including cards and digital wallets. Features include payment analytics, automated refunds, and detailed transaction history.",
-    "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus volutpat, semper velit luctus, laoreet odio. Donec vitae turpis lacinia leo accumsan hendrerit. Aliquam ut tristique dui, eu varius arcu. In hac habitasse platea dictumst. Donec sed rhoncus massa. Maecenas sem nunc, dignissim in blandit at, maximus ac eros. Fusce et odio vel nunc sagittis dictum et vitae arcu. Sed ut mollis arcu, eu aliquet felis. Donec porttitor tempus ornare. Curabitur id magna rutrum, laoreet ex pellentesque, congue risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sem ex, rhoncus et condimentum placerat, aliquet vel nulla. Vestibulum imperdiet luctus arcu, ut porttitor eros sollicitudin at. Nulla nec libero commodo, ornare sapien in, laoreet ex. Maecenas id arcu ligula. Vivamus tristique ipsum vestibulum lobortis finibus.\n\nFusce lorem ipsum, aliquam et nisi vel, dictum dapibus arcu. Cras molestie dolor ligula, sit amet efficitur tortor sodales eget. Suspendisse id cursus dui. Pellentesque tempus vitae augue ac semper. Aenean eget tellus arcu. Praesent a justo ut mi varius blandit et ut dolor. Sed mattis tempor ultrices. Curabitur a molestie velit, vitae suscipit velit. Aenean vitae dignissim nisl.\n\nSuspendisse et faucibus odio. Donec mollis pharetra neque ullamcorper egestas. Donec suscipit auctor diam, eget fringilla lacus semper quis. Phasellus auctor efficitur turpis ac tempor. Pellentesque eget interdum purus, non vulputate nisl. Duis tellus mauris, fermentum ut dignissim eget, bibendum vel ex. Donec neque dui, semper ac ex non, mattis pellentesque libero. Phasellus pharetra at neque ac varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus facilisis iaculis arcu ac vestibulum.\n\nUt ac facilisis purus, sit amet consequat neque. Nullam sed sodales est. Curabitur auctor velit eu augue sollicitudin, eget imperdiet tortor luctus. Phasellus euismod lorem est, et aliquet ipsum dapibus ac. Proin ut est ac quam pellentesque tempus. Aliquam erat volutpat. Nulla porta mattis tellus, sit amet venenatis nisi tristique at.\n\nCurabitur eleifend sapien magna, in pretium tellus mollis eget. Sed vel leo ut odio tempus iaculis quis sit amet massa. Duis metus eros, suscipit egestas egestas quis, bibendum in elit. Aliquam finibus, nibh ac luctus accumsan, justo erat posuere nibh, vitae consectetur ligula libero non elit. Maecenas quis elit urna. Nulla et massa dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce fermentum interdum orci ut consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at tempor massa, at auctor felis. Maecenas vel consequat elit. Maecenas interdum posuere sem, bibendum feugiat ipsum sodales ac. Cras dictum neque non lectus feugiat commodo. Duis euismod euismod iaculis.\n\nNulla malesuada feugiat consequat. Nulla consequat pretium erat quis gravida. Suspendisse sagittis posuere lorem ut venenatis. Phasellus nec lorem pretium, iaculis tellus id, euismod ex. Proin in justo non est faucibus commodo ac et lorem. Ut dapibus ante eu lectus vehicula pellentesque. Pellentesque id ipsum odio. Curabitur eu dui ut justo placerat bibendum feugiat at tortor. Integer laoreet, nibh non vehicula faucibus, tortor augue bibendum elit, quis pellentesque enim quam vel odio. Aenean vitae tortor sapien. Cras eget enim at libero luctus maximus et a elit. Integer lobortis neque felis, ut imperdiet turpis ultricies vel. Aenean at tempus odio. Aenean hendrerit leo vel sem pretium cursus. Mauris convallis dui ut erat blandit, non mattis purus suscipit.\n\nSed eu turpis mattis, venenatis metus non, dignissim neque. Morbi et eros aliquam, bibendum nunc et, faucibus lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tincidunt elit tortor, vel feugiat ex mattis non. Aliquam blandit aliquet dui at mollis. Cras egestas neque ligula, vitae vulputate felis volutpat a. Nullam eleifend mollis tristique. Vestibulum ligula erat, pretium at quam vitae, vestibulum lobortis leo. Maecenas euismod nisi nisi, sit amet fringilla nisl aliquam vitae. Nullam quis erat eget sapien volutpat aliquet. Morbi vel nisl ultrices, eleifend sem vel, sodales turpis. Donec et sagittis elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\nQuisque orci nisl, feugiat porta dapibus vitae, feugiat ut sapien. Quisque iaculis sapien non diam mattis, in scelerisque mi egestas. Mauris eget lorem commodo, semper elit sagittis, facilisis nulla. In non tortor justo. Fusce sollicitudin turpis et magna feugiat, sit amet pretium purus sodales. Quisque ac purus varius, elementum risus eget, euismod libero. Nunc tempor tristique justo a ultrices. Quisque a erat rutrum, dictum nisi id, mollis dolor. Nunc scelerisque metus ut ante elementum, non lobortis odio congue. Integer semper orci et justo pellentesque, at varius turpis pharetra. Donec vel suscipit velit, eget malesuada quam. Integer suscipit feugiat convallis. Curabitur blandit felis nibh, et placerat ante feugiat maximus. Sed sollicitudin magna quis turpis tincidunt, vehicula posuere magna ullamcorper.\n\nCras arcu justo, elementum at quam semper, pulvinar efficitur felis. Suspendisse libero tellus, mattis sed imperdiet posuere, porttitor quis ex. Fusce at semper arcu. Nulla feugiat tincidunt nulla fermentum blandit. Etiam malesuada ante vestibulum feugiat finibus. Maecenas auctor vestibulum justo, sit amet hendrerit eros consequat elementum. Aliquam erat volutpat. Donec tempor dictum tellus non volutpat.\n\nDuis sed massa in tellus interdum vehicula ac in eros. Nunc vitae urna odio. Integer urna velit, tincidunt eget risus eget, facilisis consectetur justo. Integer aliquam eleifend orci nec convallis. Suspendisse sed metus ullamcorper, pharetra lorem nec, aliquam dolor. Nulla id nunc ut dolor lobortis tincidunt. Duis dapibus id sem a ornare. Nam at purus elementum, interdum erat vitae, pharetra nisi. Vivamus nec pretium dui. Aliquam tortor dolor, accumsan nec pulvinar id, efficitur in velit. Pellentesque varius, est quis eleifend commodo, nunc nisl dapibus dolor, vel finibus elit lorem eu risus. Sed consequat rutrum quam, in vulputate purus consequat eu. Sed vitae eleifend nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi efficitur, augue a sagittis dictum, nibh nisl malesuada urna, nec ultrices odio erat et neque. Sed ac pulvinar felis.",
+    "fullDescription": "",
+    "highlights": [
+      "Integrated Stripe across web, mobile, and physical terminal surfaces",
+      "Built automated refund flows and detailed transaction history with reconciliation",
+      "Implemented SQS-based webhook event handling to ensure reliable payment state management",
+      "Supported cards, digital wallets, and Stripe Terminal for in-person payments"
+    ],
+    "technologies": [
+      "React Native",
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "AWS SQS",
+      "Stripe SDK",
+      "Stripe Terminal"
+    ],
     "images": [
       "/images/eatme-stripe-payments.webp",
       "/images/eatme-stripe-payments-1.webp",
@@ -72,183 +200,447 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Janashakthi InsureConnect",
     "year": "2024",
     "client": "LOLC",
     "company": "EchonLabs",
+    "role": "React Native Engineer",
     "description": "A comprehensive mobile application for insurance customers featuring policy management, claim submissions, payment processing, and document storage. Includes real-time notifications and direct communication with insurance agents.",
     "fullDescription": "",
+    "highlights": [
+      "Built the full mobile application as the React Native engineer",
+      "Implemented real-time push notifications and in-app agent communication",
+      "Integrated document upload, secure storage, and policy management flows",
+      "Delivered claim submission and payment processing end-to-end on mobile"
+    ],
+    "technologies": [
+      "React Native",
+      "Redux",
+      "Redux-Saga",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "OneSignal"
+    ],
     "images": ["/images/janashakthi-insureconnect.webp"]
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "e-Assessor",
     "year": "2023",
-    "client": "Kelsey",
+    "client": "Janashakthi",
     "company": "EchonLabs",
+    "role": "React Native Engineer",
     "description": "A cross-platform mobile solution for insurance assessors to manage vehicle inspections and claims. Features include photo documentation, damage assessment tools, automated report generation, and offline functionality.",
     "fullDescription": "",
+    "highlights": [
+      "Built the mobile application end-to-end as the sole React Native engineer",
+      "Engineered offline-first functionality allowing assessors to work in areas without connectivity",
+      "Implemented photo capture, annotation, and damage assessment tooling",
+      "Built automated PDF report generation from inspection data"
+    ],
+    "technologies": [
+      "React Native",
+      "Redux",
+      "SQLite",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "images": ["/images/janashakthi-e-assessor.webp"]
   },
   {
-    "id": 9,
-    "title": "EatMe Merchant App",
+    "id": 10,
+    "title": "Dinetap Merchant App",
     "year": "2023",
-    "client": "EatMe",
-    "company": "EatMe",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer",
     "description": "A comprehensive mobile application for restaurant management, enabling owners to process orders, track delivery status, and handle payments. Features include real-time order updates, inventory management, and sales analytics.",
     "fullDescription": "",
+    "highlights": [
+      "Built the full stack end-to-end \u2014 mobile app, APIs, and database schema",
+      "Implemented real-time order streaming using Pusher for instant kitchen and delivery updates",
+      "Built inventory management and sales analytics modules",
+      "Integrated with the Stripe payment platform for in-app payment handling"
+    ],
+    "technologies": [
+      "React Native",
+      "Redux",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Pusher",
+      "Stripe"
+    ],
     "images": ["/images/eatme-merchant-app.webp"]
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "ArchivEL",
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
     "description": "A sophisticated document management system featuring advanced search capabilities, version control, automated indexing, and secure storage. Includes OCR functionality, document workflow automation, and access control management.",
     "fullDescription": "",
+    "highlights": [
+      "Architected the entire system \u2014 storage architecture, versioning model, workflow engine, and access control design",
+      "Led full-stack engineering from inception to production as the tech lead",
+      "Integrated OCR for automated document indexing and full-text search",
+      "Built document workflow automation and granular access control, integrated with the BaseNeo framework and CredenEL IAM system"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Bootstrap",
+      "BaseNeo"
+    ],
     "images": ["/images/el-archivel.webp"]
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Base Neo",
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
-    "description": "A scalable ERP system built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting.",
+    "role": "Full-Stack Engineer \u00b7 Architect",
+    "description": "A scalable ERP framework built with a modular architecture, supporting distributed deployment patterns. Features include customizable workflows, real-time data synchronization, and integrated business intelligence reporting. Now powers 20+ production applications.",
     "fullDescription": "",
+    "highlights": [
+      "Designed and built the entire ERP framework from scratch as the sole architect and engineer",
+      "Architected a modular system that other applications (ArchivEL, CredenEL, Kelzey CMS, LOLC Portal) integrate with as a foundation",
+      "The framework now underpins 20+ live production applications across EchonLabs' client portfolio",
+      "Designed customisable workflow engine, real-time data sync, and BI reporting infrastructure"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "MySQL",
+      "Bootstrap",
+      "NGINX",
+      "Docker"
+    ],
     "images": ["/images/el-base-neo.webp"]
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "CredenEL",
     "year": "2022",
     "client": "EchonLabs",
     "company": "EchonLabs",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead \u00b7 Architect",
     "description": "A comprehensive identity and access management system providing secure authentication, role-based access control, and user lifecycle management. Includes SSO integration, multi-factor authentication, and detailed audit logging.",
     "fullDescription": "",
+    "highlights": [
+      "Architected the entire IAM system \u2014 authentication flows, RBAC model, SSO integration strategy, and audit logging",
+      "Led full-stack engineering as the tech lead, integrated with the BaseNeo framework",
+      "Implemented SSO, MFA, and full user lifecycle management",
+      "Designed a detailed audit logging system for compliance and security monitoring"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Bootstrap",
+      "BaseNeo"
+    ],
     "images": ["/images/el-credenel.webp"]
   },
   {
-    "id": 13,
-    "title": "EatMe Consumer Web",
+    "id": 14,
+    "title": "Dinetap Consumer Web",
     "year": "2022",
-    "client": "EatMe",
-    "company": "EatMe",
-    "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalized recommendations, payment processing, and order history management.",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer",
+    "description": "A feature-rich web application enabling customers to browse restaurants, place orders, and track deliveries in real-time. Includes personalised recommendations, payment processing, and order history management.",
     "fullDescription": "",
+    "highlights": [
+      "Built the full stack end-to-end \u2014 from React frontend through to Express APIs and database",
+      "Implemented real-time order tracking using Pusher",
+      "Integrated Stripe payment processing with full order history management",
+      "Built personalised restaurant recommendation engine"
+    ],
+    "technologies": [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Pusher",
+      "Stripe"
+    ],
     "images": ["/images/eatme-consumer-web.webp"]
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "LOLC Customer Portal",
     "year": "2022",
     "client": "LOLC",
     "company": "EchonLabs",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead",
     "description": "An integrated web portal and mobile app for insurance customers to manage their policies, submit claims, and track payments. Features include document upload, policy comparisons, and automated renewal notifications.",
     "fullDescription": "",
+    "highlights": [
+      "Led full-stack engineering as the tech lead across both web portal and mobile app",
+      "Built on top of the BaseNeo framework, extending it with insurance-specific modules",
+      "Implemented policy comparison, document upload, and automated renewal notification flows",
+      "Engaged directly with the LOLC client team throughout delivery"
+    ],
+    "technologies": [
+      "React Native",
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "BaseNeo",
+      "OneSignal"
+    ],
     "images": ["/images/lolc-customer-portal.webp"]
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Personalized Greeting System",
     "year": "2022",
     "client": "Janashakthi",
     "company": "EchonLabs",
-    "description": "An innovative mobile application utilizing facial recognition technology to display personalized greetings on kiosk displays at events. Features include real-time face detection, customizable greeting templates, and analytics tracking.",
+    "role": "React Native Engineer",
+    "description": "An innovative mobile application utilising facial recognition technology to display personalised greetings on kiosk displays at events. Features include real-time face detection, customisable greeting templates, and analytics tracking.",
     "fullDescription": "",
+    "highlights": [
+      "Built the kiosk-facing React Native app as the sole engineer",
+      "Integrated real-time facial recognition to identify and greet registered attendees",
+      "Built customisable greeting template system and event analytics dashboard",
+      "Deployed on physical kiosk hardware at live Janashakthi events"
+    ],
+    "technologies": [
+      "React Native",
+      "Face Recognition API",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "images": ["/images/janashakthi-pgs.webp"]
   },
   {
-    "id": 16,
-    "title": "Writer Watch (AKA ReaderScout) Chrome Extension",
+    "id": 17,
+    "title": "Writer Watch (ReaderScout) Chrome Extension",
     "year": "2022",
     "client": "Surge",
     "company": "Surge",
+    "role": "Solo Developer",
     "description": "A powerful Chrome extension for authors to monitor their Amazon book performance metrics in real-time. Features include sales tracking, ranking analysis, review monitoring, and competitive market insights.",
     "fullDescription": "",
+    "highlights": [
+      "Built the entire extension as the sole developer \u2014 from Chrome extension architecture through to the backend API",
+      "Implemented real-time Amazon data scraping and parsing within extension constraints",
+      "Built sales rank tracking, review monitoring, and competitive analysis tooling",
+      "Delivered independently from scoping to release"
+    ],
+    "technologies": [
+      "React",
+      "Chrome Extensions API",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "images": ["/images/writer-watch.webp"]
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "XLife",
     "year": "2022",
     "client": "XL Axiata",
-    "company": "ADL",
-    "description": "A comprehensive employee super app providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates.",
+    "company": "Axiata Digital Labs",
+    "role": "React Native Engineer",
+    "description": "A comprehensive employee super app for XL Axiata Indonesia providing access to company services, HR functions, and internal communications. Features include leave management, expense tracking, document access, and company news updates.",
     "fullDescription": "",
+    "highlights": [
+      "Worked as a React Native engineer within a cross-functional international team across Indonesia and Sri Lanka",
+      "Integrated a customised Yammer platform into the app using React Native WebView",
+      "Contributed features across leave management, expense tracking, and HR modules",
+      "Conducted knowledge transfer sessions on React concepts for team members"
+    ],
+    "technologies": ["React Native", "Redux", "Redux-Saga", "Jest", "Sonar"],
     "images": ["/images/xlife.webp"]
   },
   {
     "id": 19,
+    "title": "WooCommerce Payments Plugin",
+    "year": "2022",
+    "client": "Dinetap",
+    "company": "Dinetap",
+    "role": "Full-Stack Engineer",
+    "description": "A WooCommerce plugin enabling merchants to process payments through the Dinetap payments platform. Allows WooCommerce-based restaurant and retail merchants to accept payments via the Dinetap ecosystem directly from their existing WooCommerce store.",
+    "fullDescription": "",
+    "highlights": [
+      "Built the full plugin solo \u2014 from WooCommerce PHP plugin architecture through to the Dinetap payments API integration",
+      "Implemented checkout flow, payment status handling, and webhook reconciliation between WooCommerce and Dinetap",
+      "Designed for easy merchant onboarding with minimal configuration required",
+      "Tested across multiple WooCommerce versions and payment scenarios"
+    ],
+    "technologies": ["PHP", "WooCommerce", "Node.js", "Express", "MySQL"],
+    "images": ["/images/woocommerce-plugin.webp"]
+  },
+  {
+    "id": 20,
     "title": "Kelzey CMS",
     "year": "2021",
     "client": "Kelsey",
     "company": "EchonLabs",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead",
     "description": "A sophisticated web application for condominium management featuring unit pricing calculations, maintenance scheduling, and resident communications. Includes payment processing, facility booking, and automated billing.",
     "fullDescription": "",
+    "highlights": [
+      "Led full-stack engineering as the tech lead, built on top of the BaseNeo ERP framework",
+      "Designed unit pricing calculation engine and automated billing workflows",
+      "Built maintenance scheduling, facility booking, and resident communication modules",
+      "Engaged directly with the Kelsey client team throughout scoping and delivery"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Bootstrap",
+      "BaseNeo"
+    ],
     "images": ["/images/kelsey-cms.webp"]
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "Genie Admin Portal",
     "year": "2021",
     "client": "Dialog Axiata",
-    "company": "ADL",
+    "company": "Axiata Digital Labs",
+    "role": "Angular Frontend Engineer",
     "description": "A comprehensive administration platform for Dialog Axiata's digital wallet service featuring transaction management, user administration, and reporting tools. Includes fraud detection and compliance monitoring.",
     "fullDescription": "",
+    "highlights": [
+      "Built the admin portal frontend as an Angular engineer during the internship period",
+      "Implemented transaction management, user administration, and reporting views",
+      "Worked on fraud detection monitoring dashboards and compliance tooling",
+      "Applied NgRx state management, BEM/ITCSS CSS methodology, and Jasmine unit tests"
+    ],
+    "technologies": [
+      "Angular",
+      "NgRx",
+      "Bootstrap",
+      "Sass",
+      "Jasmine",
+      "Karma"
+    ],
     "images": ["/images/genie-admin.webp"]
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "Janashakthi Life",
     "year": "2021",
     "client": "LOLC",
     "company": "EchonLabs",
+    "role": "React Native Engineer",
     "description": "A self-service mobile application for life insurance customers featuring policy management, premium payments, and claim submissions. Includes document storage, beneficiary management, and policy illustrations.",
     "fullDescription": "",
+    "highlights": [
+      "Built the mobile application as the React Native engineer",
+      "Implemented policy management, premium payment flows, and claim submissions",
+      "Built document storage, beneficiary management, and policy illustration features",
+      "Integrated with EchonLabs backend infrastructure and BaseNeo framework APIs"
+    ],
+    "technologies": [
+      "React Native",
+      "Redux",
+      "Redux-Saga",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "images": ["/images/janashakthi-life.webp"]
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "Janashakthi Protech",
     "year": "2021",
     "client": "LOLC",
     "company": "EchonLabs",
+    "role": "Full-Stack Engineer \u00b7 Tech Lead",
     "description": "An interactive web platform for insurance policy exploration and purchase featuring product comparisons, premium calculators, and online applications. Includes document upload, payment processing, and status tracking.",
     "fullDescription": "",
+    "highlights": [
+      "Led full-stack engineering as the tech lead, built on the MEAN stack",
+      "Designed and built an interactive premium calculator and policy comparison engine",
+      "Implemented online application flows with document upload and payment processing",
+      "Engaged directly with the Janashakthi client team throughout delivery"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Bootstrap",
+      "Sass"
+    ],
     "images": ["/images/janashakthi-protech.webp"]
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "NCell Payment Gateway",
     "year": "2021",
     "client": "NCell",
-    "company": "ADL",
+    "company": "Axiata Digital Labs",
+    "role": "Angular Frontend Engineer",
     "description": "A comprehensive payment platform for NCell's telco services featuring e-top ups, bill payments, and product purchases. Includes transaction monitoring, automated reconciliation, and integration with multiple payment providers.",
     "fullDescription": "",
+    "highlights": [
+      "Built the frontend of both the admin portal and the dealer app as an Angular engineer",
+      "Implemented e-top up flows, bill payment journeys, and product purchase interfaces",
+      "Built transaction monitoring dashboards and reconciliation tooling",
+      "Applied NgXs state management, lazy-loading, and BEM/ITCSS methodology"
+    ],
+    "technologies": ["Angular", "NgXs", "Bootstrap", "Sass", "Jasmine"],
     "images": ["/images/ncell-payment-gateway.webp"]
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "NCell Gifting Platform",
     "year": "2020",
     "client": "NCell",
-    "company": "ADL",
-    "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalized messaging, scheduled gifting, and integration with NCell's billing system.",
+    "company": "Axiata Digital Labs",
+    "role": "Angular Frontend Engineer",
+    "description": "A web-based platform enabling users to gift telco products and services to others. Features include product catalogs, personalised messaging, scheduled gifting, and integration with NCell's billing system.",
     "fullDescription": "",
+    "highlights": [
+      "Built the frontend as an Angular engineer during the internship period",
+      "Implemented product catalog, personalised messaging, and scheduled gifting flows",
+      "Integrated with NCell's billing system APIs",
+      "Applied lazy-loading, scaffolding patterns, BEM and ITCSS methodology"
+    ],
+    "technologies": ["Angular", "Bootstrap", "Sass", "NgRx", "Jasmine"],
     "images": ["/images/ncell-gifting.webp"]
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "URL Shortener",
     "year": "2020",
     "client": "EchonLabs",
     "company": "EchonLabs",
-    "description": "A feature-rich URL shortening service with link protection and monetization capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
+    "role": "Solo Full-Stack Developer",
+    "description": "A feature-rich URL shortening service with link protection and monetisation capabilities. Includes click tracking analytics, custom alias creation, QR code generation, and access control management.",
     "fullDescription": "",
+    "highlights": [
+      "Built the entire platform as the sole full-stack developer",
+      "Implemented click tracking analytics, custom alias creation, and QR code generation",
+      "Built link protection, monetisation, and access control management features",
+      "Designed and deployed the full MEAN stack infrastructure independently"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "Bootstrap"],
     "images": ["/images/el-url-shortener.webp"]
   }
 ]

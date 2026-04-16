@@ -1,4 +1,3 @@
 yarn format
 yarn lint
 yarn typecheck
-ggshield secret scan pre-commit

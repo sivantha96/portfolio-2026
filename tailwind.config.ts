@@ -12,6 +12,10 @@ export default {
   },
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-dm-sans)', 'Arial', 'Helvetica', 'sans-serif'],
+        serif: ['var(--font-lora)', 'Georgia', 'serif'],
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

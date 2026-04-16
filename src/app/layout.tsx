@@ -1,18 +1,21 @@
 import { about, contact } from '@/assets/content';
 import { Providers } from '@/hocs/Providers';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { DM_Sans, Lora } from 'next/font/google';
 import React from 'react';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const lora = Lora({
+  variable: '--font-lora',
   subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
@@ -124,7 +127,7 @@ export default function RootLayout({
         <link rel='manifest' href='site.webmanifest' />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${dmSans.variable} ${lora.variable} antialiased`}
         suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>

@@ -60,6 +60,9 @@ function ProjectCard({ data, onPress }: ProjectCardProps) {
     <Card>
       <CardHeader>
         <CardTitle>{data.title}</CardTitle>
+        {data.role && (
+          <p className='text-xs font-medium text-primary mt-0.5'>{data.role}</p>
+        )}
         <CardDescription>{data.description}</CardDescription>
       </CardHeader>
       <CardContent>

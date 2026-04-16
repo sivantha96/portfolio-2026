@@ -3,7 +3,7 @@ export const contact = {
   designation: 'Full-Stack Engineer',
   email: {
     personal: 'sivantha.paranavithana@gmail.com',
-    work: 'sivantha.p@eatmeglobal.com',
+    work: 'sivantha.p@dinetap.com',
   },
   phone: {
     mobile: '+94768887357',

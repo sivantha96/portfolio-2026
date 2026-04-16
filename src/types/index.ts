@@ -1,6 +1,7 @@
 export interface Project {
   id: number;
   title: string;
+  role?: string;
   description: string;
   fullDescription: string;
   images: string[];

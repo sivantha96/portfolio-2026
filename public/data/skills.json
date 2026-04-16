@@ -1,33 +1,70 @@
 [
   { "id": 1, "name": "TypeScript", "icon": "/icons/typescript.svg" },
   { "id": 2, "name": "JavaScript", "icon": "/icons/javascript.svg" },
+  { "id": 3, "name": "Python", "icon": "/icons/python.svg" },
+  { "id": 4, "name": "Java", "icon": "/icons/java.svg" },
 
-  { "id": 3, "name": "React", "icon": "/icons/react.svg" },
-  { "id": 4, "name": "React Native", "icon": "/icons/react-native.svg" },
-  { "id": 5, "name": "Angular", "icon": "/icons/angular.svg" },
-  { "id": 6, "name": "Next.js", "icon": "/icons/nextjs.svg" },
+  { "id": 5, "name": "React", "icon": "/icons/react.svg" },
+  { "id": 6, "name": "React Native", "icon": "/icons/react-native.svg" },
+  { "id": 7, "name": "Angular", "icon": "/icons/angular.svg" },
+  { "id": 8, "name": "Next.js", "icon": "/icons/nextjs.svg" },
+  { "id": 9, "name": "Expo", "icon": "/icons/expo.svg" },
 
-  { "id": 7, "name": "Node.js", "icon": "/icons/nodejs.svg" },
-  { "id": 8, "name": "Express.js", "icon": "/icons/express.svg" },
-  { "id": 9, "name": "Nest.js", "icon": "/icons/nestjs.svg" },
+  { "id": 11, "name": "Redux Toolkit", "icon": "/icons/redux.svg" },
+  { "id": 12, "name": "Zustand", "icon": "/icons/zustand.svg" },
+  { "id": 13, "name": "RxJS", "icon": "/icons/rxjs.svg" },
+  { "id": 14, "name": "NgRx", "icon": "/icons/ngrx.svg" },
 
-  { "id": 10, "name": "MongoDB", "icon": "/icons/mongodb.svg" },
-  { "id": 11, "name": "MySQL", "icon": "/icons/mysql.svg" },
+  { "id": 15, "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
+  { "id": 16, "name": "Sass", "icon": "/icons/sass.svg" },
+  { "id": 17, "name": "Bootstrap", "icon": "/icons/bootstrap.svg" },
 
-  { "id": 12, "name": "Mongoose", "icon": "/icons/mongoose.svg" },
-  { "id": 13, "name": "Sequelize", "icon": "/icons/sequelize.svg" },
+  { "id": 18, "name": "Node.js", "icon": "/icons/nodejs.svg" },
+  { "id": 19, "name": "Express.js", "icon": "/icons/express.svg" },
+  { "id": 20, "name": "Nest.js", "icon": "/icons/nestjs.svg" },
 
-  { "id": 14, "name": "Jest", "icon": "/icons/jest.svg" },
-  { "id": 15, "name": "Cypress", "icon": "/icons/cypress.svg" },
+  { "id": 21, "name": "MongoDB", "icon": "/icons/mongodb.svg" },
+  { "id": 22, "name": "MySQL", "icon": "/icons/mysql.svg" },
 
-  { "id": 16, "name": "GitHub Actions", "icon": "/icons/github-actions.svg" },
+  { "id": 23, "name": "Mongoose", "icon": "/icons/mongoose.svg" },
+  { "id": 24, "name": "Sequelize", "icon": "/icons/sequelize.svg" },
+
+  { "id": 25, "name": "Supabase", "icon": "/icons/supabase.svg" },
+  { "id": 26, "name": "Firebase", "icon": "/icons/firebase.svg" },
+  { "id": 27, "name": "Pusher", "icon": "/icons/pusher.svg" },
+
+  { "id": 30, "name": "AWS ECS", "icon": "/icons/aws-ecs.svg" },
+  { "id": 31, "name": "AWS Lambda", "icon": "/icons/aws-lambda.svg" },
+  { "id": 32, "name": "AWS SQS", "icon": "/icons/aws-sqs.svg" },
+  { "id": 33, "name": "AWS RDS", "icon": "/icons/aws-rds.svg" },
+  { "id": 34, "name": "AWS CloudWatch", "icon": "/icons/aws-cloudwatch.svg" },
+
+  { "id": 35, "name": "Stripe", "icon": "/icons/stripe.svg" },
+  { "id": 36, "name": "Adyen", "icon": "/icons/adyen.svg" },
+  { "id": 37, "name": "Airwallex", "icon": "/icons/airwallex.svg" },
+
+  { "id": 38, "name": "Jest", "icon": "/icons/jest.svg" },
+  { "id": 39, "name": "Cypress", "icon": "/icons/cypress.svg" },
+  { "id": 40, "name": "Playwright", "icon": "/icons/playwright.svg" },
+  { "id": 42, "name": "Jasmine", "icon": "/icons/jasmine.svg" },
+
+  { "id": 43, "name": "GitHub Actions", "icon": "/icons/github-actions.svg" },
   {
-    "id": 17,
+    "id": 44,
     "name": "GitLab Pipelines",
     "icon": "/icons/gitlab-pipelines.svg"
   },
+  { "id": 45, "name": "Expo EAS", "icon": "/icons/expo.svg" },
 
-  { "id": 18, "name": "Git", "icon": "/icons/git.svg" },
-  { "id": 19, "name": "Docker", "icon": "/icons/docker.svg" },
-  { "id": 20, "name": "AWS", "icon": "/icons/aws.svg" }
+  { "id": 46, "name": "Git", "icon": "/icons/git.svg" },
+  { "id": 47, "name": "Docker", "icon": "/icons/docker.svg" },
+  { "id": 48, "name": "NGINX", "icon": "/icons/nginx.svg" },
+
+  { "id": 49, "name": "Sentry", "icon": "/icons/sentry.svg" },
+  { "id": 50, "name": "SonarQube", "icon": "/icons/sonarqube.svg" },
+  { "id": 51, "name": "Mixpanel", "icon": "/icons/mixpanel.svg" },
+  { "id": 52, "name": "OneSignal", "icon": "/icons/onesignal.svg" },
+  { "id": 53, "name": "Cloudflare", "icon": "/icons/cloudflare.svg" },
+
+  { "id": 54, "name": "Figma", "icon": "/icons/figma.svg" }
 ]

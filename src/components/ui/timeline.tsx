@@ -168,17 +168,19 @@ const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
                       className='mt-0'>
-                      {groupedEvents[year].map((event, index) => (
-                        <TimelineItem
-                          key={event.id}
-                          title={event.title}
-                          date={event.date}
-                          description={event.description}
-                          type={event.type}
-                          icon={getIcon(event.type)}
-                          isLeft={isDesktop ? index % 2 === 0 : true}
-                        />
-                      ))}
+                      {[...groupedEvents[year]]
+                        .reverse()
+                        .map((event, index) => (
+                          <TimelineItem
+                            key={event.id}
+                            title={event.title}
+                            date={event.date}
+                            description={event.description}
+                            type={event.type}
+                            icon={getIcon(event.type)}
+                            isLeft={isDesktop ? index % 2 === 0 : true}
+                          />
+                        ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
