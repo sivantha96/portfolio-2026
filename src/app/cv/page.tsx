@@ -30,7 +30,7 @@ export default function CVPage() {
     if (contentRef.current) {
       const el = contentRef.current;
 
-      // Reset CSS zoom before measuring — on mobile the element carries a
+      // Reset CSS zoom before measuring: on mobile the element carries a
       // viewport-fit zoom that scales scrollHeight, producing an undersized
       // @page height that causes multi-page output.
       el.style.zoom = '1';

@@ -77,7 +77,7 @@ export const StructuredData = () => {
     '@type': 'WebSite',
     '@id': `${BASE_URL}/#website`,
     url: BASE_URL,
-    name: `${contact.name} — Portfolio`,
+    name: `${contact.name} | Portfolio`,
     description: about.meta,
     inLanguage: 'en-US',
     author: {
@@ -99,13 +99,13 @@ export const StructuredData = () => {
     })),
   };
 
-  // ProfilePage — helps search engines and AI assistants understand this is a portfolio/profile
+  // ProfilePage: helps search engines and AI assistants understand this is a portfolio/profile
   const profilePageSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
     '@id': `${BASE_URL}/#profilepage`,
     url: BASE_URL,
-    name: `${contact.name} — ${contact.designation}`,
+    name: `${contact.name} | ${contact.designation}`,
     description: about.meta,
     inLanguage: 'en-US',
     dateModified: new Date().toISOString().split('T')[0],

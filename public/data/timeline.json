@@ -101,14 +101,14 @@
     "id": 19,
     "title": "ArchivEL",
     "date": "2022",
-    "description": "Tech lead and architect for a Google Drive-like document management system. Built OCR, version control, workflow automation, and access control — integrated with the BaseNeo framework.",
+    "description": "Tech lead and architect for a Google Drive-like document management system. Built OCR, version control, workflow automation, and access control, integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
     "id": 20,
     "title": "CredenEL",
     "date": "2022",
-    "description": "Tech lead and architect for an identity and access management system featuring SSO, MFA, RBAC, and audit logging — integrated with the BaseNeo framework.",
+    "description": "Tech lead and architect for an identity and access management system featuring SSO, MFA, RBAC, and audit logging, integrated with the BaseNeo framework.",
     "type": "project"
   },
   {
@@ -129,7 +129,7 @@
     "id": 23,
     "title": "Writer Watch Chrome Extension",
     "date": "2022",
-    "description": "Built a React Chrome extension solo for authors to monitor Amazon book performance metrics in real time — sales rank, reviews, and competitive insights. Reached 6,000+ users.",
+    "description": "Built a React Chrome extension solo for authors to monitor Amazon book performance metrics in real time: sales rank, reviews, and competitive insights. Reached 6,000+ users.",
     "type": "project"
   },
   {
@@ -241,7 +241,7 @@
     "id": 35,
     "title": "AWS Infrastructure Migration",
     "date": "2025",
-    "description": "Designed and provisioned Dinetap's complete AWS cloud infrastructure using CDK. Led the migration from a monolithic EC2 system to a serverless ECS Fargate microservices architecture — achieving near-100% uptime, isolating failures to individual services, and reducing infrastructure costs by over 49%.",
+    "description": "Designed and provisioned Dinetap's complete AWS cloud infrastructure using CDK. Led the migration from a monolithic EC2 system to a serverless ECS Fargate microservices architecture, achieving near-100% uptime, isolating failures to individual services, and reducing infrastructure costs by over 49%.",
     "type": "project"
   },
 

@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     username: 'sivantha96',
     locale: 'en_US',
     url: BASE_URL,
-    siteName: `${contact.name} — Portfolio`,
+    siteName: `${contact.name} | Portfolio`,
     title: `${contact.name} | ${contact.designation}`,
     description: about.meta,
     images: [
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: `${contact.name} — ${contact.designation}`,
+        alt: `${contact.name} | ${contact.designation}`,
       },
     ],
   },

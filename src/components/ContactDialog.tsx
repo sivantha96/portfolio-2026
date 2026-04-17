@@ -36,7 +36,7 @@ interface ContactDialogProps {
 }
 
 export function ContactDialog({
-  triggerLabel = 'Contact Me',
+  triggerLabel = 'Send a message',
   triggerClassName,
   triggerStyle,
 }: ContactDialogProps) {
@@ -73,7 +73,7 @@ export function ContactDialog({
       <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
         <DialogContent className='sm:max-w-[425px]'>
           <DialogHeader>
-            <DialogTitle>Contact Me</DialogTitle>
+            <DialogTitle>Send a Message</DialogTitle>
             <DialogDescription>
               {`Fill out the form below to send me a message. I'll get back to you
             as soon as possible.`}

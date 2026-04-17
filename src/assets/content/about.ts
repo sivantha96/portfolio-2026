@@ -9,11 +9,11 @@ export const about = {
   notable: [
     {
       name: 'Dinetap App',
-      desc: 'Flagship consumer dining app — restaurant discovery, table booking, ordering & payments with cashback rewards. Led a team of 6 engineers end-to-end.',
+      desc: 'Flagship consumer dining app: restaurant discovery, table booking, ordering & payments with cashback rewards. Led a team of 6 engineers end-to-end.',
     },
     {
       name: 'AWS Infrastructure & Microservices Migration',
-      desc: 'Designed and owned the full AWS cloud infrastructure from scratch using CDK. Migrated a monolith to ECS Fargate microservices — achieving near-100% uptime and over 49% infrastructure cost reduction.',
+      desc: 'Designed and owned the full AWS cloud infrastructure from scratch using CDK. Migrated a monolith to ECS Fargate microservices, achieving near-100% uptime and over 49% infrastructure cost reduction.',
     },
     {
       name: 'Adyen Payments Platform',

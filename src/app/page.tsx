@@ -15,7 +15,10 @@ import projectsData from '../../public/data/projects.json';
 
 const ContactDialog = dynamic(
   () => import('@/components/ContactDialog').then((m) => m.ContactDialog),
-  { ssr: false, loading: () => <Button variant='outline'>Contact Me</Button> },
+  {
+    ssr: false,
+    loading: () => <Button variant='outline'>Send a Message</Button>,
+  },
 );
 
 dayjs.extend(duration);
@@ -32,7 +35,7 @@ const flagshipProjects = [
     category: 'Infrastructure · 2022–2025',
     title: 'AWS Microservices Migration',
     description:
-      'Owned and architected the full AWS cloud infrastructure from scratch using CDK. Drove the migration from a monolithic EC2 system to ECS Fargate microservices — eliminating platform-wide outages caused by database deadlocks and achieving near-100% uptime with failures contained to individual services.',
+      'Owned and architected the full AWS cloud infrastructure from scratch using CDK. Drove the migration from a monolithic EC2 system to ECS Fargate microservices, eliminating platform-wide outages caused by database deadlocks and achieving near-100% uptime with failures contained to individual services.',
     metrics: [
       { val: '49%', label: 'Cost Reduction' },
       { val: '~100%', label: 'Uptime' },
@@ -68,7 +71,7 @@ const flagshipProjects = [
     category: 'Consumer Product · 2022–Present',
     title: jp(3).title,
     description:
-      'Led a team of 6 engineers end-to-end to deliver the flagship consumer dining app — restaurant discovery, table booking, ordering, and payments with cashback rewards. Architected the React Native Expo codebase, set API contracts, and owned the delivery calendar.',
+      'Led a team of 6 engineers end-to-end to deliver the flagship consumer dining app: restaurant discovery, table booking, ordering, and payments with cashback rewards. Architected the React Native Expo codebase, set API contracts, and owned the delivery calendar.',
     metrics: [
       { val: '6', label: 'Engineers Led' },
       { val: 'E2E', label: 'Ownership' },
@@ -864,7 +867,7 @@ function FlagshipImage({ webp, title }: { webp: string; title: string }) {
       alt={title}
       width={600}
       height={400}
-      className='w-full h-full object-cover transition-opacity duration-300'
+      className='w-full h-full max-h-[420px] object-cover transition-opacity duration-300'
       onLoad={handleLoad}
     />
   );
@@ -951,7 +954,7 @@ export default function Portfolio() {
 
   return (
     <div className='min-h-screen bg-background text-foreground bg-grid'>
-      {/* Radial glow — top-left */}
+      {/* Radial glow: top-left */}
       <div
         aria-hidden='true'
         className='fixed pointer-events-none'
@@ -981,11 +984,11 @@ export default function Portfolio() {
       <main>
         {/* ── HERO ────────────────────────────────────────────── */}
         <section className='grid grid-cols-1 md:grid-cols-2 items-center min-h-screen px-6 md:px-16 pt-28 pb-24 gap-16 md:gap-20'>
-          {/* Left — text */}
+          {/* Left: text */}
           <div className='text-center md:text-left'>
             <div className='fade-up fade-up-1 inline-flex items-center gap-2 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-green-700 bg-green-500/10 border border-green-400/50 px-3 py-1.5 w-fit mb-8 mx-auto md:mx-0'>
               <span className='status-dot w-1.5 h-1.5 rounded-full bg-green-600 shrink-0' />
-              Open to senior roles — Remote
+              Open to senior roles · Remote
             </div>
 
             <p className='fade-up fade-up-1 font-mono text-[0.78rem] tracking-[0.2em] uppercase text-muted-foreground mb-7'>
@@ -1020,7 +1023,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* Right — stats block */}
+          {/* Right: stats block */}
           <div className='fade-up fade-up-3 flex justify-center md:justify-end'>
             <div className='grid grid-cols-2 gap-px bg-border border border-border w-full max-w-[380px]'>
               <div className='relative overflow-hidden bg-background p-8 group'>
@@ -1078,7 +1081,7 @@ export default function Portfolio() {
             },
             {
               big: `${roundUp5(projectsData.length)}+`,
-              desc: 'Projects delivered across organizations — from startups to enterprise',
+              desc: 'Projects delivered across organizations, from startups to enterprise',
             },
             {
               big: `${roundUp5(uniqueClients.length)}+`,
@@ -1105,7 +1108,7 @@ export default function Portfolio() {
         {/* ── 01 PROJECTS ─────────────────────────────────────── */}
         <section id='projects' className='px-6 md:px-16 py-32'>
           <div className='mb-16'>
-            <SectionLabel label='01 — Projects' />
+            <SectionLabel label='01 · Projects' />
             <h2 className='section-title font-serif text-center md:text-left'>
               Flagship Work
             </h2>
@@ -1162,14 +1165,14 @@ export default function Portfolio() {
                 <div
                   className={`${
                     i % 2 === 1 ? 'md:order-first' : ''
-                  } flex items-center justify-center min-h-[300px] overflow-hidden`}>
+                  } flex items-center justify-center min-h-[300px] max-h-[420px] overflow-hidden`}>
                   <ProjectVisual num={p.num} image={p.image} title={p.title} />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* More projects — 3-col card grid */}
+          {/* More projects: 3-col card grid */}
           <div className='font-mono text-[0.72rem] tracking-[0.2em] uppercase text-muted-foreground mt-20 mb-4 text-center md:text-left'>
             More Projects
           </div>
@@ -1214,7 +1217,7 @@ export default function Portfolio() {
         {/* ── 02 EXPERIENCE ───────────────────────────────────── */}
         <section id='experience' className='px-6 md:px-16 py-32 bg-secondary'>
           <div className='mb-20'>
-            <SectionLabel label='02 — Experience' />
+            <SectionLabel label='02 · Experience' />
             <h2 className='section-title font-serif text-center md:text-left'>
               Journey
             </h2>
@@ -1226,7 +1229,7 @@ export default function Portfolio() {
                 key={company.company}
                 className='reveal mb-16 last:mb-0 relative'>
                 <span
-                  className='absolute -left-[25px] md:-left-[41px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
+                  className='absolute -left-[29px] md:-left-[45px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
                   style={
                     ci === 0
                       ? {
@@ -1270,7 +1273,7 @@ export default function Portfolio() {
             {/* Education */}
             <div className='reveal mb-0 relative'>
               <span
-                className='absolute -left-[25px] md:-left-[41px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
+                className='absolute -left-[29px] md:-left-[45px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
                 style={{ borderColor: 'hsl(var(--border))' }}
               />
               <div className='font-mono text-[0.68rem] tracking-[0.15em] uppercase text-primary mb-1'>
@@ -1290,7 +1293,7 @@ export default function Portfolio() {
         {/* ── 03 SKILLS ───────────────────────────────────────── */}
         <section id='skills' className='px-6 md:px-16 py-32'>
           <div className='mb-20'>
-            <SectionLabel label='03 — Skills' />
+            <SectionLabel label='03 · Skills' />
             <h2 className='section-title font-serif text-center md:text-left'>
               Stack &amp; Expertise
             </h2>
@@ -1320,7 +1323,7 @@ export default function Portfolio() {
         {/* ── 04 WRITING ──────────────────────────────────────── */}
         <section id='articles' className='px-6 md:px-16 py-32 bg-secondary'>
           <div className='mb-16'>
-            <SectionLabel label='04 — Writing' />
+            <SectionLabel label='04 · Writing' />
             <h2 className='section-title font-serif text-center md:text-left'>
               Articles
             </h2>
@@ -1378,7 +1381,7 @@ export default function Portfolio() {
         className='px-6 md:px-16 py-32'
         style={{ background: '#0A0A0A' }}>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start'>
-          {/* Left — heading + description + button */}
+          {/* Left: heading + description + button */}
           <div className='text-center md:text-left'>
             <div
               className='flex items-center justify-center md:justify-start gap-4 font-mono text-[0.72rem] tracking-[0.2em] uppercase mb-6'
@@ -1387,7 +1390,7 @@ export default function Portfolio() {
                 className='w-8 h-px shrink-0'
                 style={{ background: 'hsl(var(--primary) / 0.4)' }}
               />
-              05 — Contact
+              05 · Contact
             </div>
 
             <h2
@@ -1410,7 +1413,7 @@ export default function Portfolio() {
             />
           </div>
 
-          {/* Right — contact links */}
+          {/* Right: contact links */}
           <div style={{ borderTop: '1px solid rgba(255,253,245,0.08)' }}>
             {contactLinks.map((link) => (
               <a
