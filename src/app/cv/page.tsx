@@ -8,21 +8,28 @@ const PAGE_WIDTH = 920; // natural design width of .cv-page (px)
 export default function CVPage() {
   const contentRef = useRef<HTMLDivElement>(null);
   const pageStyleRef = useRef<HTMLStyleElement | null>(null);
+  const scaleRef = useRef(1);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Scale the CV to fit the viewport on narrow screens by setting a CSS custom
-  // property that the @media screen rule in CVContent picks up via `zoom`.
+  // Scale the CV to fit the viewport on narrow screens by applying zoom
+  // directly to the element so it works reliably across all browsers.
   useEffect(() => {
     const update = () => {
       const scale = Math.min(1, window.innerWidth / PAGE_WIDTH);
-      document.documentElement.style.setProperty('--cv-zoom', String(scale));
+      scaleRef.current = scale;
+      if (contentRef.current) {
+        contentRef.current.style.zoom = scale < 1 ? String(scale) : '';
+      }
       setIsMobile(window.innerWidth < 768);
     };
     update();
     window.addEventListener('resize', update);
     return () => {
       window.removeEventListener('resize', update);
-      document.documentElement.style.removeProperty('--cv-zoom');
+      if (contentRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        contentRef.current.style.zoom = '';
+      }
     };
   }, []);
 
@@ -40,7 +47,8 @@ export default function CVPage() {
       void el.getBoundingClientRect();
       const heightPx = el.scrollHeight;
       const heightMm = Math.ceil(heightPx * 0.264583);
-      el.style.zoom = '';
+      // Restore viewport zoom after measurement
+      el.style.zoom = scaleRef.current < 1 ? String(scaleRef.current) : '';
       el.style.width = '';
       el.style.maxWidth = '';
       el.style.overflow = '';
@@ -87,6 +95,11 @@ export default function CVPage() {
       }
       pageStyleRef.current?.remove();
       pageStyleRef.current = null;
+      // Restore viewport zoom after print dialog closes
+      if (contentRef.current) {
+        contentRef.current.style.zoom =
+          scaleRef.current < 1 ? String(scaleRef.current) : '';
+      }
     };
 
     window.addEventListener('beforeprint', handleBeforePrint);

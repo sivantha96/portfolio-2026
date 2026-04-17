@@ -210,7 +210,6 @@ const styles = `
       width: 920px;
       max-width: none;
       border-radius: 0;
-      zoom: var(--cv-zoom, 1);
       transform-origin: top left;
     }
   }

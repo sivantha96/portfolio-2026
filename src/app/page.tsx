@@ -35,7 +35,7 @@ const flagshipProjects = [
     category: 'Infrastructure · 2022–2025',
     title: 'AWS Microservices Migration',
     description:
-      'Owned and architected the full AWS cloud infrastructure from scratch using CDK. Drove the migration from a monolithic EC2 system to ECS Fargate microservices, eliminating platform-wide outages caused by database deadlocks and achieving near-100% uptime with failures contained to individual services.',
+      'Inherited a monolithic EC2 system where a single database deadlock could take the entire platform offline. Redesigned the full infrastructure using AWS CDK — migrating to ECS Fargate microservices with isolated service boundaries, eliminating platform-wide outages, achieving near-100% uptime, and cutting monthly cloud costs by 49%. Designed for distributed team workflows with infrastructure-as-code, automated rollbacks, and per-service observability via CloudWatch.',
     metrics: [
       { val: '49%', label: 'Cost Reduction' },
       { val: '~100%', label: 'Uptime' },
@@ -57,7 +57,7 @@ const flagshipProjects = [
     category: 'Payments Platform · 2022–Present',
     title: 'Dinetap Payments',
     description:
-      'Led a team of 7 engineers to design and ship an end-to-end payment platform across card, digital wallet, and physical terminal surfaces. Delivered Adyen and Stripe integrations, a WooCommerce PHP payment plugin, and is currently leading the Airwallex integration.',
+      'Architected and led a team of 7 engineers to build a payment platform now processing SGD 13.5M+ per month across card, digital wallet, and physical POS terminal surfaces. Engineered for high-concurrency reliability during restaurant peak hours — SQS-backed webhook processing ensures no payment event is lost under load. Covers Stripe, Adyen (with terminal support), WooCommerce, and Airwallex, with PCI-compliant data handling across all surfaces.',
     metrics: [
       { val: 'SGD 13.5M', label: 'Monthly Volume' },
       { val: '7', label: 'Engineers Led' },
@@ -71,7 +71,7 @@ const flagshipProjects = [
     category: 'Consumer Product · 2022–Present',
     title: jp(3).title,
     description:
-      'Led a team of 6 engineers end-to-end to deliver the flagship consumer dining app: restaurant discovery, table booking, ordering, and payments with cashback rewards. Architected the React Native Expo codebase, set API contracts, and owned the delivery calendar.',
+      'Architected and led a cross-functional team of 6 engineers to deliver the flagship consumer dining app end-to-end. Set API contracts, data models, and release cadence from day one — with documentation-first workflows enabling async delivery across a distributed team. Covers restaurant discovery, real-time ordering, integrated payments, and a cashback rewards system, built on React Native Expo with AWS ECS Fargate for high availability.',
     metrics: [
       { val: '6', label: 'Engineers Led' },
       { val: 'E2E', label: 'Ownership' },
@@ -84,7 +84,7 @@ const flagshipProjects = [
     category: 'Engineering Culture · 2023–Present',
     title: 'Engineering Quality Programme',
     description:
-      'Established a company-wide engineering quality programme that eliminated all manual release steps and enabled daily automated deployments. Introduced GitHub Actions CI/CD with AI-assisted code review, security scanning via SonarQube, and one-click deployment across all web, API, mobile, and microservice repositories.',
+      'Built the engineering quality infrastructure to support a distributed team shipping across multiple product streams simultaneously. Eliminated all manual release steps, enabling daily autonomous deployments across every web, API, mobile, and microservice repository. Pipelines include AI-assisted code review, SonarQube security scanning, and automated regression checks — so engineers ship confidently without synchronous sign-off.',
     metrics: [
       { val: '0', label: 'Manual Release Steps' },
       { val: 'Daily', label: 'Deploy Cadence' },
@@ -917,8 +917,14 @@ function ProjectVisual({
 
 const roundUp5 = (n: number) => Math.ceil(n / 5) * 5;
 
+const GRID_INITIAL = 6;
+
 export default function Portfolio() {
   const yearsExp = dayjs().diff(dayjs(about.experience.start), 'year');
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects
+    ? gridProjects
+    : gridProjects.slice(0, GRID_INITIAL);
 
   const { data: articles } = useQuery({
     queryKey: ['articles'],
@@ -1175,7 +1181,7 @@ export default function Portfolio() {
             More Projects
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border'>
-            {gridProjects.map((p, i, arr) => {
+            {visibleProjects.map((p, i, arr) => {
               const cols = 3;
               const remainder = arr.length % cols;
               const isInLastRow =
@@ -1185,17 +1191,25 @@ export default function Portfolio() {
               const center = lastRowCount === 1 && isInLastRow;
               const spanTwo =
                 lastRowCount === 2 && isInLastRow && posInLastRow === 0;
+              const isNew = showAllProjects && i >= GRID_INITIAL;
               return (
                 <div
                   key={p.title}
                   className={`reveal relative overflow-hidden bg-background p-8 hover:bg-secondary transition-colors group cursor-default${center ? ' lg:w-1/3 lg:mx-auto' : ''}`}
-                  style={
-                    center
+                  style={{
+                    ...(center
                       ? { gridColumn: '1 / -1' }
                       : spanTwo
                         ? { gridColumn: 'span 2' }
-                        : undefined
-                  }>
+                        : {}),
+                    ...(isNew
+                      ? {
+                          animation: 'fadeUp 0.45s ease forwards',
+                          animationDelay: `${(i - GRID_INITIAL) * 0.055}s`,
+                          opacity: 0,
+                        }
+                      : {}),
+                  }}>
                   <span className='absolute left-0 top-0 bottom-0 w-0.5 bg-primary origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300' />
                   <div className='font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted-foreground mb-3'>
                     {p.meta}
@@ -1210,6 +1224,18 @@ export default function Portfolio() {
               );
             })}
           </div>
+
+          {!showAllProjects && gridProjects.length > GRID_INITIAL && (
+            <div className='mt-px flex justify-center'>
+              <button
+                type='button'
+                onClick={() => setShowAllProjects(true)}
+                className='inline-flex items-center gap-2 font-mono text-[0.78rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all mt-10'>
+                Show All Projects
+                <span className='inline-block'>↓</span>
+              </button>
+            </div>
+          )}
         </section>
 
         {/* ── 02 EXPERIENCE ───────────────────────────────────── */}
@@ -1227,15 +1253,8 @@ export default function Portfolio() {
                 key={company.company}
                 className='reveal mb-16 last:mb-0 relative'>
                 <span
-                  className='absolute -left-[29px] md:-left-[45px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
-                  style={
-                    ci === 0
-                      ? {
-                          borderColor: 'hsl(var(--primary))',
-                          backgroundColor: 'hsl(var(--primary))',
-                        }
-                      : { borderColor: 'hsl(var(--border))' }
-                  }
+                  className={`absolute -left-[29px] md:-left-[45px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background${ci === 0 ? ' timeline-dot-pulse' : ''}`}
+                  style={{ borderColor: 'hsl(var(--primary))' }}
                 />
                 <div className='font-mono text-[0.68rem] tracking-[0.15em] uppercase text-primary mb-1'>
                   {company.company}
@@ -1272,7 +1291,7 @@ export default function Portfolio() {
             <div className='reveal mb-0 relative'>
               <span
                 className='absolute -left-[29px] md:-left-[45px] top-1 w-2.5 h-2.5 rounded-full border-2 bg-background'
-                style={{ borderColor: 'hsl(var(--border))' }}
+                style={{ borderColor: 'hsl(var(--primary))' }}
               />
               <div className='font-mono text-[0.68rem] tracking-[0.15em] uppercase text-primary mb-1'>
                 University of Sri Jayewardenepura

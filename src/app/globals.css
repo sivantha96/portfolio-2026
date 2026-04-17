@@ -111,6 +111,22 @@
   animation: status-pulse 2s ease-in-out infinite;
 }
 
+/* ── Timeline dot ring-pulse (topmost entry) ── */
+@keyframes timeline-ring {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 7px hsl(var(--primary) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0);
+  }
+}
+.timeline-dot-pulse {
+  animation: timeline-ring 2s ease-in-out infinite;
+}
+
 @layer base {
   :root {
     /* Surfaces — warm cream family (all neutrals share the warm hue family) */

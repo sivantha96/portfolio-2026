@@ -1,12 +1,15 @@
 export const cvSkills: Record<string, string[]> = {
-  'Leadership & Process': [
-    'Team Leadership',
-    'Hiring & Onboarding',
-    'Engineering Mentoring',
-    'Agile / Scrum',
-    'Stakeholder Management',
-    'Code Review',
+  Languages: ['JavaScript', 'TypeScript', 'Python', 'Java'],
+  'Mobile & Frontend': [
+    'React Native',
+    'Expo',
+    'React.js',
+    'Next.js',
+    'Angular',
+    'Redux',
+    'Zustand',
   ],
+  'Backend & Data': ['Node.js', 'Express', 'MySQL', 'MongoDB', 'Supabase'],
   'Cloud & Infrastructure': [
     'AWS CDK',
     'ECS Fargate',
@@ -26,15 +29,15 @@ export const cvSkills: Record<string, string[]> = {
     'SonarQube',
     'Expo EAS',
   ],
-  'Mobile & Frontend': [
-    'React Native',
-    'Expo',
-    'React.js',
-    'Next.js',
-    'Angular',
-    'Redux',
-    'Zustand',
+  'Leadership & Process': [
+    'Team Leadership',
+    'Hiring & Onboarding',
+    'Engineering Mentoring',
+    'Async Communication',
+    'Documentation-First Workflows',
+    'Distributed Team Coordination',
+    'Agile / Scrum',
+    'Stakeholder Management',
+    'Code Review',
   ],
-  'Backend & Data': ['Node.js', 'Express', 'MySQL', 'MongoDB', 'Supabase'],
-  Languages: ['JavaScript', 'TypeScript', 'Python', 'Java'],
 };

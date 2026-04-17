@@ -21,12 +21,12 @@ export const experience: Company[] = [
         title: 'Senior Software Engineer',
         period: 'Jul 2025 – Present',
         bullets: [
-          'Led an engineering team of 8 across 5+ concurrent product streams, running regular 1:1s, annual performance reviews, and structured growth planning for every engineer in the organization.',
+          'Led a distributed engineering team of 8 across 5+ concurrent product streams — running regular 1:1s, annual performance reviews, and structured growth plans that measurably progressed every engineer in the organization.',
           'Built a company-wide culture of continuous learning and drove all engineering hiring: introduced knowledge-sharing sessions, embedded tracking of new tools and trends into team rituals, and designed structured onboarding programs with growth plans and knowledge transfer tracks for each new hire.',
           'Owned the full AWS cloud architecture using CDK (ECS Fargate, RDS/Aurora, VPC, API Gateway, SQS, Lambda, WAF, EventBridge, and CloudWatch), reducing monthly infrastructure costs by over 49% through a serverless architecture with auto-scaling services and databases.',
           'Drove the migration from a monolithic EC2 system to ECS Fargate microservices, eliminating platform-wide outages caused by database deadlocks and resource exhaustion, and achieving near-100% uptime with failures contained to individual services.',
           'Architected and led delivery of the Dinetap App (React Native Expo, team of 6) and Dinetap Admin Panel (Next.js, team of 4): flagship consumer dining app and the centralized operations dashboard for all Dinetap restaurants.',
-          'Established an engineering quality program that eliminated manual release steps and enabled daily automated deployments: GitHub Actions CI/CD with AI code review, security scanning, and one-click deployment across all web, API, mobile, and microservice repositories.',
+          'Established an engineering quality programme enabling daily autonomous deployments across all repositories — GitHub Actions CI/CD with AI-assisted code review and SonarQube security scanning, eliminating all manual release gates and synchronous sign-off for routine deploys.',
           'Partnered with product and business stakeholders to translate ambiguous goals into sequenced engineering plans, communicating trade-offs and managing delivery expectations across concurrent work streams.',
         ],
       },
@@ -54,7 +54,7 @@ export const experience: Company[] = [
         bullets: [
           "Designed and built BaseNeo, a MEAN stack ERP framework from scratch, directing a small team of engineers; the platform now underpins 20+ production applications across the company's portfolio.",
           'Served as tech lead across ArchivEL (document management with OCR and workflow automation), CredenEL (SSO/MFA/RBAC identity platform), LOLC Customer Portal (20K+ downloads on mobile), and Kelzey CMS, owning architecture, delivery, and direct client engagement on each.',
-          'Conducted knowledge transfer sessions and hands-on mentoring for engineers on the team; managed full project lifecycle across multiple simultaneous client engagements.',
+          'Ran structured knowledge transfer and mentoring programmes that measurably upskilled engineers across the team; owned full project lifecycle concurrently across multiple client engagements.',
         ],
       },
     ],
@@ -67,7 +67,7 @@ export const experience: Company[] = [
         title: 'Software Engineer',
         period: 'Feb 2021 – Jun 2022',
         bullets: [
-          "Contributed to XLife (React Native), XL Axiata Indonesia's employee super-app, within a cross-functional international team; ran knowledge transfer sessions on React concepts that up-skilled junior engineers.",
+          "Contributed to XLife (React Native), XL Axiata's 100K+ download employee super-app, within a cross-functional team spanning Sri Lanka and Indonesia; delivered knowledge transfer sessions on React that directly upskilled junior engineers across the international team.",
           'Built and shipped Writer Watch / ReaderScout (React Chrome extension) as sole developer, scoped, designed, and delivered independently.',
         ],
       },
