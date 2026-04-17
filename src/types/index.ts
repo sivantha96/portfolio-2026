@@ -19,4 +19,5 @@ export interface Article {
   title: string;
   description: string;
   url: string;
+  tag_list?: string[];
 }

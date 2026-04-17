@@ -20,17 +20,12 @@ interface Theme {
   className: string;
 }
 
-interface RadiusOption {
-  label: string;
-  value: string;
-}
-
 const themes: Theme[] = [
   {
-    name: 'zinc',
-    label: 'Zinc',
-    activeColor: 'bg-zinc-500',
-    className: 'theme-zinc',
+    name: 'yellow',
+    label: 'Yellow',
+    activeColor: 'bg-yellow-500',
+    className: 'theme-yellow',
   },
   {
     name: 'red',
@@ -63,12 +58,6 @@ const themes: Theme[] = [
     className: 'theme-blue',
   },
   {
-    name: 'yellow',
-    label: 'Yellow',
-    activeColor: 'bg-yellow-500',
-    className: 'theme-yellow',
-  },
-  {
     name: 'violet',
     label: 'Violet',
     activeColor: 'bg-violet-500',
@@ -76,40 +65,11 @@ const themes: Theme[] = [
   },
 ];
 
-const radiusOptions: RadiusOption[] = [
-  {
-    label: '0',
-    value: '0',
-  },
-  {
-    label: '0.3',
-    value: '0.3',
-  },
-  {
-    label: '0.5',
-    value: '0.5',
-  },
-  {
-    label: '0.75',
-    value: '0.75',
-  },
-  {
-    label: '1.0',
-    value: '1.0',
-  },
-];
-
 export function ThemeCustomizer() {
   const { setTheme, resolvedTheme } = useTheme();
-  const [radius, setRadius] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('radius') || '0.5';
-    }
-    return '0.5';
-  });
   const [activeColor, setActiveColor] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('color') || 'zinc';
+      return localStorage.getItem('color') || 'yellow';
     }
     return 'zinc';
   });
@@ -174,30 +134,6 @@ export function ThemeCustomizer() {
             </div>
           </div>
           <div className='space-y-2'>
-            <Label>Radius</Label>
-            <div className='grid grid-cols-5 gap-2'>
-              {radiusOptions.map((option) => (
-                <Button
-                  key={option.value}
-                  variant='outline'
-                  size='sm'
-                  onClick={() => {
-                    setRadius(option.value);
-                    localStorage.setItem('radius', option.value);
-                    document.documentElement.style.setProperty(
-                      '--radius',
-                      option.value,
-                    );
-                  }}
-                  className={
-                    radius === option.value ? 'border-2 border-primary' : ''
-                  }>
-                  {option.label}
-                </Button>
-              ))}
-            </div>
-          </div>
-          <div className='space-y-2'>
             <Label>Mode</Label>
             <div className='grid grid-cols-3 gap-2'>
               <Button
@@ -227,15 +163,12 @@ export function ThemeCustomizer() {
             onClick={() => {
               const currentTheme = resolvedTheme || 'light';
               setTheme(currentTheme);
-              setRadius('0.5');
-              setActiveColor('zinc');
-              localStorage.setItem('radius', '0.5');
-              localStorage.setItem('color', 'zinc');
-              document.documentElement.style.setProperty('--radius', '0.5');
+              setActiveColor('yellow');
+              localStorage.setItem('color', 'yellow');
               document.documentElement.classList.remove(
                 ...themes.map((t) => t.className),
               );
-              document.documentElement.classList.add('theme-zinc');
+              document.documentElement.classList.add('theme-yellow');
             }}>
             <Reset className='mr-2 h-4 w-4' />
             Reset

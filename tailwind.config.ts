@@ -15,6 +15,12 @@ export default {
       fontFamily: {
         sans: ['var(--font-dm-sans)', 'Arial', 'Helvetica', 'sans-serif'],
         serif: ['var(--font-lora)', 'Georgia', 'serif'],
+        mono: [
+          'var(--font-dm-mono)',
+          'ui-monospace',
+          'SFMono-Regular',
+          'monospace',
+        ],
       },
       colors: {
         background: 'hsl(var(--background))',

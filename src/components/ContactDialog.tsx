@@ -18,7 +18,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
-import { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import * as yup from 'yup';
@@ -29,9 +29,19 @@ export const contactMeSchema = yup.object({
   message: yup.string().max(5000).required('Message is required'),
 });
 
-export function ContactDialog() {
-  const [loading, setLoading] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
+interface ContactDialogProps {
+  triggerLabel?: string;
+  triggerClassName?: string;
+  triggerStyle?: React.CSSProperties;
+}
+
+export function ContactDialog({
+  triggerLabel = 'Contact Me',
+  triggerClassName,
+  triggerStyle,
+}: ContactDialogProps) {
+  const [loading, setLoading] = React.useState(false);
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
 
   const form = useForm({
     resolver: yupResolver(contactMeSchema),
@@ -50,7 +60,16 @@ export function ContactDialog() {
 
   return (
     <>
-      <Button onClick={() => setIsContactOpen(true)}>Contact Me</Button>
+      {triggerClassName ? (
+        <button
+          onClick={() => setIsContactOpen(true)}
+          className={triggerClassName}
+          style={triggerStyle}>
+          {triggerLabel}
+        </button>
+      ) : (
+        <Button onClick={() => setIsContactOpen(true)}>{triggerLabel}</Button>
+      )}
       <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
         <DialogContent className='sm:max-w-[425px]'>
           <DialogHeader>

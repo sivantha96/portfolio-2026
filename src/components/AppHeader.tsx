@@ -1,94 +1,81 @@
+'use client';
+
 import { Menu } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import { ThemeCustomizer } from './ThemeCustomizer';
 import { Button } from './ui/button';
 import { Sheet, SheetContent } from './ui/sheet';
 
-const NavItems = ({ onClose }: { onClose: () => void }) => (
-  <>
-    <Button
-      variant='ghost'
-      className='w-full justify-start'
-      asChild
-      onClick={onClose}>
-      <a href='#about'>About</a>
-    </Button>
+const navItems = [
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#articles', label: 'Writing' },
+  { href: '#contact', label: 'Contact' },
+];
 
-    <Button
-      variant='ghost'
-      className='w-full justify-start'
-      asChild
-      onClick={onClose}>
-      <a href='#projects'>Projects</a>
-    </Button>
-    <Button
-      variant='ghost'
-      className='w-full justify-start'
-      asChild
-      onClick={onClose}>
-      <a href='#skills'>Skills</a>
-    </Button>
-    <Button
-      variant='ghost'
-      className='w-full justify-start'
-      asChild
-      onClick={onClose}>
-      <a href='#timeline'>Timeline</a>
-    </Button>
-    <Button
-      variant='ghost'
-      className='w-full justify-start'
-      asChild
-      onClick={onClose}>
-      <a href='#articles'>Articles</a>
-    </Button>
+const NavLinks = ({ onClose }: { onClose?: () => void }) => (
+  <>
+    {navItems.map(({ href, label }) => (
+      <a
+        key={href}
+        href={href}
+        onClick={onClose}
+        className='font-mono text-[0.72rem] tracking-[0.08em] uppercase text-muted-foreground hover:text-foreground transition-colors'>
+        {label}
+      </a>
+    ))}
   </>
 );
 
 export const AppHeader = () => {
-  const [sheetOpened, setSheetOpen] = useState(false);
-
-  const handleToggleSheet = useCallback(() => {
-    setSheetOpen((prev) => !prev);
-  }, []);
-
-  const handleCloseSheet = useCallback(() => {
-    setSheetOpen(false);
-  }, []);
+  const [open, setOpen] = useState(false);
+  const close = useCallback(() => setOpen(false), []);
 
   return (
-    <header className='sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 flex justify-center'>
-      <div className='container flex h-14 items-center mx-auto px-6'>
-        <div className='mr-4 ml-6 md:ml-0 flex'>
-          <h1 className='text-2xl font-bold'>sivantha.com</h1>
-        </div>
-        <div className='flex flex-1 items-center justify-between space-x-2 md:justify-end'>
-          <nav className='flex items-center space-x-6 text-sm font-medium'>
-            <div className='hidden md:flex'>
-              <NavItems onClose={handleCloseSheet} />
-            </div>
-          </nav>
-          <div className='flex items-center space-x-2'>
-            <ThemeCustomizer />
-            <Button
-              variant='ghost'
-              size='icon'
-              aria-label='Open Menu'
-              className='md:hidden'
-              onClick={handleToggleSheet}>
-              <Menu className='h-6 w-6 mr-6' />
-            </Button>
+    <header className='fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 md:px-16 py-5 bg-background/92 backdrop-blur-sm border-b border-border'>
+      <span className='font-mono text-[0.8rem] tracking-[0.15em] uppercase text-foreground select-none'>
+        SP
+      </span>
 
-            <Sheet open={sheetOpened} onOpenChange={handleToggleSheet}>
-              <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
-                <nav className='flex flex-col space-y-4'>
-                  <NavItems onClose={handleCloseSheet} />
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
+      <nav className='hidden md:flex items-center gap-10'>
+        <NavLinks />
+      </nav>
+
+      <div className='flex items-center gap-3'>
+        <ThemeCustomizer />
+
+        <button
+          onClick={() => window.open('/cv', '_blank')}
+          className='hidden md:inline-block font-mono text-[0.72rem] tracking-[0.1em] uppercase px-5 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all'>
+          Download CV
+        </button>
+
+        <Button
+          variant='ghost'
+          size='icon'
+          aria-label='Open menu'
+          className='md:hidden'
+          onClick={() => setOpen(true)}>
+          <Menu className='h-5 w-5' />
+        </Button>
       </div>
+
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetContent side='right' className='w-[280px]'>
+          <nav className='flex flex-col gap-6 pt-8'>
+            <NavLinks onClose={close} />
+            <button
+              onClick={() => {
+                window.open('/cv', '_blank');
+                close();
+              }}
+              className='font-mono text-[0.72rem] tracking-[0.1em] uppercase px-5 py-2.5 border border-foreground text-foreground text-center hover:bg-primary hover:border-primary transition-all mt-2'>
+              Download CV
+            </button>
+          </nav>
+        </SheetContent>
+      </Sheet>
     </header>
   );
 };

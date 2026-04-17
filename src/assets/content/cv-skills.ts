@@ -36,6 +36,5 @@ export const cvSkills: Record<string, string[]> = {
     'Zustand',
   ],
   'Backend & Data': ['Node.js', 'Express', 'MySQL', 'MongoDB', 'Supabase'],
-  Payments: ['Stripe', 'Adyen', 'Airwallex', 'Terminal Integration'],
   Languages: ['JavaScript', 'TypeScript', 'Python', 'Java'],
 };

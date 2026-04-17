@@ -1,4 +1,4 @@
-# *
+# All crawlers
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -7,8 +7,21 @@ Disallow: /_error
 Disallow: /404
 Disallow: /500
 
+# AI crawlers — explicitly allow for indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 # Host
-Host: https://sivantha.com
+Host: https://www.sivantha.com
 
 # Sitemaps
-Sitemap: https://sivantha.com/sitemap.xml
+Sitemap: https://www.sivantha.com/sitemap.xml

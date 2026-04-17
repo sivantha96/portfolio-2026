@@ -1,0 +1,66 @@
+# Sivantha Paranavithana
+
+> Senior Engineering Lead with 5+ years of experience leading engineering teams, defining technical architecture, and building engineering culture across fast-moving product organizations.
+
+## Identity
+
+- Full name: Sivantha Paranavithana
+- Current role: Senior Engineering Lead at Dinetap
+- Location: Colombo, Sri Lanka
+- Website: https://www.sivantha.com
+- GitHub: https://github.com/sivantha96
+- LinkedIn: https://www.linkedin.com/in/sivantha96
+- Blog: https://dev.to/sivantha96
+- Email: sivantha.paranavithana@gmail.com
+
+## Summary
+
+Senior engineering lead with 5+ years of experience building and directing engineering teams, defining technical architecture, and establishing engineering culture across fast-moving product organizations. At Dinetap, led a team of 8 engineers across 5+ concurrent product streams, drove a monolith-to-microservices migration that achieved near-100% uptime, reduced AWS infrastructure costs by 49%, and built a payments platform now processing over SGD 13.5M per month. Known for combining hands-on technical depth with a strong focus on team growth, knowledge sharing, and engineering quality.
+
+## Key Achievements
+
+- **49% AWS infrastructure cost reduction** — Designed and owned the full AWS cloud infrastructure from scratch using CDK. Migrated a monolith to ECS Fargate microservices achieving near-100% uptime.
+- **SGD 13.5M/month payment volume** — Led a team of 7 engineers to deliver an end-to-end payments platform across Adyen, Stripe, and WooCommerce integrations.
+- **100K+ app downloads** — Contributed to XLife, the XL Axiata employee super-app with 100K+ downloads.
+- **Engineering Quality Programme** — Eliminated all manual release steps, enabled daily automated deployments with GitHub Actions CI/CD, SonarQube, and AI-assisted code review.
+
+## Technical Skills
+
+- **Languages**: TypeScript, JavaScript, PHP, Python, Java
+- **Frontend**: React, Next.js, React Native, Expo, Angular, Vite
+- **Backend**: Node.js, Express, NestJS
+- **Cloud / DevOps**: AWS (CDK, ECS Fargate, Lambda, SQS, RDS/Aurora, CloudWatch, EventBridge), Docker, GitHub Actions, SonarQube, Sentry
+- **Databases**: MySQL, MongoDB, PostgreSQL
+- **Payments**: Adyen, Stripe, Airwallex, WooCommerce
+- **Testing**: Jest, Cypress, Playwright, Jasmine
+
+## Leadership Skills
+
+Engineering Team Leadership, Distributed Systems Architecture, Engineering Quality Programme, Cross-team Technical Coordination, Hiring & Onboarding, Mentoring & Knowledge Transfer, CI/CD & DevOps Culture, Payment Systems Architecture, Stakeholder Management, Engineering Organization Design
+
+## Notable Projects
+
+1. **AWS Microservices Migration** — Architected full AWS cloud infrastructure from scratch using CDK. Migrated monolith to ECS Fargate microservices, eliminating platform-wide outages. Solo architecture owner. 49% cost reduction, ~100% uptime.
+
+2. **Dinetap Payments** — Led a team of 7 engineers to build end-to-end payment processing across card, digital wallet, and physical terminal surfaces. Integrations: Adyen, Stripe, Airwallex, WooCommerce. Processing SGD 13.5M/month.
+
+3. **Dinetap Consumer App** — Flagship consumer dining app for restaurant discovery, table booking, ordering, and payments with cashback rewards. Led 6 engineers end-to-end. Built on React Native + Expo.
+
+4. **Engineering Quality Programme** — Company-wide CI/CD with GitHub Actions, AI-assisted code review, SonarQube security scanning. Zero manual release steps. Daily deployment cadence.
+
+5. **Dinetap POS** — Offline-first, cloud-synced point-of-sale with multi-device conflict resolution. Led 6 engineers.
+
+6. **BaseNeo ERP Framework** — Built from scratch at EchonLabs, now underpinning 20+ production applications. Designed the architecture and directed the engineering team.
+
+7. **LOLC Customer Portal** — Consumer-facing mobile app with 20K+ downloads. Tech lead for web portal and mobile app.
+
+8. **XLife (XL Axiata)** — Employee super-app for XL Axiata Indonesia. 100K+ downloads. Cross-functional international team.
+
+## Education
+
+- **B.Sc. (Hons) Computer Science** — University of Sri Jayewardenepura, Sri Lanka (2016–2021)
+- Specialization: Computer Science, Mathematics & Statistics
+
+## Availability
+
+Open to Senior Engineering Lead and Staff Engineer roles. Currently based in Sri Lanka, open to working remotely across timezones.

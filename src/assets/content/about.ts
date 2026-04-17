@@ -20,7 +20,7 @@ export const about = {
       desc: 'End-to-end payment platform processing over SGD 13.5M/month across card, digital wallet, and physical terminal surfaces. Led a team of 7 engineers.',
     },
     {
-      name: 'EatMe POS & BackOffice',
+      name: 'Dinetap POS & BackOffice',
       desc: 'Architected and led delivery of an offline-first cloud POS (team of 6) and a full restaurant operations portal (team of 5).',
     },
   ],
