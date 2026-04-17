@@ -953,7 +953,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className='min-h-screen bg-background text-foreground bg-grid'>
+    <div className='min-h-screen bg-background text-foreground'>
       {/* Radial glow: top-left */}
       <div
         aria-hidden='true'
@@ -983,9 +983,18 @@ export default function Portfolio() {
 
       <main>
         {/* ── HERO ────────────────────────────────────────────── */}
-        <section className='grid grid-cols-1 md:grid-cols-2 items-center min-h-screen px-6 md:px-16 pt-28 pb-24 gap-16 md:gap-20'>
+        <section className='relative bg-grid grid grid-cols-1 md:grid-cols-2 items-center min-h-screen px-6 md:px-16 pt-28 pb-24 gap-16 md:gap-20'>
+          {/* Grid fade: dissolves into background color toward the bottom */}
+          <div
+            aria-hidden='true'
+            className='absolute inset-0 pointer-events-none z-0'
+            style={{
+              background:
+                'linear-gradient(to bottom, transparent 40%, hsl(var(--background)) 100%)',
+            }}
+          />
           {/* Left: text */}
-          <div className='text-center md:text-left'>
+          <div className='relative z-10 text-center md:text-left'>
             <div className='fade-up fade-up-1 inline-flex items-center gap-2 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-green-700 bg-green-500/10 border border-green-400/50 px-3 py-1.5 w-fit mb-8 mx-auto md:mx-0'>
               <span className='status-dot w-1.5 h-1.5 rounded-full bg-green-600 shrink-0' />
               Open to senior roles · Remote
@@ -1024,7 +1033,7 @@ export default function Portfolio() {
           </div>
 
           {/* Right: stats block */}
-          <div className='fade-up fade-up-3 flex justify-center md:justify-end'>
+          <div className='relative z-10 fade-up fade-up-3 flex justify-center md:justify-end'>
             <div className='grid grid-cols-2 gap-px bg-border border border-border w-full max-w-[380px]'>
               <div className='relative overflow-hidden bg-background p-8 group'>
                 <span className='absolute bottom-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300' />
@@ -1378,30 +1387,20 @@ export default function Portfolio() {
       {/* ── 05 CONTACT ──────────────────────────────────────────── */}
       <div
         id='contact'
-        className='px-6 md:px-16 py-32'
-        style={{ background: '#0A0A0A' }}>
+        className='px-6 md:px-16 py-32 bg-secondary dark:bg-[#0A0A0A]'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start'>
           {/* Left: heading + description + button */}
           <div className='text-center md:text-left'>
-            <div
-              className='flex items-center justify-center md:justify-start gap-4 font-mono text-[0.72rem] tracking-[0.2em] uppercase mb-6'
-              style={{ color: 'rgba(255,253,245,0.3)' }}>
-              <span
-                className='w-8 h-px shrink-0'
-                style={{ background: 'hsl(var(--primary) / 0.4)' }}
-              />
+            <div className='flex items-center justify-center md:justify-start gap-4 font-mono text-[0.72rem] tracking-[0.2em] uppercase mb-6 text-muted-foreground'>
+              <span className='w-8 h-px shrink-0 bg-primary/40' />
               05 · Contact
             </div>
 
-            <h2
-              className='section-title font-serif text-center md:text-left mb-6'
-              style={{ color: '#FFFDF5' }}>
+            <h2 className='section-title font-serif text-center md:text-left mb-6 text-foreground'>
               Get in Touch
             </h2>
 
-            <p
-              className='text-lg leading-[1.85] mb-10'
-              style={{ color: 'rgba(255,253,245,0.45)' }}>
+            <p className='text-lg leading-[1.85] mb-10 text-muted-foreground'>
               Open to Senior Engineering Lead and Staff Engineer roles.
               Currently based in Sri Lanka, open to working remotely across
               timezones.
@@ -1414,7 +1413,7 @@ export default function Portfolio() {
           </div>
 
           {/* Right: contact links */}
-          <div style={{ borderTop: '1px solid rgba(255,253,245,0.08)' }}>
+          <div className='border-t border-border'>
             {contactLinks.map((link) => (
               <a
                 key={link.label}
@@ -1425,22 +1424,8 @@ export default function Portfolio() {
                     ? 'noopener noreferrer'
                     : undefined
                 }
-                className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline transition-colors'
-                style={{
-                  borderBottom: '1px solid rgba(255,253,245,0.08)',
-                  color: 'rgba(255,253,245,0.55)',
-                }}
-                onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color =
-                    'hsl(var(--primary))')
-                }
-                onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color =
-                    'rgba(255,253,245,0.55)')
-                }>
-                <span
-                  className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0'
-                  style={{ color: 'rgba(255,253,245,0.25)' }}>
+                className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground hover:text-primary transition-colors'>
+                <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
                   {link.label}
                 </span>
                 {link.value}

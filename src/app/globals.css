@@ -35,13 +35,13 @@
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-size: 64px 64px;
 }
 .dark .bg-grid {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-size: 64px 64px;
 }
 
 /* ── Fluid type scales ── */
@@ -113,53 +113,78 @@
 
 @layer base {
   :root {
-    /* Warm cream light theme */
-    --background: 48 100% 98%; /* #FFFDF5 */
-    --foreground: 0 0% 4%; /* #0A0A0A */
-    --card: 49 37% 94%; /* #F5F3EA */
-    --card-foreground: 0 0% 4%;
-    --popover: 48 100% 98%;
-    --popover-foreground: 0 0% 4%;
-    --primary: 48 96% 53%; /* #FACC15 yellow */
-    --primary-foreground: 26 83% 14%;
-    --secondary: 49 37% 94%; /* #F5F3EA */
-    --secondary-foreground: 0 0% 4%;
-    --muted: 49 37% 94%;
-    --muted-foreground: 220 9% 46%; /* #6B7280 */
-    --accent: 48 96% 53%;
-    --accent-foreground: 26 83% 14%;
-    --destructive: 0 84.2% 60.2%;
+    /* Surfaces — warm cream family (all neutrals share the warm hue family) */
+    --background: 48 100% 98%; /* #FFFDF5 — warm cream page */
+    --foreground: 28 8% 8%; /* warm near-black */
+    --card: 44 30% 97%; /* elevated surface, slightly distinct from bg */
+    --card-foreground: 28 8% 8%;
+    --popover: 44 30% 97%;
+    --popover-foreground: 28 8% 8%;
+
+    /* Default accent: golden yellow */
+    --primary: 45 93% 47%; /* #E8A800 — golden yellow */
+    --primary-foreground: 28 60% 8%; /* dark warm brown */
+
+    /* Section backgrounds — warm gray, clearly distinct from card */
+    --secondary: 40 18% 92%; /* warm light gray */
+    --secondary-foreground: 28 8% 8%;
+    --muted: 40 18% 92%;
+    --muted-foreground: 28 7% 46%; /* warm medium gray — matches cream temp */
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 28 60% 8%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 91%; /* #E5E7EB */
-    --input: 220 13% 91%;
-    --ring: 45 93% 47%; /* #EAB308 */
-    --chart-1: 48 96% 53%;
-    --chart-2: 142 76% 36%;
+
+    /* Borders — warm-tinted gray, not cool 220° gray */
+    --border: 38 12% 87%; /* warm light border */
+    --input: 38 12% 87%;
+    --ring: 45 93% 47%;
+
+    --chart-1: 45 93% 47%;
+    --chart-2: 142 70% 36%;
     --chart-3: 221 83% 53%;
     --chart-4: 262 83% 58%;
     --chart-5: 0 84% 60%;
+
     --radius: 0rem;
   }
+
   .dark {
+    /* Surfaces — neutral near-black */
     --background: 0 0% 4%; /* #0A0A0A */
-    --foreground: 48 47% 94%; /* #F0EDE8 */
-    --card: 0 0% 7%;
-    --card-foreground: 48 47% 94%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 48 47% 94%;
+    --foreground: 40 12% 92%; /* warm off-white */
+    --card: 0 0% 7%; /* slightly lighter dark surface */
+    --card-foreground: 40 12% 92%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 12% 92%;
+
+    /* Default accent: chartreuse yellow */
     --primary: 67 100% 64%; /* #E8FF47 */
     --primary-foreground: 0 0% 4%;
+
     --secondary: 0 0% 11%;
-    --secondary-foreground: 48 47% 94%;
+    --secondary-foreground: 40 12% 92%;
     --muted: 0 0% 11%;
     --muted-foreground: 0 0% 60%;
+
     --accent: 67 100% 64%;
     --accent-foreground: 0 0% 4%;
-    --destructive: 0 62.8% 30.6%;
+
+    --destructive: 0 62% 35%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 67 100% 64%;
+
+    /* Charts lightened for dark backgrounds */
+    --chart-1: 55 90% 62%;
+    --chart-2: 142 60% 52%;
+    --chart-3: 217 85% 68%;
+    --chart-4: 263 68% 72%;
+    --chart-5: 0 72% 60%;
   }
 }
 
@@ -182,78 +207,89 @@
 }
 
 /* ── Color themes ─────────────────────────────────────────────────────────── */
+/*
+  Convention:
+  - Light mode: primary is dark/saturated enough to contrast against warm cream bg
+  - Dark mode:  primary is lightened so it pops against near-black bg
+  - primary-foreground: dark when primary is light (≥55% L), white when primary is dark
+*/
 
 .theme-red {
-  --primary: 0 72.2% 50.6%;
+  /* Deep red — good contrast on cream, white text on red button */
+  --primary: 0 70% 48%;
   --primary-foreground: 0 0% 98%;
-  --ring: 0 72.2% 50.6%;
-  --accent: 0 72.2% 50.6%;
+  --ring: 0 70% 48%;
+  --accent: 0 70% 48%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-red {
-  --primary: 0 72.2% 62%;
+  /* Lightened to ~60% L — white text still passes 4.5:1 on this red */
+  --primary: 0 72% 60%;
   --primary-foreground: 0 0% 98%;
-  --ring: 0 72.2% 62%;
+  --ring: 0 72% 60%;
 }
 
 .theme-rose {
-  --primary: 346.8 77.2% 49.8%;
+  --primary: 346 75% 46%;
   --primary-foreground: 0 0% 98%;
-  --ring: 346.8 77.2% 49.8%;
-  --accent: 346.8 77.2% 49.8%;
+  --ring: 346 75% 46%;
+  --accent: 346 75% 46%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-rose {
-  --primary: 346.8 77.2% 62%;
+  --primary: 346 75% 60%;
   --primary-foreground: 0 0% 98%;
-  --ring: 346.8 77.2% 62%;
+  --ring: 346 75% 60%;
 }
 
 .theme-orange {
-  --primary: 24.6 95% 53.1%;
+  --primary: 25 90% 46%;
   --primary-foreground: 0 0% 98%;
-  --ring: 24.6 95% 53.1%;
-  --accent: 24.6 95% 53.1%;
+  --ring: 25 90% 46%;
+  --accent: 25 90% 46%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-orange {
-  --primary: 24.6 95% 62%;
-  --primary-foreground: 0 0% 98%;
-  --ring: 24.6 95% 62%;
+  /* Orange at 60% L is perceptually bright — dark text gives better contrast */
+  --primary: 25 90% 60%;
+  --primary-foreground: 25 10% 8%;
+  --ring: 25 90% 60%;
 }
 
 .theme-green {
-  --primary: 142.1 76.2% 36.3%;
+  --primary: 142 70% 36%;
   --primary-foreground: 0 0% 98%;
-  --ring: 142.1 76.2% 36.3%;
-  --accent: 142.1 76.2% 36.3%;
+  --ring: 142 70% 36%;
+  --accent: 142 70% 36%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-green {
-  --primary: 142.1 70% 52%;
-  --primary-foreground: 0 0% 98%;
-  --ring: 142.1 70% 52%;
+  /* Green has high perceptual luminance — dark text gives better contrast */
+  --primary: 142 60% 52%;
+  --primary-foreground: 142 10% 6%;
+  --ring: 142 60% 52%;
 }
 
 .theme-blue {
-  --primary: 221.2 83.2% 53.3%;
+  --primary: 221 83% 53%;
   --primary-foreground: 0 0% 98%;
-  --ring: 221.2 83.2% 53.3%;
-  --accent: 221.2 83.2% 53.3%;
+  --ring: 221 83% 53%;
+  --accent: 221 83% 53%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-blue {
-  --primary: 217.2 91.2% 69.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --ring: 217.2 91.2% 69.8%;
+  /* Lightened blue — blue has low perceptual luminance, dark navy reads well */
+  --primary: 217 85% 68%;
+  --primary-foreground: 222 47% 11%;
+  --ring: 217 85% 68%;
 }
 
 .theme-yellow {
-  --primary: 48 96% 53%;
-  --primary-foreground: 26 83% 14%;
+  --primary: 45 93% 47%;
+  --primary-foreground: 28 60% 8%;
   --ring: 45 93% 47%;
-  --accent: 48 96% 53%;
-  --accent-foreground: 26 83% 14%;
+  --accent: 45 93% 47%;
+  --accent-foreground: 28 60% 8%;
 }
 .dark.theme-yellow {
   --primary: 67 100% 64%;
@@ -262,14 +298,15 @@
 }
 
 .theme-violet {
-  --primary: 262.1 83.3% 57.8%;
+  --primary: 262 83% 58%;
   --primary-foreground: 0 0% 98%;
-  --ring: 262.1 83.3% 57.8%;
-  --accent: 262.1 83.3% 57.8%;
+  --ring: 262 83% 58%;
+  --accent: 262 83% 58%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-violet {
-  --primary: 263.4 70% 70%;
-  --primary-foreground: 0 0% 98%;
-  --ring: 263.4 70% 70%;
+  /* Violet at 72% L — violet has low perceptual luminance, dark text is safer */
+  --primary: 263 68% 72%;
+  --primary-foreground: 262 30% 8%;
+  --ring: 263 68% 72%;
 }
