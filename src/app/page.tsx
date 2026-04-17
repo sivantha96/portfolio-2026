@@ -968,17 +968,6 @@ export default function Portfolio() {
           zIndex: 0,
         }}
       />
-      {/* Bottom accent line */}
-      <div
-        aria-hidden='true'
-        className='fixed bottom-0 left-0 right-0 pointer-events-none'
-        style={{
-          height: '3px',
-          background:
-            'linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.3) 40%, transparent 100%)',
-          zIndex: 50,
-        }}
-      />
       <AppHeader />
 
       <main>

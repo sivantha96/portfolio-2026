@@ -4,7 +4,7 @@ import { Menu } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import { ThemeCustomizer } from './ThemeCustomizer';
 import { Button } from './ui/button';
-import { Sheet, SheetContent } from './ui/sheet';
+import { Sheet, SheetContent, SheetTitle } from './ui/sheet';
 
 const navItems = [
   { href: '#projects', label: 'Projects' },
@@ -62,18 +62,21 @@ export const AppHeader = () => {
       </div>
 
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side='right' className='w-[280px]'>
-          <nav className='flex flex-col gap-6 pt-8'>
+        <SheetContent side='right' className='w-[280px] flex flex-col'>
+          <SheetTitle className='sr-only'>Navigation</SheetTitle>
+          <nav className='flex flex-col gap-6 pt-8 flex-1'>
             <NavLinks onClose={close} />
+          </nav>
+          <div className='pb-6'>
             <button
               onClick={() => {
                 window.open('/cv', '_blank');
                 close();
               }}
-              className='font-mono text-[0.72rem] tracking-[0.1em] uppercase px-5 py-2.5 border border-foreground text-foreground text-center hover:bg-primary hover:border-primary transition-all mt-2'>
+              className='w-full font-mono text-[0.72rem] tracking-[0.1em] uppercase px-5 py-2.5 border border-foreground text-foreground text-center hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all'>
               Download CV
             </button>
-          </nav>
+          </div>
         </SheetContent>
       </Sheet>
     </header>
