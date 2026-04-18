@@ -128,6 +128,11 @@ const contactLinks = [
     ),
     href: `tel:${contact.phone.mobile}`,
   },
+  {
+    label: 'Timezone',
+    value: 'Asia/Colombo (UTC+5:30)',
+    href: undefined,
+  },
 ];
 
 // ─── SVG Diagrams ────────────────────────────────────────────────────────────
@@ -1126,7 +1131,7 @@ export default function Portfolio() {
                 className='reveal grid grid-cols-1 md:grid-cols-2 border-b border-border last:border-b-0 transition-colors hover:bg-secondary/40'>
                 {/* Info */}
                 <div
-                  className={`p-10 md:p-12 flex flex-col justify-between gap-8 ${
+                  className={`p-6 md:p-12 flex flex-col justify-between gap-8 ${
                     i % 2 === 1 ? 'md:order-last' : ''
                   }`}>
                   <div>
@@ -1195,7 +1200,7 @@ export default function Portfolio() {
               return (
                 <div
                   key={p.title}
-                  className={`reveal relative overflow-hidden bg-background p-8 hover:bg-secondary transition-colors group cursor-default${center ? ' lg:w-1/3 lg:mx-auto' : ''}`}
+                  className={`reveal relative overflow-hidden bg-background p-6 md:p-8 hover:bg-secondary transition-colors group cursor-default${center ? ' lg:w-1/3 lg:mx-auto' : ''}`}
                   style={{
                     ...(center
                       ? { gridColumn: '1 / -1' }
@@ -1225,17 +1230,27 @@ export default function Portfolio() {
             })}
           </div>
 
-          {!showAllProjects && gridProjects.length > GRID_INITIAL && (
-            <div className='mt-px flex justify-center'>
+          <div className='mt-px flex justify-center'>
+            {showAllProjects ? (
               <button
                 type='button'
-                onClick={() => setShowAllProjects(true)}
+                onClick={() => setShowAllProjects(false)}
                 className='inline-flex items-center gap-2 font-mono text-[0.78rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all mt-10'>
-                Show All Projects
-                <span className='inline-block'>↓</span>
+                Show Less
+                <span className='inline-block'>↑</span>
               </button>
-            </div>
-          )}
+            ) : (
+              gridProjects.length > GRID_INITIAL && (
+                <button
+                  type='button'
+                  onClick={() => setShowAllProjects(true)}
+                  className='inline-flex items-center gap-2 font-mono text-[0.78rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all mt-10'>
+                  Show All Projects
+                  <span className='inline-block'>↓</span>
+                </button>
+              )
+            )}
+          </div>
         </section>
 
         {/* ── 02 EXPERIENCE ───────────────────────────────────── */}
@@ -1422,23 +1437,34 @@ export default function Portfolio() {
 
           {/* Right: contact links */}
           <div className='border-t border-border'>
-            {contactLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={
-                  link.href.startsWith('http')
-                    ? 'noopener noreferrer'
-                    : undefined
-                }
-                className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground hover:text-primary transition-colors'>
-                <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
-                  {link.label}
-                </span>
-                {link.value}
-              </a>
-            ))}
+            {contactLinks.map((link) =>
+              link.href ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={
+                    link.href.startsWith('http')
+                      ? 'noopener noreferrer'
+                      : undefined
+                  }
+                  className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground hover:text-primary transition-colors'>
+                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
+                    {link.label}
+                  </span>
+                  {link.value}
+                </a>
+              ) : (
+                <div
+                  key={link.label}
+                  className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground'>
+                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
+                    {link.label}
+                  </span>
+                  {link.value}
+                </div>
+              ),
+            )}
           </div>
         </div>
       </div>

@@ -3,52 +3,30 @@
 import CVContent from '@/components/CVContent';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-const PAGE_WIDTH = 920; // natural design width of .cv-page (px)
-
 export default function CVPage() {
   const contentRef = useRef<HTMLDivElement>(null);
   const pageStyleRef = useRef<HTMLStyleElement | null>(null);
-  const scaleRef = useRef(1);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Scale the CV to fit the viewport on narrow screens by applying zoom
-  // directly to the element so it works reliably across all browsers.
+  // The cv/layout.tsx sets viewport width=920, so the browser scales the
+  // fixed 920px layout to fit any device automatically — no JS zoom needed.
   useEffect(() => {
-    const update = () => {
-      const scale = Math.min(1, window.innerWidth / PAGE_WIDTH);
-      scaleRef.current = scale;
-      if (contentRef.current) {
-        contentRef.current.style.zoom = scale < 1 ? String(scale) : '';
-      }
-      setIsMobile(window.innerWidth < 768);
-    };
+    const update = () => setIsMobile(window.innerWidth < 768);
     update();
     window.addEventListener('resize', update);
-    return () => {
-      window.removeEventListener('resize', update);
-      if (contentRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        contentRef.current.style.zoom = '';
-      }
-    };
+    return () => window.removeEventListener('resize', update);
   }, []);
 
   const preparePrint = useCallback(() => {
     if (contentRef.current) {
       const el = contentRef.current;
 
-      // Reset CSS zoom before measuring: on mobile the element carries a
-      // viewport-fit zoom that scales scrollHeight, producing an undersized
-      // @page height that causes multi-page output.
-      el.style.zoom = '1';
       el.style.width = '794px';
       el.style.maxWidth = '794px';
       el.style.overflow = 'visible';
       void el.getBoundingClientRect();
       const heightPx = el.scrollHeight;
       const heightMm = Math.ceil(heightPx * 0.264583);
-      // Restore viewport zoom after measurement
-      el.style.zoom = scaleRef.current < 1 ? String(scaleRef.current) : '';
       el.style.width = '';
       el.style.maxWidth = '';
       el.style.overflow = '';
@@ -57,8 +35,6 @@ export default function CVPage() {
       const ps = document.createElement('style');
 
       if (isMobile) {
-        // iOS / Android browsers ignore @page { size }, defaulting to A4
-        // (297 mm). Scale the content so it fits within one A4 page instead.
         const A4_HEIGHT_MM = 297;
         const printZoom = Math.min(1, A4_HEIGHT_MM / heightMm);
         ps.textContent = [
@@ -95,11 +71,6 @@ export default function CVPage() {
       }
       pageStyleRef.current?.remove();
       pageStyleRef.current = null;
-      // Restore viewport zoom after print dialog closes
-      if (contentRef.current) {
-        contentRef.current.style.zoom =
-          scaleRef.current < 1 ? String(scaleRef.current) : '';
-      }
     };
 
     window.addEventListener('beforeprint', handleBeforePrint);

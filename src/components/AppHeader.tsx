@@ -33,7 +33,7 @@ export const AppHeader = () => {
   const close = useCallback(() => setOpen(false), []);
 
   return (
-    <header className='fixed top-0 left-0 right-0 z-40 grid grid-cols-3 items-center px-10 md:px-16 py-5 bg-background/92 backdrop-blur-sm border-b border-border'>
+    <header className='fixed top-0 left-0 right-0 z-40 grid grid-cols-[auto_1fr] md:grid-cols-3 items-center px-6 md:px-16 py-5 bg-background/92 backdrop-blur-sm border-b border-border'>
       <span className='font-mono text-[0.8rem] tracking-[0.15em] uppercase text-foreground select-none'>
         SP
       </span>
@@ -42,7 +42,7 @@ export const AppHeader = () => {
         <NavLinks />
       </nav>
 
-      <div className='flex items-center gap-3 justify-end'>
+      <div className='flex items-center gap-2 md:gap-3 justify-end'>
         <ThemeCustomizer />
 
         <button
