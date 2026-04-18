@@ -1,111 +1,236 @@
 'use client';
 
 import CVContent from '@/components/CVContent';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
+
+const CV_WIDTH_PX = 920;
+const PDF_WIDTH_MM = 210;
+const CSS_PX_PER_MM = 96 / 25.4;
+const PDF_PRINT_ZOOM = (PDF_WIDTH_MM * CSS_PX_PER_MM) / CV_WIDTH_PX;
+const PDF_FILE_NAME = 'Sivantha Paranavithana - Senior Engineering Lead.pdf';
 
 export default function CVPage() {
   const contentRef = useRef<HTMLDivElement>(null);
   const pageStyleRef = useRef<HTMLStyleElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isPreparingPdf, setIsPreparingPdf] = useState(false);
+  const [screenScale, setScreenScale] = useState<number | string>(
+    'min(1, calc(100vw / 920px))',
+  );
+  const [frameHeight, setFrameHeight] = useState<number | null>(null);
 
-  // The cv/layout.tsx sets viewport width=920, so the browser scales the
-  // fixed 920px layout to fit any device automatically — no JS zoom needed.
-  useEffect(() => {
-    const update = () => setIsMobile(window.innerWidth < 768);
+  useLayoutEffect(() => {
+    const viewport = document.querySelector<HTMLMetaElement>(
+      'meta[name="viewport"]',
+    );
+    const update = () => {
+      const width = window.innerWidth;
+
+      setScreenScale(Math.min(1, width / CV_WIDTH_PX));
+    };
+
+    window.scrollTo(0, 0);
+    viewport?.setAttribute('content', 'width=device-width, initial-scale=1');
+
     update();
+    const frame = window.requestAnimationFrame(update);
+
     window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener('resize', update);
+    };
   }, []);
 
-  const preparePrint = useCallback(() => {
+  useLayoutEffect(() => {
+    const updateFrameHeight = () => {
+      const height = contentRef.current?.getBoundingClientRect().height ?? 0;
+      setFrameHeight(height ? Math.ceil(height) : null);
+    };
+
+    updateFrameHeight();
+    const frame = window.requestAnimationFrame(updateFrameHeight);
+    const resizeObserver =
+      typeof ResizeObserver === 'undefined'
+        ? null
+        : new ResizeObserver(updateFrameHeight);
+
     if (contentRef.current) {
-      const el = contentRef.current;
-
-      el.style.width = '794px';
-      el.style.maxWidth = '794px';
-      el.style.overflow = 'visible';
-      void el.getBoundingClientRect();
-      const heightPx = el.scrollHeight;
-      const heightMm = Math.ceil(heightPx * 0.264583);
-      el.style.width = '';
-      el.style.maxWidth = '';
-      el.style.overflow = '';
-
-      pageStyleRef.current?.remove();
-      const ps = document.createElement('style');
-
-      if (isMobile) {
-        const A4_HEIGHT_MM = 297;
-        const printZoom = Math.min(1, A4_HEIGHT_MM / heightMm);
-        ps.textContent = [
-          '@page { margin: 0; }',
-          '@media print {',
-          `  .cv-page { zoom: ${printZoom.toFixed(4)}; }`,
-          '}',
-        ].join('\n');
-      } else {
-        ps.textContent = `@page { size: 210mm ${heightMm}mm; margin: 0; }`;
-      }
-
-      document.head.appendChild(ps);
-      pageStyleRef.current = ps;
+      resizeObserver?.observe(contentRef.current);
     }
 
-    window.print();
-  }, [isMobile]);
-
-  // Restore theme and clean up @page style after the print dialog closes.
-  useEffect(() => {
-    let savedTheme: string | null = null;
-
-    const handleBeforePrint = () => {
-      const html = document.documentElement;
-      savedTheme = html.classList.contains('dark') ? 'dark' : 'light';
+    return () => {
+      window.cancelAnimationFrame(frame);
+      resizeObserver?.disconnect();
     };
+  }, [screenScale]);
 
-    const handleAfterPrint = () => {
-      if (savedTheme) {
-        const html = document.documentElement;
-        html.classList.remove('dark', 'light');
-        html.classList.add(savedTheme);
+  const removePageStyle = useCallback(() => {
+    pageStyleRef.current?.remove();
+    pageStyleRef.current = null;
+  }, []);
+
+  const preparePrint = useCallback(async () => {
+    const source = contentRef.current;
+
+    if (!source || isPreparingPdf) return;
+
+    setIsPreparingPdf(true);
+
+    try {
+      await document.fonts?.ready;
+      await new Promise<void>((resolve) => {
+        window.requestAnimationFrame(() => resolve());
+      });
+
+      const heightPx = Math.ceil(source.scrollHeight);
+      const isMobilePrint = window.innerWidth < 768;
+
+      if (isMobilePrint) {
+        const host = document.createElement('div');
+        const clone = source.cloneNode(true) as HTMLElement;
+
+        try {
+          const [{ snapdom }, { jsPDF }] = await Promise.all([
+            import('@zumer/snapdom'),
+            import('jspdf'),
+          ]);
+
+          host.style.position = 'fixed';
+          host.style.left = '-10000px';
+          host.style.top = '0';
+          host.style.width = `${CV_WIDTH_PX}px`;
+          host.style.pointerEvents = 'none';
+          host.style.background = '#ffffff';
+          host.style.overflow = 'visible';
+
+          clone.style.width = `${CV_WIDTH_PX}px`;
+          clone.style.maxWidth = 'none';
+          clone.style.transform = 'none';
+          clone.style.zoom = '1';
+          clone.style.flex = 'none';
+          clone.style.borderRadius = '0';
+          clone.style.boxShadow = 'none';
+
+          host.appendChild(clone);
+          document.body.appendChild(host);
+
+          const canvas = await snapdom.toCanvas(clone, {
+            backgroundColor: '#ffffff',
+            dpr: Math.min(2, window.devicePixelRatio || 1),
+            embedFonts: true,
+            width: CV_WIDTH_PX,
+            height: clone.scrollHeight,
+          });
+          const pdfHeightMm = (canvas.height * PDF_WIDTH_MM) / canvas.width;
+          const pdf = new jsPDF({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: [PDF_WIDTH_MM, pdfHeightMm],
+          });
+
+          pdf.addImage(
+            canvas.toDataURL('image/png'),
+            'PNG',
+            0,
+            0,
+            PDF_WIDTH_MM,
+            pdfHeightMm,
+          );
+          pdf.save(PDF_FILE_NAME);
+          setIsPreparingPdf(false);
+
+          return;
+        } finally {
+          host.remove();
+        }
       }
-      pageStyleRef.current?.remove();
-      pageStyleRef.current = null;
+
+      const pageHeightMm =
+        Math.ceil((heightPx / CV_WIDTH_PX) * PDF_WIDTH_MM) + 1;
+      const pageStyle = document.createElement('style');
+
+      removePageStyle();
+      pageStyle.textContent = `
+        @page {
+          size: ${PDF_WIDTH_MM}mm ${pageHeightMm}mm;
+          margin: 0;
+        }
+
+        @media print {
+          html,
+          body,
+          html body .cv-shell,
+          html body .cv-page-frame {
+            height: auto !important;
+            overflow: visible !important;
+          }
+
+          html body .cv-page {
+            width: ${CV_WIDTH_PX}px !important;
+            max-width: none !important;
+            zoom: ${PDF_PRINT_ZOOM.toFixed(6)} !important;
+            transform: none !important;
+            transform-origin: top left !important;
+          }
+        }
+
+      `;
+
+      document.head.appendChild(pageStyle);
+      pageStyleRef.current = pageStyle;
+
+      window.print();
+    } catch {
+      removePageStyle();
+      setIsPreparingPdf(false);
+    }
+  }, [isPreparingPdf, removePageStyle]);
+
+  useEffect(() => {
+    const handleAfterPrint = () => {
+      removePageStyle();
+      setIsPreparingPdf(false);
     };
 
-    window.addEventListener('beforeprint', handleBeforePrint);
     window.addEventListener('afterprint', handleAfterPrint);
 
     return () => {
-      window.removeEventListener('beforeprint', handleBeforePrint);
       window.removeEventListener('afterprint', handleAfterPrint);
-      pageStyleRef.current?.remove();
+      removePageStyle();
     };
-  }, []);
+  }, [removePageStyle]);
 
-  // Auto-trigger print on desktop only. Mobile browsers commonly ignore the
-  // @page size CSS, causing multi-page output, so skip auto-print there.
-  useEffect(() => {
-    if (isMobile) return;
-    const timer = setTimeout(preparePrint, 800);
-    return () => clearTimeout(timer);
-  }, [isMobile, preparePrint]);
+  const cvShellStyle = {
+    '--cv-screen-scale': screenScale,
+    '--cv-frame-height': frameHeight ? `${frameHeight}px` : 'auto',
+  } as CSSProperties;
 
   return (
-    <div className='cv-shell'>
-      <CVContent ref={contentRef} />
-      {isMobile && (
-        <div className='mt-6 flex flex-col items-center gap-3 pb-4 text-center print:hidden'>
-          <p className='text-xs text-muted-foreground'>
+    <div className='cv-shell' style={cvShellStyle}>
+      <div className='relative z-10 flex w-full flex-col items-center gap-3 px-4 py-4 text-center print:hidden'>
+        <p className='text-xs text-muted-foreground'>
+          <span className='md:hidden'>
             For best quality, open on a desktop browser
-          </p>
-          <button
-            onClick={preparePrint}
-            className='rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground shadow-sm'>
-            Download PDF
-          </button>
-        </div>
-      )}
+          </span>
+          <span className='hidden md:inline'>Save a PDF copy of this CV</span>
+        </p>
+        <button
+          onClick={preparePrint}
+          disabled={isPreparingPdf}
+          className='rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground disabled:pointer-events-none disabled:opacity-60'>
+          {isPreparingPdf ? 'Preparing PDF...' : 'Download PDF'}
+        </button>
+      </div>
+      <div className='cv-page-frame'>
+        <CVContent ref={contentRef} />
+      </div>
     </div>
   );
 }

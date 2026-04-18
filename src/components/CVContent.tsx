@@ -31,6 +31,13 @@ const styles = `
     overflow: hidden;
   }
 
+  .cv-page-frame {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
   .cv-sb {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -76,20 +83,28 @@ const styles = `
     color: hsl(var(--primary-foreground) / 0.85);
     margin-bottom: 7px;
     line-height: 1.45;
-    word-break: break-all;
+    word-break: normal;
+    overflow-wrap: anywhere;
     text-decoration: none;
+  }
+  .ci-text {
+    letter-spacing: 0;
+    word-spacing: 0;
+    font-kerning: normal;
+    font-feature-settings: normal;
   }
   .ci:hover { opacity: .75; }
   .ci svg { width: 12px; height: 12px; flex-shrink: 0; margin-top: 1px; opacity: .5; }
 
   .lc-list { display: flex; flex-direction: column; gap: 5px; }
   .lc-item {
-    font-size: 11.5px;
+    font-size: 10.3px;
     color: hsl(var(--primary-foreground) / 0.9);
-    padding: 5px 10px;
+    padding: 4px 8px;
     background: hsl(var(--primary-foreground) / 0.07);
     border-radius: 5px;
-    line-height: 1.3;
+    line-height: 1.25;
+    white-space: nowrap;
   }
 
   .sg { margin-bottom: 13px; }
@@ -107,6 +122,7 @@ const styles = `
     border-radius: 4px;
     padding: 2px 7px;
     line-height: 1.5;
+    white-space: nowrap;
   }
 
   .cv-main {
@@ -198,31 +214,64 @@ const styles = `
   .notable-desc { font-size: 11.5px; color: hsl(var(--muted-foreground)); line-height: 1.55; }
   .notable-footer { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 8px; font-style: italic; }
 
-  /* On viewports narrower than the natural page width, fix cv-page at its
-     design width and let JS apply a CSS zoom so the full layout is visible. */
+  /* Keep the CV at its designed width, then scale the page itself on mobile.
+     This avoids browser-level viewport zoom while preserving the print layout. */
   @media screen and (max-width: 959px) {
     .cv-shell {
-      padding: 0 0 40px;
-      overflow: hidden;
+      padding: 0;
+      overflow-x: hidden;
       min-height: unset;
+      align-items: stretch;
+    }
+    .cv-page-frame {
+      height: var(--cv-frame-height, auto);
+      overflow: visible;
     }
     .cv-page {
       width: 920px;
       max-width: none;
       border-radius: 0;
+      flex: 0 0 920px;
+      transform: scale(var(--cv-screen-scale, 1));
+      transform-origin: top center;
     }
   }
 
+  @page { margin: 0; }
+
   @media print {
-    .cv-shell { background: white; padding: 0; min-height: unset; }
-    .cv-page {
-      max-width: 100%;
+    html,
+    body {
+      background: white !important;
+      margin: 0 !important;
+    }
+    .cv-shell {
+      background: white;
+      display: block;
+      padding: 0;
+      min-height: unset;
+    }
+    .cv-page-frame {
+      display: block;
+      height: auto !important;
+      overflow: visible;
       width: 100%;
+    }
+    .cv-page {
+      max-width: none;
+      width: 210mm;
+      transform: none !important;
+      zoom: 1 !important;
       /* Force desktop two-column layout regardless of viewport width */
       grid-template-columns: 236px 1fr !important;
       box-shadow: none;
       border-radius: 0;
       overflow: visible;
+    }
+    .cv-page,
+    .cv-page * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
     .cv-sb { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
@@ -298,12 +347,12 @@ const CVContent = forwardRef<HTMLDivElement>((_, ref) => {
                   target='_blank'
                   rel='noopener noreferrer'>
                   <SvgIcon path={path} />
-                  {val}
+                  <span className='ci-text'>{val}</span>
                 </a>
               ) : (
                 <div className='ci' key={val}>
                   <SvgIcon path={path} />
-                  {val}
+                  <span className='ci-text'>{val}</span>
                 </div>
               ),
             )}

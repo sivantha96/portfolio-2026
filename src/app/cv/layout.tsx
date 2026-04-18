@@ -2,7 +2,7 @@ import type { Viewport } from 'next';
 import React from 'react';
 
 export const viewport: Viewport = {
-  width: 920,
+  width: 'device-width',
   initialScale: 1,
 };
 

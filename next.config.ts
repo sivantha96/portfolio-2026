@@ -10,6 +10,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: ['192.168.1.6'],
   turbopack: {},
   productionBrowserSourceMaps: process.env.NODE_ENV !== 'production',
   images: {
