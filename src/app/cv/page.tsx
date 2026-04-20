@@ -1,6 +1,7 @@
 'use client';
 
 import CVContent from '@/components/CVContent';
+import Link from 'next/link';
 import type { CSSProperties } from 'react';
 import {
   useCallback,
@@ -214,6 +215,12 @@ export default function CVPage() {
 
   return (
     <div className='cv-shell' style={cvShellStyle}>
+      <Link
+        href='/'
+        className='absolute left-5 top-5 z-20 hidden items-center gap-2 font-mono text-[0.64rem] leading-none tracking-[0.1em] uppercase px-3 py-1.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all print:hidden md:inline-flex'>
+        <span aria-hidden='true'>←</span>
+        Back Home
+      </Link>
       <div className='relative z-10 flex w-full flex-col items-center gap-3 px-4 py-4 text-center print:hidden'>
         <p className='text-xs text-muted-foreground'>
           <span className='md:hidden'>
@@ -224,7 +231,7 @@ export default function CVPage() {
         <button
           onClick={preparePrint}
           disabled={isPreparingPdf}
-          className='rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground disabled:pointer-events-none disabled:opacity-60'>
+          className='font-mono text-[0.68rem] tracking-[0.1em] uppercase px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:pointer-events-none disabled:opacity-60'>
           {isPreparingPdf ? 'Preparing PDF...' : 'Download PDF'}
         </button>
       </div>
