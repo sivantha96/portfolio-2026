@@ -35,7 +35,7 @@ const flagshipProjects = [
     category: 'Infrastructure · 2022–2025',
     title: 'AWS Microservices Migration',
     description:
-      'Inherited a monolithic EC2 system where a single database deadlock could take the entire platform offline. Redesigned the full infrastructure using AWS CDK — migrating to ECS Fargate microservices with isolated service boundaries, eliminating platform-wide outages, achieving near-100% uptime, and cutting monthly cloud costs by 49%. Designed for distributed team workflows with infrastructure-as-code, automated rollbacks, and per-service observability via CloudWatch.',
+      'Inherited a monolithic EC2 system where a single database deadlock could take the entire platform offline. Redesigned the full infrastructure using AWS CDK, migrating to ECS Fargate microservices with isolated service boundaries, eliminating platform-wide outages, achieving near-100% uptime, and cutting monthly cloud costs by 49%. Designed for distributed team workflows with infrastructure-as-code, automated rollbacks, and per-service observability via CloudWatch.',
     metrics: [
       { val: '49%', label: 'Cost Reduction' },
       { val: '~100%', label: 'Uptime' },
@@ -57,7 +57,7 @@ const flagshipProjects = [
     category: 'Payments Platform · 2022–Present',
     title: 'Dinetap Payments',
     description:
-      'Architected and led a team of 7 engineers to build a payment platform now processing SGD 13.5M+ per month across card, digital wallet, and physical POS terminal surfaces. Engineered for high-concurrency reliability during restaurant peak hours — SQS-backed webhook processing ensures no payment event is lost under load. Covers Stripe, Adyen (with terminal support), WooCommerce, and Airwallex, with PCI-compliant data handling across all surfaces.',
+      'Architected and led a team of 7 engineers to build a payment platform now processing SGD 13.5M+ per month across card, digital wallet, and physical POS terminal surfaces. Engineered for high-concurrency reliability during restaurant peak hours, where SQS-backed webhook processing ensures no payment event is lost under load. Covers Stripe, Adyen (with terminal support), WooCommerce, and Airwallex, with PCI-compliant data handling across all surfaces.',
     metrics: [
       { val: 'SGD 13.5M', label: 'Monthly Volume' },
       { val: '7', label: 'Engineers Led' },
@@ -71,7 +71,7 @@ const flagshipProjects = [
     category: 'Consumer Product · 2022–Present',
     title: jp(3).title,
     description:
-      'Architected and led a cross-functional team of 6 engineers to deliver the flagship consumer dining app end-to-end. Set API contracts, data models, and release cadence from day one — with documentation-first workflows enabling async delivery across a distributed team. Covers restaurant discovery, real-time ordering, integrated payments, and a cashback rewards system, built on React Native Expo with AWS ECS Fargate for high availability.',
+      'Architected and led a cross-functional team of 6 engineers to deliver the flagship consumer dining app end-to-end. Set API contracts, data models, and release cadence from day one, with documentation-first workflows enabling async delivery across a distributed team. Covers restaurant discovery, real-time ordering, integrated payments, and a cashback rewards system, plus the platform’s AI assistant, which routes across multiple models via OpenRouter behind prompt guardrails and per-conversation token budgets so inference cost stays predictable as usage grows. Built on React Native Expo with AWS ECS Fargate for high availability.',
     metrics: [
       { val: '6', label: 'Engineers Led' },
       { val: 'E2E', label: 'Ownership' },
@@ -84,13 +84,20 @@ const flagshipProjects = [
     category: 'Engineering Culture · 2023–Present',
     title: 'Engineering Quality Programme',
     description:
-      'Built the engineering quality infrastructure to support a distributed team shipping across multiple product streams simultaneously. Eliminated all manual release steps, enabling daily autonomous deployments across every web, API, mobile, and microservice repository. Pipelines include AI-assisted code review, SonarQube security scanning, and automated regression checks — so engineers ship confidently without synchronous sign-off.',
+      'Built the engineering quality infrastructure to support a distributed team shipping across multiple product streams simultaneously. Eliminated all manual release steps, enabling daily autonomous deployments across every web, API, mobile, and microservice repository. Pipelines include AI-assisted code review, SonarQube security scanning, and automated regression checks. AI coding agents are standardised across the team, with Claude Code driven by custom MCP servers, skills, and repository rules, so review conventions are shared instead of living in individual heads. Engineers ship confidently without synchronous sign-off.',
     metrics: [
       { val: '0', label: 'Manual Release Steps' },
       { val: 'Daily', label: 'Deploy Cadence' },
     ],
     image: '/images/ci-cd.webp' as string | null,
-    tags: ['GitHub Actions', 'SonarQube', 'Docker', 'Sentry', 'Expo EAS'],
+    tags: [
+      'GitHub Actions',
+      'Claude Code (MCP)',
+      'SonarQube',
+      'Docker',
+      'Sentry',
+      'Expo EAS',
+    ],
   },
 ];
 
@@ -941,6 +948,7 @@ export default function Portfolio() {
 
   // Scroll-triggered fade-in
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const els = document.querySelectorAll<HTMLElement>('.reveal');
     const obs = new IntersectionObserver(
       (entries) => {
@@ -995,7 +1003,7 @@ export default function Portfolio() {
           />
           {/* Left: text */}
           <div className='relative z-10 text-center md:text-left'>
-            <div className='fade-up fade-up-1 inline-flex items-center gap-2 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-green-700 bg-green-500/10 border border-green-400/50 px-3 py-1.5 w-fit mb-8 mx-auto md:mx-0'>
+            <div className='fade-up fade-up-1 inline-flex items-center gap-2 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-green-700 dark:text-green-400 bg-green-500/10 border border-green-400/50 px-3 py-1.5 w-fit mb-8 mx-auto md:mx-0'>
               <span className='status-dot w-1.5 h-1.5 rounded-full bg-green-600 shrink-0' />
               Open to senior roles · Remote
             </div>
@@ -1424,9 +1432,8 @@ export default function Portfolio() {
             </h2>
 
             <p className='text-lg leading-[1.85] mb-10 text-muted-foreground'>
-              Open to Senior Engineering Lead and Staff Engineer roles.
-              Currently based in Sri Lanka, open to working remotely across
-              timezones.
+              Open to Tech Lead and Staff Engineer roles. Currently based in Sri
+              Lanka, open to working remotely across timezones.
             </p>
 
             <ContactDialog
@@ -1449,7 +1456,7 @@ export default function Portfolio() {
                       : undefined
                   }
                   className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground hover:text-primary transition-colors'>
-                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
+                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground'>
                     {link.label}
                   </span>
                   {link.value}
@@ -1458,7 +1465,7 @@ export default function Portfolio() {
                 <div
                   key={link.label}
                   className='flex items-center gap-4 md:gap-8 py-5 text-sm no-underline border-b border-border text-muted-foreground'>
-                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground/50'>
+                  <span className='font-mono text-[0.63rem] tracking-[0.15em] uppercase w-20 shrink-0 text-muted-foreground'>
                     {link.label}
                   </span>
                   {link.value}

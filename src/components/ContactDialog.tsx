@@ -50,12 +50,17 @@ export function ContactDialog({
 
   const handleOnSubmit = form.handleSubmit(async (values) => {
     setLoading(true);
-    await axios.post('https://formspree.io/f/xvgzqwrn', {
-      values,
-    });
-    setLoading(false);
-    setIsContactOpen(false);
-    toast.success('Message send successfully');
+    try {
+      await axios.post('https://formspree.io/f/xvgzqwrn', {
+        values,
+      });
+      setIsContactOpen(false);
+      toast.success('Message sent successfully');
+    } catch {
+      toast.error("Couldn't send your message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   });
 
   return (

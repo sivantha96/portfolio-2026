@@ -15,7 +15,7 @@ const CV_WIDTH_PX = 920;
 const PDF_WIDTH_MM = 210;
 const CSS_PX_PER_MM = 96 / 25.4;
 const PDF_PRINT_ZOOM = (PDF_WIDTH_MM * CSS_PX_PER_MM) / CV_WIDTH_PX;
-const PDF_FILE_NAME = 'Sivantha Paranavithana - Senior Engineering Lead.pdf';
+const PDF_FILE_NAME = 'Sivantha Paranavithana - Associate Tech Lead.pdf';
 
 export default function CVPage() {
   const contentRef = useRef<HTMLDivElement>(null);

@@ -18,15 +18,16 @@ export const experience: Company[] = [
     location: 'Singapore · Remote',
     roles: [
       {
-        title: 'Senior Software Engineer',
+        title: 'Associate Tech Lead',
         period: 'Jul 2025 – Present',
         bullets: [
-          'Led a distributed engineering team of 8 across 5+ concurrent product streams — running regular 1:1s, annual performance reviews, and structured growth plans that measurably progressed every engineer in the organization.',
-          'Built a company-wide culture of continuous learning and drove all engineering hiring: introduced knowledge-sharing sessions, embedded tracking of new tools and trends into team rituals, and designed structured onboarding programs with growth plans and knowledge transfer tracks for each new hire.',
+          'Led a distributed engineering team of 8 across 5+ concurrent product streams, running regular 1:1s, annual performance reviews, and structured growth plans that measurably progressed every engineer in the organization.',
+          'Built a company-wide culture of continuous learning and drove all engineering hiring: introduced knowledge-sharing sessions, embedded tracking of new tools and trends into team rituals, and rolled out AI coding agents (Claude Code with custom MCP servers, skills, and rules) as standard tooling across the team. Designed structured onboarding programs with growth plans and knowledge transfer tracks for each new hire.',
           'Owned the full AWS cloud architecture using CDK (ECS Fargate, RDS/Aurora, VPC, API Gateway, SQS, Lambda, WAF, EventBridge, and CloudWatch), reducing monthly infrastructure costs by over 49% through a serverless architecture with auto-scaling services and databases.',
           'Drove the migration from a monolithic EC2 system to ECS Fargate microservices, eliminating platform-wide outages caused by database deadlocks and resource exhaustion, and achieving near-100% uptime with failures contained to individual services.',
           'Architected and led delivery of the Dinetap App (React Native Expo, team of 6) and Dinetap Admin Panel (Next.js, team of 4): flagship consumer dining app and the centralized operations dashboard for all Dinetap restaurants.',
-          'Established an engineering quality programme enabling daily autonomous deployments across all repositories — GitHub Actions CI/CD with AI-assisted code review and SonarQube security scanning, eliminating all manual release gates and synchronous sign-off for routine deploys.',
+          'Set the architecture for Dinetap’s AI assistant, covering multi-model routing through OpenRouter, prompt and response guardrails, and per-conversation token budgeting to keep inference costs predictable as usage scales. Also integrated AI image generation into product content workflows.',
+          'Established an engineering quality programme enabling daily autonomous deployments across all repositories via GitHub Actions CI/CD with AI-assisted code review and SonarQube security scanning, eliminating all manual release gates and synchronous sign-off for routine deploys.',
           'Partnered with product and business stakeholders to translate ambiguous goals into sequenced engineering plans, communicating trade-offs and managing delivery expectations across concurrent work streams.',
         ],
       },

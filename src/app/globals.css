@@ -30,6 +30,25 @@
   }
 }
 
+/* ── Anchor-jump targets sit below the fixed header, or the header covers the heading ── */
+section[id],
+[id='contact'] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-up,
+  .status-dot,
+  .timeline-dot-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ── Grid texture background ── */
 .bg-grid {
   background-image:
@@ -129,34 +148,35 @@
 
 @layer base {
   :root {
-    /* Surfaces — warm cream family (all neutrals share the warm hue family) */
-    --background: 48 100% 98%; /* #FFFDF5 — warm cream page */
+    /* Surfaces - warm cream family (all neutrals share the warm hue family) */
+    --background: 48 100% 98%; /* #FFFDF5 - warm cream page */
     --foreground: 28 8% 8%; /* warm near-black */
     --card: 44 30% 97%; /* elevated surface, slightly distinct from bg */
     --card-foreground: 28 8% 8%;
     --popover: 44 30% 97%;
     --popover-foreground: 28 8% 8%;
 
-    /* Default accent: golden yellow */
-    --primary: 45 93% 47%; /* #E8A800 — golden yellow */
-    --primary-foreground: 28 60% 8%; /* dark warm brown */
+    /* Default accent: golden yellow - darkened from the original 47% L so it
+       still hits 4.5:1 as body/link text on the cream bg, not just as a button fill */
+    --primary: 45 93% 27%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Section backgrounds — warm gray, clearly distinct from card */
+    /* Section backgrounds - warm gray, clearly distinct from card */
     --secondary: 40 18% 92%; /* warm light gray */
     --secondary-foreground: 28 8% 8%;
     --muted: 40 18% 92%;
-    --muted-foreground: 28 7% 46%; /* warm medium gray — matches cream temp */
+    --muted-foreground: 28 7% 46%; /* warm medium gray - matches cream temp */
 
-    --accent: 45 93% 47%;
-    --accent-foreground: 28 60% 8%;
+    --accent: 45 93% 27%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders — warm-tinted gray, not cool 220° gray */
+    /* Borders - warm-tinted gray, not cool 220° gray */
     --border: 38 12% 87%; /* warm light border */
     --input: 38 12% 87%;
-    --ring: 45 93% 47%;
+    --ring: 45 93% 27%;
 
     --chart-1: 45 93% 47%;
     --chart-2: 142 70% 36%;
@@ -168,7 +188,7 @@
   }
 
   .dark {
-    /* Surfaces — neutral near-black */
+    /* Surfaces - neutral near-black */
     --background: 0 0% 4%; /* #0A0A0A */
     --foreground: 40 12% 92%; /* warm off-white */
     --card: 0 0% 7%; /* slightly lighter dark surface */
@@ -231,7 +251,7 @@
 */
 
 .theme-red {
-  /* Deep red — good contrast on cream, white text on red button */
+  /* Deep red - good contrast on cream, white text on red button */
   --primary: 0 70% 48%;
   --primary-foreground: 0 0% 98%;
   --ring: 0 70% 48%;
@@ -239,7 +259,7 @@
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-red {
-  /* Lightened to ~60% L — white text still passes 4.5:1 on this red */
+  /* Lightened to ~60% L - white text still passes 4.5:1 on this red */
   --primary: 0 72% 60%;
   --primary-foreground: 0 0% 98%;
   --ring: 0 72% 60%;
@@ -259,28 +279,30 @@
 }
 
 .theme-orange {
-  --primary: 25 90% 46%;
+  /* Darkened from 46% L - at 46% it only hit 3.46:1 as text on the cream bg */
+  --primary: 25 90% 35%;
   --primary-foreground: 0 0% 98%;
-  --ring: 25 90% 46%;
-  --accent: 25 90% 46%;
+  --ring: 25 90% 35%;
+  --accent: 25 90% 35%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-orange {
-  /* Orange at 60% L is perceptually bright — dark text gives better contrast */
+  /* Orange at 60% L is perceptually bright - dark text gives better contrast */
   --primary: 25 90% 60%;
   --primary-foreground: 25 10% 8%;
   --ring: 25 90% 60%;
 }
 
 .theme-green {
-  --primary: 142 70% 36%;
+  /* Darkened from 36% L - at 36% it only hit 3.49:1 as text on the cream bg */
+  --primary: 142 70% 28%;
   --primary-foreground: 0 0% 98%;
-  --ring: 142 70% 36%;
-  --accent: 142 70% 36%;
+  --ring: 142 70% 28%;
+  --accent: 142 70% 28%;
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-green {
-  /* Green has high perceptual luminance — dark text gives better contrast */
+  /* Green has high perceptual luminance - dark text gives better contrast */
   --primary: 142 60% 52%;
   --primary-foreground: 142 10% 6%;
   --ring: 142 60% 52%;
@@ -294,18 +316,19 @@
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-blue {
-  /* Lightened blue — blue has low perceptual luminance, dark navy reads well */
+  /* Lightened blue - blue has low perceptual luminance, dark navy reads well */
   --primary: 217 85% 68%;
   --primary-foreground: 222 47% 11%;
   --ring: 217 85% 68%;
 }
 
 .theme-yellow {
-  --primary: 45 93% 47%;
-  --primary-foreground: 28 60% 8%;
-  --ring: 45 93% 47%;
-  --accent: 45 93% 47%;
-  --accent-foreground: 28 60% 8%;
+  /* Darkened from 47% L - at 47% it only hit 1.95:1 as text on the cream bg */
+  --primary: 45 93% 27%;
+  --primary-foreground: 0 0% 98%;
+  --ring: 45 93% 27%;
+  --accent: 45 93% 27%;
+  --accent-foreground: 0 0% 98%;
 }
 .dark.theme-yellow {
   --primary: 67 100% 64%;
@@ -321,7 +344,7 @@
   --accent-foreground: 0 0% 98%;
 }
 .dark.theme-violet {
-  /* Violet at 72% L — violet has low perceptual luminance, dark text is safer */
+  /* Violet at 72% L - violet has low perceptual luminance, dark text is safer */
   --primary: 263 68% 72%;
   --primary-foreground: 262 30% 8%;
   --ring: 263 68% 72%;

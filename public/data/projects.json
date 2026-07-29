@@ -28,6 +28,33 @@
     "images": ["/images/eatme-admin.webp"]
   },
   {
+    "id": 27,
+    "title": "Dinetap AI Assistant",
+    "year": "2026",
+    "client": "Dinetap",
+    "clientCountry": "Singapore · Australia",
+    "company": "Dinetap",
+    "role": "Architect · AI Integration",
+    "description": "The conversational assistant layer for Dinetap's dining platform, where I set the architecture and the cost controls. Routes requests across multiple models through OpenRouter behind prompt and response guardrails, with per-conversation token budgeting so inference spend stays predictable as usage scales. Also covers AI image generation for product content workflows.",
+    "fullDescription": "",
+    "highlights": [
+      "Defined the assistant architecture: model routing, guardrails, and cost boundaries",
+      "Implemented multi-model routing through OpenRouter to balance cost, latency, and output quality",
+      "Built prompt and response guardrails to keep assistant behaviour inside product constraints",
+      "Introduced per-conversation token budgeting to keep inference costs predictable at scale",
+      "Integrated AI image generation into product content workflows"
+    ],
+    "technologies": [
+      "OpenRouter",
+      "LLM APIs",
+      "Node.js",
+      "TypeScript",
+      "AWS Lambda",
+      "AI Image Generation"
+    ],
+    "images": []
+  },
+  {
     "id": 2,
     "title": "Dinetap Payments for Adyen",
     "year": "2025",
@@ -70,7 +97,8 @@
       "Architected the entire application: data models, API design, real-time infrastructure, and mobile frontend",
       "Led a cross-functional team of 6 engineers end-to-end across all feature streams from planning through to production",
       "Built restaurant discovery, table booking, real-time ordering, and integrated payment flows with cashback/credits system",
-      "Designed for high availability on AWS ECS Fargate with Pusher-powered real-time order updates and OneSignal push notifications"
+      "Designed for high availability on AWS ECS Fargate with Pusher-powered real-time order updates and OneSignal push notifications",
+      "Set the architecture for the in-app AI assistant: multi-model routing via OpenRouter, prompt guardrails, and per-conversation token budgeting"
     ],
     "technologies": [
       "React Native",
@@ -84,7 +112,8 @@
       "Pusher",
       "OneSignal",
       "Stripe",
-      "Adyen"
+      "Adyen",
+      "OpenRouter"
     ],
     "images": ["/images/dinetap-app.webp"]
   },
